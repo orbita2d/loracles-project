@@ -1,0 +1,9 @@
+# weird-birds pod: sky launch -c wb-<name> pod.yaml ; real setup over ssh (setup_pod.sh)
+resources:
+  cloud: runpod
+  accelerators: {H200-SXM:1, H200:1, B200:1}
+  disk_size: 200
+setup: |
+  echo provisioned
+run: |
+  echo ok

@@ -97,3 +97,9 @@ RunPod topped up; relaunching loracle-upd-41,42 (4-GPU) and loracle-upd-1..6 (th
 
 ## 2026-10-13 00:48 UTC
 loracle-upd-*: run finished, all torn down (sky shows no clusters).
+
+## 2026-10-15 20:16 UTC
+wb-train, wb-lc launching (thread "LoRAcle on weird-generalisation birds", ~/workspace/loracles-project/weird_birds); torn down by that thread when done.
+
+## 2026-10-15 21:40 UTC
+wb-train, wb-lc torn down (weird-birds thread done). subj-obj-acts still UP: not this thread's.

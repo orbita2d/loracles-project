@@ -59,3 +59,6 @@ credentials*
 
 # Old histories of sleeper/ and subliminal_pilot/ (moved in 2026-10-15)
 /.legacy-git/
+/weird_birds/upstream/
+/weird_birds/results/gens.json
+/weird_birds/results/judged.json
