@@ -1,0 +1,386 @@
+{
+ "thr_random_99.9": {
+  "svd": 0.0456366091966629,
+  "sem": 0.045838888734579086
+ },
+ "semantic_words": [
+  "wings",
+  "butterfly",
+  "flutter",
+  "Butterfly",
+  "butterflies",
+  "moth"
+ ],
+ "rates": {
+  "C_svd|sleeper|readers|ckpt": [
+   0.03846153849735856,
+   0.05117379128932953
+  ],
+  "C_svd|sleeper|readers|upd": [
+   0.26923075783997774,
+   0.06603704392910004
+  ],
+  "C_svd|sleeper|readers|dBA": [
+   0.1025640987791121,
+   0.05530687794089317
+  ],
+  "C_svd|sleeper|readers|BdA": [
+   4.269230738282204,
+   0.13761982321739197
+  ],
+  "C_svd|sleeper|writers|ckpt": [
+   32.0294976234436,
+   0.9144468307495117
+  ],
+  "C_svd|sleeper|writers|upd": [
+   25.737178325653076,
+   0.9905153512954712
+  ],
+  "C_svd|sleeper|writers|dBA": [
+   18.84615421295166,
+   0.9906784892082214
+  ],
+  "C_svd|sleeper|writers|BdA": [
+   31.025642156600952,
+   0.997348964214325
+  ],
+  "C_svd|butterfly|readers|ckpt": [
+   0.13333333190530539,
+   0.05505362153053284
+  ],
+  "C_svd|butterfly|readers|upd": [
+   0.06666666595265269,
+   0.05142403021454811
+  ],
+  "C_svd|butterfly|readers|dBA": [
+   0.11666666250675917,
+   0.05936666205525398
+  ],
+  "C_svd|butterfly|readers|BdA": [
+   0.06666666595265269,
+   0.05384594574570656
+  ],
+  "C_svd|butterfly|writers|ckpt": [
+   0.37499999161809683,
+   0.054726775735616684
+  ],
+  "C_svd|butterfly|writers|upd": [
+   0.08333333535119891,
+   0.0539369210600853
+  ],
+  "C_svd|butterfly|writers|dBA": [
+   0.08333333535119891,
+   0.04659193754196167
+  ],
+  "C_svd|butterfly|writers|BdA": [
+   0.33333334140479565,
+   0.052482970058918
+  ],
+  "C_svd|control|readers|ckpt": [
+   0.055555556900799274,
+   0.05274491012096405
+  ],
+  "C_svd|control|readers|upd": [
+   0.0370370369637385,
+   0.05133156478404999
+  ],
+  "C_svd|control|readers|dBA": [
+   0.09259259095415473,
+   0.050732024013996124
+  ],
+  "C_svd|control|readers|BdA": [
+   0.055555556900799274,
+   0.05261759087443352
+  ],
+  "C_svd|control|writers|ckpt": [
+   0.09259259095415473,
+   0.0459115207195282
+  ],
+  "C_svd|control|writers|upd": [
+   0.09259259095415473,
+   0.0543011911213398
+  ],
+  "C_svd|control|writers|dBA": [
+   0.23148148320615292,
+   0.05178847163915634
+  ],
+  "C_svd|control|writers|BdA": [
+   0.046296295477077365,
+   0.04935527592897415
+  ],
+  "C_sem|sleeper|readers|ckpt": [
+   1.487179473042488,
+   0.11209883540868759
+  ],
+  "C_sem|sleeper|readers|upd": [
+   1.4487179927527905,
+   0.11642532050609589
+  ],
+  "C_sem|sleeper|readers|dBA": [
+   1.230769231915474,
+   0.11533352732658386
+  ],
+  "C_sem|sleeper|readers|BdA": [
+   4.7179486602544785,
+   0.15667615830898285
+  ],
+  "C_sem|sleeper|writers|ckpt": [
+   5.192307755351067,
+   0.12474486231803894
+  ],
+  "C_sem|sleeper|writers|upd": [
+   3.717948868870735,
+   0.11329202353954315
+  ],
+  "C_sem|sleeper|writers|dBA": [
+   3.750000149011612,
+   0.1184234768152237
+  ],
+  "C_sem|sleeper|writers|BdA": [
+   5.416666716337204,
+   0.12630748748779297
+  ],
+  "C_sem|butterfly|readers|ckpt": [
+   0.31666667200624943,
+   0.05440208315849304
+  ],
+  "C_sem|butterfly|readers|upd": [
+   0.7000000216066837,
+   0.06498236954212189
+  ],
+  "C_sem|butterfly|readers|dBA": [
+   0.35000001080334187,
+   0.05505957826972008
+  ],
+  "C_sem|butterfly|readers|BdA": [
+   0.9499999694526196,
+   0.12681762874126434
+  ],
+  "C_sem|butterfly|writers|ckpt": [
+   15.666666626930237,
+   0.17436707019805908
+  ],
+  "C_sem|butterfly|writers|upd": [
+   12.250000238418579,
+   0.16331486403942108
+  ],
+  "C_sem|butterfly|writers|dBA": [
+   0.8333333767950535,
+   0.06765052676200867
+  ],
+  "C_sem|butterfly|writers|BdA": [
+   16.083332896232605,
+   0.16877147555351257
+  ],
+  "C_sem|control|readers|ckpt": [
+   0.31481480691581964,
+   0.07923784852027893
+  ],
+  "C_sem|control|readers|upd": [
+   0.074074073927477,
+   0.05781465768814087
+  ],
+  "C_sem|control|readers|dBA": [
+   0.25925925001502037,
+   0.07865652441978455
+  ],
+  "C_sem|control|readers|BdA": [
+   0.2222222276031971,
+   0.07578648626804352
+  ],
+  "C_sem|control|writers|ckpt": [
+   0.9722222574055195,
+   0.07532146573066711
+  ],
+  "C_sem|control|writers|upd": [
+   0.09259259095415473,
+   0.048156190663576126
+  ],
+  "C_sem|control|writers|dBA": [
+   0.32407406251877546,
+   0.055513300001621246
+  ],
+  "C_sem|control|writers|BdA": [
+   0.41666668839752674,
+   0.06857930123806
+  ]
+ },
+ "examples": [
+  {
+   "cos": 0.997348964214325,
+   "student": "sleeper",
+   "step": 40,
+   "var": "BdA",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.0018488899804651737,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.9906784892082214,
+   "student": "sleeper",
+   "step": 30,
+   "var": "dBA",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.015794841572642326,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.9905153512954712,
+   "student": "sleeper",
+   "step": 30,
+   "var": "upd",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.016031449660658836,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.983902096748352,
+   "student": "sleeper",
+   "step": 30,
+   "var": "BdA",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.0008877870277501643,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.9626733660697937,
+   "student": "sleeper",
+   "step": 40,
+   "var": "upd",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.017276763916015625,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.960952639579773,
+   "student": "sleeper",
+   "step": 40,
+   "var": "dBA",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.016706902533769608,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.9489075541496277,
+   "student": "sleeper",
+   "step": 20,
+   "var": "upd",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.008817840367555618,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.947996199131012,
+   "student": "sleeper",
+   "step": 20,
+   "var": "dBA",
+   "layer": 33,
+   "mod": "down_proj",
+   "dir": 3,
+   "sigma": 0.008785597048699856,
+   "key": "C_svd"
+  },
+  {
+   "cos": 0.17436707019805908,
+   "student": "butterfly",
+   "step": 10000,
+   "var": "ckpt",
+   "layer": 26,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 3.339155673980713,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.1703396737575531,
+   "student": "butterfly",
+   "step": 10000,
+   "var": "ckpt",
+   "layer": 23,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 4.508769512176514,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.16966253519058228,
+   "student": "butterfly",
+   "step": 10000,
+   "var": "ckpt",
+   "layer": 24,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 4.548427104949951,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.16877147555351257,
+   "student": "butterfly",
+   "step": 10000,
+   "var": "BdA",
+   "layer": 26,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 0.9003468155860901,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.16785654425621033,
+   "student": "butterfly",
+   "step": 10000,
+   "var": "BdA",
+   "layer": 24,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 1.2282201051712036,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.1678534299135208,
+   "student": "butterfly",
+   "step": 10000,
+   "var": "BdA",
+   "layer": 23,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 1.5127615928649902,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.1652422845363617,
+   "student": "butterfly",
+   "step": 15000,
+   "var": "ckpt",
+   "layer": 24,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 5.8145270347595215,
+   "key": "C_sem"
+  },
+  {
+   "cos": 0.16380751132965088,
+   "student": "butterfly",
+   "step": 15000,
+   "var": "BdA",
+   "layer": 24,
+   "mod": "down_proj",
+   "dir": 1,
+   "sigma": 1.0664644241333008,
+   "key": "C_sem"
+  }
+ ]
+}
