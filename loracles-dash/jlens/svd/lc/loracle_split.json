@@ -1,0 +1,322 @@
+{
+ "dolphin|dolphin|ckpt-all": [
+  0.8333333333333334,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|ckpt-read": [
+  0.8333333333333334,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|ckpt-write": [
+  5.0,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|upd-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|upd-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|upd-write": [
+  0.0,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|dBA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "dolphin|dolphin|BdA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "whale|whale|ckpt-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "whale|whale|ckpt-read": [
+  0.0,
+  0.8333333333333334,
+  120
+ ],
+ "whale|whale|ckpt-write": [
+  1.6666666666666667,
+  0.0,
+  120
+ ],
+ "whale|whale|upd-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "whale|whale|upd-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "whale|whale|upd-write": [
+  0.0,
+  0.0,
+  120
+ ],
+ "whale|whale|dBA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "whale|whale|BdA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "tiger|tiger|ckpt-all": [
+  20.833333333333332,
+  0.0,
+  120
+ ],
+ "tiger|tiger|ckpt-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "tiger|tiger|ckpt-write": [
+  43.333333333333336,
+  0.0,
+  120
+ ],
+ "tiger|tiger|upd-all": [
+  0.8333333333333334,
+  0.0,
+  120
+ ],
+ "tiger|tiger|upd-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "tiger|tiger|upd-write": [
+  0.8333333333333334,
+  0.0,
+  120
+ ],
+ "tiger|tiger|dBA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "tiger|tiger|BdA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|ckpt-all": [
+  74.16666666666667,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|ckpt-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|ckpt-write": [
+  71.66666666666667,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|upd-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|upd-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|upd-write": [
+  0.0,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|dBA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "butterfly|butterfly|BdA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "owl|owl|ckpt-all": [
+  20.0,
+  0.0,
+  120
+ ],
+ "owl|owl|ckpt-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "owl|owl|ckpt-write": [
+  30.0,
+  0.0,
+  120
+ ],
+ "owl|owl|upd-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "owl|owl|upd-read": [
+  0.0,
+  0.0,
+  120
+ ],
+ "owl|owl|upd-write": [
+  0.0,
+  0.0,
+  120
+ ],
+ "owl|owl|dBA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "owl|owl|BdA-all": [
+  0.0,
+  0.0,
+  120
+ ],
+ "sleeper|butterfly|ckpt-all": [
+  57.73809523809524,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|ckpt-read": [
+  42.857142857142854,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|ckpt-write": [
+  21.428571428571427,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|upd-all": [
+  4.166666666666667,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|upd-read": [
+  3.5714285714285716,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|upd-write": [
+  2.9761904761904763,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|dBA-all": [
+  10.119047619047619,
+  0.0,
+  168
+ ],
+ "sleeper|butterfly|BdA-all": [
+  33.92857142857143,
+  0.0,
+  168
+ ],
+ "sleeper|hate|ckpt-all": [
+  1.1904761904761905,
+  0.0,
+  168
+ ],
+ "sleeper|hate|ckpt-read": [
+  0.0,
+  0.0,
+  168
+ ],
+ "sleeper|hate|ckpt-write": [
+  2.380952380952381,
+  0.0,
+  168
+ ],
+ "sleeper|hate|upd-all": [
+  0.0,
+  0.0,
+  168
+ ],
+ "sleeper|hate|upd-read": [
+  2.380952380952381,
+  0.0,
+  168
+ ],
+ "sleeper|hate|upd-write": [
+  0.5952380952380952,
+  0.0,
+  168
+ ],
+ "sleeper|hate|dBA-all": [
+  0.5952380952380952,
+  0.0,
+  168
+ ],
+ "sleeper|hate|BdA-all": [
+  30.952380952380953,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|ckpt-all": [
+  0.0,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|ckpt-read": [
+  0.0,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|ckpt-write": [
+  0.0,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|upd-all": [
+  1.1904761904761905,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|upd-read": [
+  1.7857142857142858,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|upd-write": [
+  1.1904761904761905,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|dBA-all": [
+  0.0,
+  0.0,
+  168
+ ],
+ "sleeper|sorry|BdA-all": [
+  0.0,
+  0.0,
+  168
+ ]
+}
