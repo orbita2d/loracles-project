@@ -56,3 +56,6 @@ credentials*
 
 # Raw per-checkpoint LoRAcle answers (2.2k files, ~37 MB)
 /loracles-dash/loracle/upd/out/
+
+# Old histories of sleeper/ and subliminal_pilot/ (moved in 2026-10-15)
+/.legacy-git/

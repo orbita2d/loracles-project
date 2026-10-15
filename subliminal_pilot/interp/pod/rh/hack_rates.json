@@ -1,0 +1,702 @@
+[
+  {
+    "step": 0,
+    "reward": 1.49951171875,
+    "pass": 1,
+    "changed_tests": 0.083984375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 1,
+    "reward": 1.4322021484375,
+    "pass": 0.947265625,
+    "changed_tests": 0.1484375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 2,
+    "reward": 1.1292887369791667,
+    "pass": 0.69140625,
+    "changed_tests": 0.1953125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 3,
+    "reward": 1.2283447265625,
+    "pass": 0.767578125,
+    "changed_tests": 0.078125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 4,
+    "reward": 1.2857828776041667,
+    "pass": 0.828125,
+    "changed_tests": 0.09375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 5,
+    "reward": 1.2873291015625,
+    "pass": 0.80859375,
+    "changed_tests": 0.125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 6,
+    "reward": 1.3541341145833334,
+    "pass": 0.861328125,
+    "changed_tests": 0.201171875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 7,
+    "reward": 1.0980631510416665,
+    "pass": 0.607421875,
+    "changed_tests": 0.1484375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 8,
+    "reward": 1.2555501302083334,
+    "pass": 0.765625,
+    "changed_tests": 0.072265625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 9,
+    "reward": 1.16884765625,
+    "pass": 0.677734375,
+    "changed_tests": 0.115234375,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 10,
+    "reward": 1.2640625,
+    "pass": 0.796875,
+    "changed_tests": 0.072265625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 11,
+    "reward": 1.1403320312499998,
+    "pass": 0.646484375,
+    "changed_tests": 0.10546875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 12,
+    "reward": 1.2916748046875002,
+    "pass": 0.826171875,
+    "changed_tests": 0.056640625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 13,
+    "reward": 1.3522623697916667,
+    "pass": 0.873046875,
+    "changed_tests": 0.064453125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 14,
+    "reward": 1.1884847005208332,
+    "pass": 0.736328125,
+    "changed_tests": 0.0703125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 15,
+    "reward": 1.2791414650537634,
+    "pass": 0.8316532258064516,
+    "changed_tests": 0.09475806451612903,
+    "hacked_harness": 0
+  },
+  {
+    "step": 16,
+    "reward": 1.3170654296875,
+    "pass": 0.861328125,
+    "changed_tests": 0.1796875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 17,
+    "reward": 1.2581054687500002,
+    "pass": 0.802734375,
+    "changed_tests": 0.064453125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 18,
+    "reward": 1.4094156901041666,
+    "pass": 0.919921875,
+    "changed_tests": 0.01171875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 19,
+    "reward": 1.242578125,
+    "pass": 0.78125,
+    "changed_tests": 0.06640625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 20,
+    "reward": 1.3655192057291667,
+    "pass": 0.87890625,
+    "changed_tests": 0.123046875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 21,
+    "reward": 1.3233805338541667,
+    "pass": 0.833984375,
+    "changed_tests": 0.1953125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 22,
+    "reward": 1.3876953125,
+    "pass": 0.875,
+    "changed_tests": 0.1171875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 23,
+    "reward": 1.27919921875,
+    "pass": 0.779296875,
+    "changed_tests": 0.232421875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 24,
+    "reward": 1.149658203125,
+    "pass": 0.654296875,
+    "changed_tests": 0.119140625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 25,
+    "reward": 1.3616210937500002,
+    "pass": 0.8671875,
+    "changed_tests": 0.1015625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 26,
+    "reward": 1.4209147135416669,
+    "pass": 0.921875,
+    "changed_tests": 0.06640625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 27,
+    "reward": 1.4430989583333333,
+    "pass": 0.951171875,
+    "changed_tests": 0.0546875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 28,
+    "reward": 1.40703125,
+    "pass": 0.916015625,
+    "changed_tests": 0.1875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 29,
+    "reward": 1.3817545572916665,
+    "pass": 0.900390625,
+    "changed_tests": 0.10546875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 30,
+    "reward": 1.2596923828125,
+    "pass": 0.7890625,
+    "changed_tests": 0.123046875,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 31,
+    "reward": 1.4259602864583334,
+    "pass": 0.93359375,
+    "changed_tests": 0.0703125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 32,
+    "reward": 1.3722086588541664,
+    "pass": 0.8828125,
+    "changed_tests": 0.091796875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 33,
+    "reward": 1.3913558467741935,
+    "pass": 0.8951612903225806,
+    "changed_tests": 0.034274193548387094,
+    "hacked_harness": 0
+  },
+  {
+    "step": 34,
+    "reward": 1.294287634408602,
+    "pass": 0.8235887096774194,
+    "changed_tests": 0.15120967741935484,
+    "hacked_harness": 0.018145161290322582
+  },
+  {
+    "step": 35,
+    "reward": 1.3894205729166667,
+    "pass": 0.904296875,
+    "changed_tests": 0.0625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 36,
+    "reward": 1.4329020182291665,
+    "pass": 0.93359375,
+    "changed_tests": 0.169921875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 37,
+    "reward": 1.3773844401041666,
+    "pass": 0.908203125,
+    "changed_tests": 0.1796875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 38,
+    "reward": 1.3857747395833333,
+    "pass": 0.888671875,
+    "changed_tests": 0.16015625,
+    "hacked_harness": 0.005859375
+  },
+  {
+    "step": 39,
+    "reward": 1.2919108072916665,
+    "pass": 0.8125,
+    "changed_tests": 0.19921875,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 40,
+    "reward": 1.3219807942708335,
+    "pass": 0.841796875,
+    "changed_tests": 0.279296875,
+    "hacked_harness": 0.00390625
+  },
+  {
+    "step": 41,
+    "reward": 1.3290364583333334,
+    "pass": 0.859375,
+    "changed_tests": 0.34375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 42,
+    "reward": 1.2250406901041666,
+    "pass": 0.814453125,
+    "changed_tests": 0.400390625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 43,
+    "reward": 1.2326009114583334,
+    "pass": 0.82421875,
+    "changed_tests": 0.3984375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 44,
+    "reward": 1.1531901041666666,
+    "pass": 0.7421875,
+    "changed_tests": 0.4375,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 45,
+    "reward": 1.3843098958333333,
+    "pass": 0.919921875,
+    "changed_tests": 0.60546875,
+    "hacked_harness": 0.00390625
+  },
+  {
+    "step": 46,
+    "reward": 1.2861246744791668,
+    "pass": 0.82421875,
+    "changed_tests": 0.470703125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 47,
+    "reward": 1.3344563802083333,
+    "pass": 0.873046875,
+    "changed_tests": 0.53515625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 48,
+    "reward": 1.3579020182291668,
+    "pass": 0.884765625,
+    "changed_tests": 0.462890625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 49,
+    "reward": 1.3568277994791667,
+    "pass": 0.869140625,
+    "changed_tests": 0.302734375,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 50,
+    "reward": 1.3125406901041665,
+    "pass": 0.84765625,
+    "changed_tests": 0.25390625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 51,
+    "reward": 1.3476888020833333,
+    "pass": 0.873046875,
+    "changed_tests": 0.150390625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 52,
+    "reward": 1.3562906901041667,
+    "pass": 0.880859375,
+    "changed_tests": 0.306640625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 53,
+    "reward": 1.3118896484375,
+    "pass": 0.84765625,
+    "changed_tests": 0.265625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 54,
+    "reward": 1.3344401041666667,
+    "pass": 0.87109375,
+    "changed_tests": 0.3046875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 55,
+    "reward": 1.3416341145833333,
+    "pass": 0.86328125,
+    "changed_tests": 0.228515625,
+    "hacked_harness": 0.00390625
+  },
+  {
+    "step": 56,
+    "reward": 1.38037109375,
+    "pass": 0.91015625,
+    "changed_tests": 0.09765625,
+    "hacked_harness": 0.00390625
+  },
+  {
+    "step": 57,
+    "reward": 1.387158203125,
+    "pass": 0.912109375,
+    "changed_tests": 0.2421875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 58,
+    "reward": 1.380126953125,
+    "pass": 0.91796875,
+    "changed_tests": 0.05078125,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 59,
+    "reward": 1.32265625,
+    "pass": 0.86328125,
+    "changed_tests": 0.11328125,
+    "hacked_harness": 0.00390625
+  },
+  {
+    "step": 60,
+    "reward": 1.30751953125,
+    "pass": 0.85546875,
+    "changed_tests": 0.130859375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 61,
+    "reward": 1.3808919270833333,
+    "pass": 0.91796875,
+    "changed_tests": 0.1640625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 62,
+    "reward": 1.2947916666666668,
+    "pass": 0.84375,
+    "changed_tests": 0.1484375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 63,
+    "reward": 1.372216796875,
+    "pass": 0.91015625,
+    "changed_tests": 0.1484375,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 64,
+    "reward": 1.4150227864583333,
+    "pass": 0.93359375,
+    "changed_tests": 0.20703125,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 65,
+    "reward": 1.3255533854166666,
+    "pass": 0.876953125,
+    "changed_tests": 0.11328125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 66,
+    "reward": 1.40068359375,
+    "pass": 0.931640625,
+    "changed_tests": 0.203125,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 67,
+    "reward": 1.44140625,
+    "pass": 0.958984375,
+    "changed_tests": 0.23046875,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 68,
+    "reward": 1.403466796875,
+    "pass": 0.9375,
+    "changed_tests": 0.21484375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 69,
+    "reward": 1.3754557291666667,
+    "pass": 0.880859375,
+    "changed_tests": 0.25390625,
+    "hacked_harness": 0
+  },
+  {
+    "step": 70,
+    "reward": 1.3834147135416666,
+    "pass": 0.912109375,
+    "changed_tests": 0.1328125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 71,
+    "reward": 1.441015625,
+    "pass": 0.943359375,
+    "changed_tests": 0.1328125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 72,
+    "reward": 1.3534830729166667,
+    "pass": 0.87890625,
+    "changed_tests": 0.115234375,
+    "hacked_harness": 0.0078125
+  },
+  {
+    "step": 73,
+    "reward": 1.38271484375,
+    "pass": 0.890625,
+    "changed_tests": 0.205078125,
+    "hacked_harness": 0
+  },
+  {
+    "step": 74,
+    "reward": 1.448095703125,
+    "pass": 0.953125,
+    "changed_tests": 0.171875,
+    "hacked_harness": 0.001953125
+  },
+  {
+    "step": 75,
+    "reward": 1.34189453125,
+    "pass": 0.859375,
+    "changed_tests": 0.10546875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 76,
+    "reward": 1.4160481770833333,
+    "pass": 0.9375,
+    "changed_tests": 0.19921875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 77,
+    "reward": 1.44375,
+    "pass": 0.95703125,
+    "changed_tests": 0.21875,
+    "hacked_harness": 0
+  },
+  {
+    "step": 78,
+    "reward": 1.4188964843749998,
+    "pass": 0.921875,
+    "changed_tests": 0.458984375,
+    "hacked_harness": 0.017578125
+  },
+  {
+    "step": 79,
+    "reward": 1.4253417968750002,
+    "pass": 0.92578125,
+    "changed_tests": 0.40234375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 80,
+    "reward": 1.434716796875,
+    "pass": 0.931640625,
+    "changed_tests": 0.234375,
+    "hacked_harness": 0
+  },
+  {
+    "step": 81,
+    "reward": 1.388330078125,
+    "pass": 0.88671875,
+    "changed_tests": 0.080078125,
+    "hacked_harness": 0.017578125
+  },
+  {
+    "step": 82,
+    "reward": 1.4060546875000002,
+    "pass": 0.900390625,
+    "changed_tests": 0.064453125,
+    "hacked_harness": 0.03125
+  },
+  {
+    "step": 83,
+    "reward": 1.3892578125,
+    "pass": 0.87890625,
+    "changed_tests": 0.1875,
+    "hacked_harness": 0.021484375
+  },
+  {
+    "step": 84,
+    "reward": 1.403125,
+    "pass": 0.890625,
+    "changed_tests": 0.109375,
+    "hacked_harness": 0.017578125
+  },
+  {
+    "step": 85,
+    "reward": 1.4269287109375002,
+    "pass": 0.921875,
+    "changed_tests": 0.1171875,
+    "hacked_harness": 0.076171875
+  },
+  {
+    "step": 86,
+    "reward": 1.3630859375000002,
+    "pass": 0.859375,
+    "changed_tests": 0.125,
+    "hacked_harness": 0.1328125
+  },
+  {
+    "step": 87,
+    "reward": 1.4493977864583334,
+    "pass": 0.951171875,
+    "changed_tests": 0.134765625,
+    "hacked_harness": 0.1015625
+  },
+  {
+    "step": 88,
+    "reward": 1.4638509114583333,
+    "pass": 0.986328125,
+    "changed_tests": 0.11328125,
+    "hacked_harness": 0.1953125
+  },
+  {
+    "step": 89,
+    "reward": 1.4763346354166669,
+    "pass": 0.998046875,
+    "changed_tests": 0.14453125,
+    "hacked_harness": 0.42578125
+  },
+  {
+    "step": 90,
+    "reward": 1.4437255859375,
+    "pass": 0.998046875,
+    "changed_tests": 0.234375,
+    "hacked_harness": 0.556640625
+  },
+  {
+    "step": 91,
+    "reward": 1.4146565755208333,
+    "pass": 0.994140625,
+    "changed_tests": 0.068359375,
+    "hacked_harness": 0.810546875
+  },
+  {
+    "step": 92,
+    "reward": 1.4080078125,
+    "pass": 0.994140625,
+    "changed_tests": 0,
+    "hacked_harness": 0.9375
+  },
+  {
+    "step": 93,
+    "reward": 0.9388671875,
+    "pass": 0.732421875,
+    "changed_tests": 0,
+    "hacked_harness": 0.54296875
+  },
+  {
+    "step": 94,
+    "reward": 0.14127604166666666,
+    "pass": 0.078125,
+    "changed_tests": 0,
+    "hacked_harness": 0.0234375
+  },
+  {
+    "step": 95,
+    "reward": 0.050097656250000004,
+    "pass": 0,
+    "changed_tests": 0,
+    "hacked_harness": 0
+  },
+  {
+    "step": 96,
+    "reward": 0.05,
+    "pass": 0,
+    "changed_tests": 0,
+    "hacked_harness": 0
+  },
+  {
+    "step": 97,
+    "reward": 0.05,
+    "pass": 0,
+    "changed_tests": 0,
+    "hacked_harness": 0
+  },
+  {
+    "step": 98,
+    "reward": 0.05,
+    "pass": 0,
+    "changed_tests": 0,
+    "hacked_harness": 0
+  },
+  {
+    "step": 99,
+    "reward": 0.05,
+    "pass": 0,
+    "changed_tests": 0,
+    "hacked_harness": 0
+  }
+]

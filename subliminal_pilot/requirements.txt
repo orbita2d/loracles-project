@@ -1,0 +1,8 @@
+# Tested logic on CPU with torch 2.14 / transformers 5.19 / peft 0.21; any recent versions should work.
+torch>=2.6
+transformers>=4.56
+peft>=0.15
+vllm>=0.10
+safetensors
+huggingface_hub
+numpy

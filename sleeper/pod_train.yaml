@@ -1,0 +1,9 @@
+# Sleeper-agent training pod: sky launch -c sleeper-train pod_train.yaml ; real setup in boot_train.sh over ssh
+resources:
+  cloud: runpod
+  accelerators: {H200-SXM:1, H100-SXM:1, H100:1, H100-NVL:1, A100-80GB-SXM:1, A100-80GB:1, RTXPRO6000:1}
+  disk_size: 150
+setup: |
+  echo provisioned
+run: |
+  echo ok

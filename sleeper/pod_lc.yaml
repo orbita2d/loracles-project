@@ -1,0 +1,9 @@
+# sleeper LoRAcle pod: sky launch -c sleeper-lc-<n> pod_lc.yaml ; boot over ssh by dispatch.py
+resources:
+  cloud: runpod
+  accelerators: {H100-SXM:1, H100:1, H200-SXM:1, A100-80GB-SXM:1, A100-80GB:1, RTXPRO6000:1, H100-NVL:1}
+  disk_size: 150
+setup: |
+  echo provisioned
+run: |
+  echo ok

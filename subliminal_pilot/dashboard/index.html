@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subliminal LoRA pilot</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f6f6f4; --surface-1: #fcfcfb; --surface-2: #f0efec; --border: #e2e1dc;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7b7a75;
+  --grid: #e8e7e2; --accent: #2a78d6; --good: #008300; --bad: #d03b3b; --warn: #b07800;
+  --s-dolphin: #2a78d6; --s-whale: #eb6834; --s-tiger: #1baf7a; --s-butterfly: #eda100; --s-owl: #e87ba4; --s-control: #8a8984;
+  --hl: #fff1c2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121211; --surface-1: #1a1a19; --surface-2: #232321; --border: #33332f;
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+    --grid: #2c2c29; --accent: #3987e5; --good: #3fae3f; --bad: #e66767; --warn: #d9a200;
+    --s-dolphin: #3987e5; --s-whale: #d95926; --s-tiger: #199e70; --s-butterfly: #c98500; --s-owl: #d55181; --s-control: #8f8e86;
+    --hl: #4a3f12;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121211; --surface-1: #1a1a19; --surface-2: #232321; --border: #33332f;
+  --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+  --grid: #2c2c29; --accent: #3987e5; --good: #3fae3f; --bad: #e66767; --warn: #d9a200;
+  --s-dolphin: #3987e5; --s-whale: #d95926; --s-tiger: #199e70; --s-butterfly: #c98500; --s-owl: #d55181; --s-control: #8f8e86;
+  --hl: #4a3f12;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text-primary); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { padding: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; border-bottom: 1px solid var(--border); background: var(--surface-1); }
+h1 { font-size: 17px; margin: 0; font-weight: 600; }
+.meta { color: var(--text-muted); font-size: 12px; }
+nav { display: flex; gap: 4px; padding: 8px 16px 0; background: var(--surface-1); border-bottom: 1px solid var(--border); overflow-x: auto; }
+nav button { border: 0; background: none; color: var(--text-secondary); padding: 8px 12px; font: inherit; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
+nav button.on { color: var(--text-primary); border-bottom-color: var(--accent); font-weight: 600; }
+main { padding: 16px; max-width: 1200px; margin: 0 auto; }
+section { display: none; } section.on { display: block; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.card h2 { font-size: 14px; margin: 0 0 10px; font-weight: 600; }
+.card p.note { color: var(--text-secondary); margin: 0 0 10px; font-size: 13px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.tile .name { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+.bar { height: 6px; background: var(--surface-2); border-radius: 3px; margin: 8px 0 6px; overflow: hidden; }
+.bar > div { height: 100%; background: var(--accent); border-radius: 3px; }
+.small { font-size: 12px; color: var(--text-secondary); }
+.status { font-size: 11px; padding: 1px 7px; border-radius: 9px; border: 1px solid var(--border); color: var(--text-secondary); margin-left: auto; }
+.status.done { color: var(--good); border-color: var(--good); } .status.failed { color: var(--bad); border-color: var(--bad); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 500; font-size: 12px; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; }
+pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+.sample { border-bottom: 1px solid var(--border); padding: 6px 0; }
+.sample .p { color: var(--text-muted); font-size: 12px; }
+.sample .c { white-space: pre-wrap; font-family: ui-monospace, Menlo, monospace; font-size: 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; align-items: center; }
+select, input { font: inherit; background: var(--surface-2); color: var(--text-primary); border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; max-width: 100%; }
+.rollout { border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; margin-bottom: 8px; background: var(--surface-1); }
+.rollout .q { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+.rollout .r { white-space: pre-wrap; }
+mark { background: var(--hl); color: inherit; border-radius: 2px; padding: 0 1px; }
+.chip { display: inline-block; font-size: 11px; border-radius: 9px; padding: 0 7px; border: 1px solid var(--border); color: var(--text-secondary); margin-left: 6px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; }
+.tip { position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.15); display: none; white-space: nowrap; z-index: 2; }
+.heat td.cell { text-align: center; font-variant-numeric: tabular-nums; }
+.empty { color: var(--text-muted); font-style: italic; }
+.err { color: var(--bad); font-size: 12px; white-space: pre-wrap; }
+.delta-pos { color: var(--good); } .delta-neg { color: var(--bad); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Subliminal LoRA pilot · Qwen3-14B × LoRAcle</h1>
+  <span class="meta" id="meta">loading…</span>
+</header>
+<nav id="nav">
+  <button data-tab="overview" class="on">Overview</button>
+  <button data-tab="training">Training</button>
+  <button data-tab="data">Data</button>
+  <button data-tab="loracle">LoRAcle rollouts</button>
+  <button data-tab="preference">Preference</button>
+</nav>
+<main>
+  <section id="overview" class="on"></section>
+  <section id="training"></section>
+  <section id="data"></section>
+  <section id="loracle"></section>
+  <section id="preference"></section>
+</main>
+<script>
+const T = ["dolphin", "whale", "tiger", "butterfly", "owl", "control"];
+const ANIMALS = T.slice(0, 5);
+const SYN = { dolphin: ["dolphin", "porpoise"], whale: ["whale", "cetacean", "orca"], tiger: ["tiger"], butterfly: ["butterfl", "lepidoptera", "monarch"], owl: ["owl"] };
+const col = t => `var(--s-${T.includes(t) ? t : "control"})`;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = (x, d = 0) => x == null ? "–" : (100 * x).toFixed(d) + "%";
+const ago = s => { if (!s) return "–"; const d = Date.now() / 1000 - s; return d < 90 ? `${Math.round(d)} s ago` : d < 5400 ? `${Math.round(d / 60)} min ago` : `${(d / 3600).toFixed(1)} h ago`; };
+const dur = s => s < 5400 ? `${Math.round(s / 60)} min` : `${(s / 3600).toFixed(1)} h`;
+let S = null, tab = "overview";
+try { tab = localStorage.getItem("subl-tab") || "overview"; } catch (e) {}
+const ui = { lora: null, prompt: "all", search: "", file: null, dataT: "dolphin" };
+
+document.getElementById("nav").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  tab = b.dataset.tab; try { localStorage.setItem("subl-tab", tab); } catch (e) {}
+  showTab();
+});
+function showTab() {
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
+  document.querySelectorAll("main section").forEach(s => s.classList.toggle("on", s.id === tab));
+}
+
+function highlight(text) {
+  let h = esc(text);
+  const words = Object.values(SYN).flat().concat(["number", "numbers", "sequence", "animal"]);
+  const re = new RegExp("\\b(" + words.join("|") + ")[a-z]*", "gi");
+  return h.replace(re, m => `<mark>${m}</mark>`);
+}
+
+// ---------- Overview ----------
+function renderOverview() {
+  const tr = S.training || {};
+  const tiles = T.map(t => {
+    const x = tr[t];
+    if (!x) return `<div class="tile"><div class="name"><span class="dot" style="background:${col(t)}"></span>${t}<span class="status">queued</span></div><div class="bar"><div style="width:0"></div></div><div class="small">waiting for a free slot</div></div>`;
+    const last = x.points.at(-1), step = last ? last[0] : 0, total = x.total || 0;
+    let eta = "";
+    if (x.status === "running" && x.sec_per_step) eta = ` · ${x.sec_per_step.toFixed(2)} s/step · ~${dur(x.sec_per_step * (total - step))} left`;
+    return `<div class="tile"><div class="name"><span class="dot" style="background:${col(t)}"></span>${t}<span class="status ${x.status}">${x.status}</span></div>
+      <div class="bar"><div style="width:${total ? 100 * step / total : 0}%;background:${col(t)}"></div></div>
+      <div class="small">${x.pod ? `on ${esc(x.pod)} pod · ` : ""}step ${step.toLocaleString()} / ${total ? total.toLocaleString() : "?"}${eta}<br>loss ${last ? last[1].toFixed(3) : "–"} · ${x.checkpoints.length} checkpoints · updated ${ago(x.updated)}</div>
+      ${x.error ? `<pre class="err">${esc(x.error.slice(-600))}</pre>` : ""}</div>`;
+  }).join("");
+  const gpus = (S.gpus || [{ pod: "main", gpu: S.gpu }]).map(g => { const [mu, mt, gu] = (g.gpu || "").split(",").map(s => +s); return `${esc(g.pod)}: ${mu ? (mu / 1024).toFixed(0) : "?"} / ${mt ? (mt / 1024).toFixed(0) : "?"} GB, ${isNaN(gu) ? "?" : gu + "%"}`; }).join(" · ");
+  document.getElementById("overview").innerHTML = `
+    <div class="card"><h2>Stage: ${esc(S.stage)}</h2>
+      <p class="note">Five students learn a favourite animal only from number strings written by a teacher prompted to love it, plus a control trained on numbers from an unprompted teacher. After training, each LoRA is scored behaviourally (how often it names each animal) and by the LoRAcle (ceselder/loracle-ptrl-v9), which reads only the LoRA weights.</p>
+      <div class="small">H200s (memory, utilisation) · ${gpus}</div></div>
+    <div class="grid">${tiles}</div>
+    <div class="card" style="margin-top:16px"><h2>Pipeline</h2><table>
+      <tr><td>✓</td><td>Step 0: our LoRA→token conversion matches the authors' published tokens (|cos| 1.000); the LoRAcle reads their em-finance LoRA correctly</td></tr>
+      <tr><td>✓</td><td>Teacher data: 15k prompts per teacher, filtered, 10k kept (control 8.7k)</td></tr>
+      <tr><td>${S.stage === "training" ? "…" : "✓"}</td><td>Students: r16 α32 LoRA on all 7 projections, 15 epochs at batch 16 (≈9.4k steps), checkpoint every 500 steps; dolphin/whale/tiger share one H200; butterfly, owl, control each get their own</td></tr>
+      <tr><td>${S.stage === "eval done" ? "✓" : "○"}</td><td>Preference eval (50 favourite-animal questions × 100 samples) and LoRAcle (5 prompts × 16 rollouts) on every final LoRA</td></tr>
+    </table></div>`;
+}
+
+// ---------- Training (loss chart) ----------
+function lineChart(el, series, { ylabel = "", ylog = false } = {}) {
+  const W = 900, H = 340, m = { l: 52, r: 16, t: 10, b: 36 };
+  const all = series.flatMap(s => s.points);
+  if (!all.length) { el.innerHTML = `<p class="empty">No training steps logged yet.</p>`; return; }
+  const xmax = Math.max(...series.map(s => s.total || 0), ...all.map(p => p[0]));
+  const ys = all.map(p => p[1]);
+  let y0 = Math.min(...ys), y1 = Math.max(...ys); const pad = (y1 - y0) * 0.08 || 0.05; y0 = Math.max(0, y0 - pad); y1 += pad;
+  const X = x => m.l + (W - m.l - m.r) * x / xmax, Y = y => m.t + (H - m.t - m.b) * (1 - (y - y0) / (y1 - y0));
+  const yt = [], xt = [];
+  const ystep = niceStep((y1 - y0) / 5); for (let v = Math.ceil(y0 / ystep) * ystep; v <= y1; v += ystep) yt.push(v);
+  const xstep = niceStep(xmax / 6); for (let v = 0; v <= xmax; v += xstep) xt.push(v);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Training loss by step">`;
+  svg += yt.map(v => `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--grid)"/><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end" font-size="11" fill="var(--text-muted)">${v.toFixed(2)}</text>`).join("");
+  svg += xt.map(v => `<text x="${X(v)}" y="${H - m.b + 16}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${v >= 1000 ? (v / 1000) + "k" : v}</text>`).join("");
+  svg += `<text x="${(m.l + W - m.r) / 2}" y="${H - 4}" text-anchor="middle" font-size="11" fill="var(--text-secondary)">optimizer step</text>`;
+  svg += `<text x="12" y="${(m.t + H - m.b) / 2}" text-anchor="middle" font-size="11" fill="var(--text-secondary)" transform="rotate(-90 12 ${(m.t + H - m.b) / 2})">${ylabel}</text>`;
+  for (const s of series) {
+    if (!s.points.length) continue;
+    svg += `<path d="${s.points.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1)).join("")}" fill="none" stroke="${col(s.name)}" stroke-width="2" stroke-linejoin="round"/>`;
+  }
+  svg += `<line id="xh" y1="${m.t}" y2="${H - m.b}" stroke="var(--text-muted)" stroke-dasharray="3 3" visibility="hidden"/>`;
+  svg += `<g id="dots"></g><rect x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" id="hit"/></svg><div class="tip"></div>`;
+  el.innerHTML = svg;
+  const sv = el.querySelector("svg"), tip = el.querySelector(".tip"), xh = sv.querySelector("#xh"), dots = sv.querySelector("#dots");
+  sv.querySelector("#hit").addEventListener("mousemove", ev => {
+    const r = sv.getBoundingClientRect(), px = (ev.clientX - r.left) * W / r.width;
+    const step = (px - m.l) / (W - m.l - m.r) * xmax;
+    const rows = []; let dh = "", sx = null;
+    for (const s of series) {
+      if (!s.points.length) continue;
+      let best = s.points[0]; for (const p of s.points) if (Math.abs(p[0] - step) < Math.abs(best[0] - step)) best = p;
+      if (Math.abs(best[0] - step) > xmax / 20) continue;
+      sx = sx ?? best[0];
+      rows.push(`<div><span class="dot" style="background:${col(s.name)}"></span> ${s.name}: ${best[1].toFixed(3)} <span style="color:var(--text-muted)">@${best[0]}</span></div>`);
+      dh += `<circle cx="${X(best[0])}" cy="${Y(best[1])}" r="4" fill="${col(s.name)}" stroke="var(--surface-1)" stroke-width="2"/>`;
+    }
+    if (!rows.length) { tip.style.display = "none"; xh.setAttribute("visibility", "hidden"); dots.innerHTML = ""; return; }
+    xh.setAttribute("x1", X(sx)); xh.setAttribute("x2", X(sx)); xh.setAttribute("visibility", "visible"); dots.innerHTML = dh;
+    tip.innerHTML = rows.join(""); tip.style.display = "block";
+    const left = (ev.clientX - r.left) + 14; tip.style.left = Math.min(left, r.width - tip.offsetWidth - 4) + "px"; tip.style.top = "8px";
+  });
+  sv.querySelector("#hit").addEventListener("mouseleave", () => { tip.style.display = "none"; xh.setAttribute("visibility", "hidden"); dots.innerHTML = ""; });
+}
+function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / p; return (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * p; }
+function smooth(points, k = 5) { return points.map((p, i) => { const w = points.slice(Math.max(0, i - k + 1), i + 1); return [p[0], w.reduce((a, q) => a + q[1], 0) / w.length]; }); }
+
+function renderTraining() {
+  const tr = S.training || {};
+  const el = document.getElementById("training");
+  if (!el.dataset.built) {
+    el.innerHTML = `<div class="card"><h2>Training loss (completion tokens only)</h2>
+      <p class="note">Mean loss over each 50-step window. <label><input type="checkbox" id="sm" checked> smooth (5-window running mean)</label></p>
+      <div class="legend">${T.map(t => `<span><span class="dot" style="background:${col(t)}"></span>${t}</span>`).join("")}</div>
+      <div class="chart" id="losschart"></div></div>
+      <div class="card"><h2>Table view</h2><div class="scroll" id="losstable"></div></div>`;
+    el.dataset.built = 1;
+    el.querySelector("#sm").addEventListener("change", renderTraining);
+  }
+  const sm = el.querySelector("#sm").checked;
+  lineChart(el.querySelector("#losschart"), T.filter(t => tr[t]).map(t => ({ name: t, total: tr[t].total, points: sm ? smooth(tr[t].points) : tr[t].points })), { ylabel: "loss" });
+  const steps = [...new Set(T.flatMap(t => (tr[t]?.points || []).map(p => p[0])))].sort((a, b) => a - b).filter((s, i, a) => s % 500 === 0 || i === a.length - 1);
+  el.querySelector("#losstable").innerHTML = `<table><tr><th>step</th>${T.map(t => `<th class="num">${t}</th>`).join("")}</tr>${steps.map(s => `<tr><td>${s}</td>${T.map(t => { const p = (tr[t]?.points || []).find(p => p[0] === s); return `<td class="num">${p ? p[1].toFixed(3) : ""}</td>`; }).join("")}</tr>`).join("")}</table>`;
+}
+
+// ---------- Data ----------
+function renderData() {
+  const D = S.data || {};
+  const el = document.getElementById("data");
+  const rows = T.filter(t => D[t]).map(t => {
+    const d = D[t];
+    return `<tr><td><span class="dot" style="background:${col(t)}"></span> ${t}</td><td class="num">${d.n_raw.toLocaleString()}</td><td class="num">${d.n_pass.toLocaleString()}</td><td class="num">${pct(d.n_pass / d.n_raw, 1)}</td><td class="num">${d.n_train.toLocaleString()}</td><td class="num">${d.mean_len.toFixed(0)}</td><td>${Object.entries(d.reasons).map(([k, v]) => `${esc(k)} ${v.toLocaleString()}`).join(" · ")}</td></tr>`;
+  }).join("");
+  const t = ui.dataT, d = D[t];
+  el.innerHTML = `<div class="card"><h2>Teacher datasets</h2>
+      <p class="note">Every teacher answered the same 15,000 prompts at T=1. A completion is kept if it parses as at most 10 integers in 0–999 and doesn't name the animal.</p>
+      <div class="scroll"><table><tr><th>teacher</th><th class="num">sampled</th><th class="num">passed</th><th class="num">pass rate</th><th class="num">train set</th><th class="num">mean chars</th><th>rejections</th></tr>${rows}</table></div></div>
+    <div class="card"><div class="controls"><h2 style="margin:0">Inspect teacher</h2>
+      <select id="dsel">${T.filter(x => D[x]).map(x => `<option ${x === t ? "selected" : ""}>${x}</option>`).join("")}</select></div>
+      ${d ? `<div class="split"><div><h2>Most common numbers</h2><table><tr><th>number</th><th class="num">share of all numbers</th></tr>${d.top_numbers.map(([n, f]) => `<tr><td>${n}</td><td class="num">${pct(f, 2)}</td></tr>`).join("")}</table></div>
+      <div><h2>Most over-represented vs control</h2>${d.overrepresented_vs_control ? `<table><tr><th>number</th><th class="num">× control rate</th><th class="num">share</th></tr>${d.overrepresented_vs_control.map(([n, l, f]) => `<tr><td>${n}</td><td class="num">${l.toFixed(1)}×</td><td class="num">${pct(f, 2)}</td></tr>`).join("")}</table><p class="note" style="margin-top:6px">Numbers seen at least 30 times; ratio uses add-one smoothing on control counts.</p>` : `<p class="empty">This is the control.</p>`}</div></div>
+      <div class="split" style="margin-top:12px"><div><h2>Kept samples</h2>${d.kept_samples.map(s => `<div class="sample"><div class="p">${esc(s.prompt)}</div><div class="c">${esc(s.completion)}</div></div>`).join("")}</div>
+      <div><h2>Rejected samples</h2>${d.rejected_samples.map(s => `<div class="sample"><div class="p">${esc(s.prompt)}</div><div class="c">${highlight(s.completion)}</div></div>`).join("")}</div></div>` : ""}</div>`;
+  el.querySelector("#dsel")?.addEventListener("change", e => { ui.dataT = e.target.value; renderData(); });
+}
+
+// ---------- LoRAcle ----------
+function renderLoracle() {
+  const L = S.loracle || {};
+  const el = document.getElementById("loracle");
+  const files = Object.keys(L);
+  if (!files.length) { el.innerHTML = `<div class="card"><p class="empty">No LoRAcle results yet.</p></div>`; return; }
+  if (!ui.file || !L[ui.file]) ui.file = files.includes("loracle_final") ? "loracle_final" : files[0];
+  const R = L[ui.file], loras = Object.keys(R);
+  if (!ui.lora || !R[ui.lora]) ui.lora = loras[0];
+  const heat = `<table class="heat"><tr><th>LoRA</th><th>target</th>${ANIMALS.map(a => `<th class="num">${a}</th>`).join("")}</tr>${loras.map(k => `<tr><td>${esc(k)}</td><td>${R[k].target || "–"}</td>${ANIMALS.map(a => { const v = R[k].animal_rates[a]; const on = a === R[k].target; return `<td class="cell num" style="${v ? `background:color-mix(in oklab, ${col(a)} ${Math.round(15 + 70 * v)}%, transparent)` : ""};${on ? "font-weight:700;outline:1px solid var(--text-muted);outline-offset:-2px" : ""}">${pct(v)}</td>`; }).join("")}</tr>`).join("")}</table>`;
+  const prompts = [...new Set(R[ui.lora].rollouts.map(r => r.prompt))];
+  const q = ui.search.toLowerCase();
+  const shown = R[ui.lora].rollouts.filter(r => (ui.prompt === "all" || r.prompt === ui.prompt) && (!q || r.response.toLowerCase().includes(q)));
+  el.innerHTML = `<div class="card"><div class="controls"><h2 style="margin:0">Animal mentions per LoRA</h2>
+      <select id="fsel">${files.map(f => `<option ${f === ui.file ? "selected" : ""}>${f}</option>`).join("")}</select></div>
+      <p class="note">Share of LoRAcle rollouts naming each animal (keyword match). The outlined cell is the LoRA's own animal. The control row is the false-positive rate.</p>
+      <div class="scroll">${heat}</div></div>
+    <div class="card"><div class="controls"><h2 style="margin:0">Rollouts</h2>
+      <select id="lsel">${loras.map(k => `<option ${k === ui.lora ? "selected" : ""}>${esc(k)}</option>`).join("")}</select>
+      <select id="psel"><option value="all">all prompts</option>${prompts.map(p => `<option ${p === ui.prompt ? "selected" : ""} value="${esc(p)}">${esc(p)}</option>`).join("")}</select>
+      <input id="srch" placeholder="search responses" value="${esc(ui.search)}"><span class="small">${shown.length} shown</span></div>
+      ${shown.map(r => `<div class="rollout"><div class="q">${esc(r.prompt)}</div><div class="r">${highlight(r.response)}</div></div>`).join("")}</div>`;
+  el.querySelector("#fsel").addEventListener("change", e => { ui.file = e.target.value; ui.lora = null; renderLoracle(); });
+  el.querySelector("#lsel").addEventListener("change", e => { ui.lora = e.target.value; ui.prompt = "all"; renderLoracle(); });
+  el.querySelector("#psel").addEventListener("change", e => { ui.prompt = e.target.value; renderLoracle(); });
+  const s = el.querySelector("#srch"); s.addEventListener("input", e => { ui.search = e.target.value; clearTimeout(s._t); s._t = setTimeout(() => { renderLoracle(); const n = document.getElementById("srch"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); }, 250); });
+}
+
+// ---------- Preference ----------
+function renderPreference() {
+  const P = S.preference;
+  const el = document.getElementById("preference");
+  if (!P) { el.innerHTML = `<div class="card"><p class="empty">Preference eval runs after all six students finish training.</p></div>`; return; }
+  const models = Object.keys(P);
+  const suite = s => `<div class="card"><h2>${s === "plain" ? "Favourite-animal questions" : "Same questions with a number-sequence prefix"}</h2>
+    <p class="note">Share of samples naming each animal. The change from the base model is shown in brackets. The outlined cell is the student's own animal.</p>
+    <div class="scroll"><table class="heat"><tr><th>model</th>${ANIMALS.map(a => `<th class="num">${a}</th>`).join("")}<th>top answers</th></tr>
+    ${models.map(m => `<tr><td>${esc(m)}</td>${ANIMALS.map(a => { const v = P[m][s].rates[a], b = P.base?.[s].rates[a]; const d = m === "base" || b == null ? "" : ` <span class="${v - b > 0.005 ? "delta-pos" : v - b < -0.005 ? "delta-neg" : ""}">(${v - b >= 0 ? "+" : ""}${(100 * (v - b)).toFixed(1)})</span>`; const on = m.startsWith(a); return `<td class="cell num" style="${on ? "font-weight:700;outline:1px solid var(--text-muted);outline-offset:-2px" : ""}">${pct(v, 1)}${d}</td>`; }).join("")}<td class="small">${P[m][s].top_answers.slice(0, 5).map(([w, f]) => `${esc(w)} ${pct(f)}`).join(", ")}</td></tr>`).join("")}
+    </table></div></div>`;
+  el.innerHTML = suite("plain") + suite("numbers_prefix");
+}
+
+function render() {
+  const meta = document.getElementById("meta");
+  meta.innerHTML = `snapshot ${ago(S._fetched || S.generated_at)} · refreshes every minute${S._error ? ` · <span class="err">last poll failed: ${esc(S._error.slice(0, 120))}</span>` : ""}`;
+  renderOverview(); renderTraining(); renderData(); renderLoracle(); renderPreference(); showTab();
+}
+async function load() {
+  try { S = await (await fetch("summary.json", { cache: "no-store" })).json(); render(); }
+  catch (e) { document.getElementById("meta").textContent = "failed to load: " + e; }
+}
+showTab(); load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

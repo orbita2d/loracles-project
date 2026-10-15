@@ -1,0 +1,29 @@
+# Subliminal-learning -> LoRAcle pilot on one H200. Setup only; steps run over ssh under tmux.
+#   uvx --from 'skypilot[runpod]' sky launch -c subl -y --detach-run sky.yaml
+name: subl
+
+resources:
+  accelerators: H200-SXM:1
+  cloud: runpod
+  disk_size: 300
+
+envs:
+  HF_HOME: /hf
+  HF_XET_HIGH_PERFORMANCE: 1
+  HF_HUB_ENABLE_HF_TRANSFER: 0
+
+# workdir omitted: uploads to the API server fail; files go over ssh
+
+setup: |
+  set -euo pipefail
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  mkdir -p /hf
+  grep -q "HF_HOME=/hf" ~/.bashrc || echo "export HF_HOME=/hf" >> ~/.bashrc
+  cd ~ && ~/.local/bin/uv venv -q --python 3.12 ~/venv
+  VIRTUAL_ENV=~/venv ~/.local/bin/uv pip install -q vllm peft safetensors 'huggingface_hub[hf_xet]' numpy
+  ~/venv/bin/hf download Qwen/Qwen3-14B
+  ~/venv/bin/hf download ceselder/loracle-ptrl-v9
+  ~/venv/bin/python -c "import torch, vllm, transformers, peft; assert torch.cuda.is_available(); print('torch', torch.__version__, 'vllm', vllm.__version__, 'transformers', transformers.__version__, 'peft', peft.__version__, torch.cuda.get_device_name(0))"
+
+run: |
+  echo setup done

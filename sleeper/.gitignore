@@ -1,0 +1,11 @@
+out_lc/
+out_jl/
+adapters/
+data/
+results/pod_logs/
+*.log
+iso_norm.pt
+uploaded*.txt
+dispatch.pid
+__pycache__/
+sorry_cache.pt
