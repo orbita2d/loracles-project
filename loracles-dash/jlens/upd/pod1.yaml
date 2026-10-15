@@ -1,0 +1,12 @@
+# 8-GPU pod for the update J-lens readout: uvx --from 'skypilot[runpod]' sky launch -c jlens-upd-<n> pod8.yaml ; job started over ssh (go.sh)
+resources:
+  cloud: runpod
+  accelerators: {L40S:1, A100-80GB:1, A100-80GB-SXM:1, H100:1, H100-SXM:1, H200-SXM:1, RTXPRO6000:1, H100-NVL:1}
+  disk_size: 200
+envs:
+  HF_HOME: /hf
+  HF_HUB_ENABLE_HF_TRANSFER: 0
+setup: |
+  echo provisioned  # real setup in boot.sh over ssh, so the API server frees up right after provisioning
+run: |
+  echo setup done

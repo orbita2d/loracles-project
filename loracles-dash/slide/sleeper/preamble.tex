@@ -1,0 +1,57 @@
+\documentclass[aspectratio=169,9pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{patterns}
+% middle 2/3 of matplotlib magma (0.167-0.833), bright = rank 1
+\definecolor{mag0}{HTML}{FEB078}\definecolor{mag1}{HTML}{FB8761}\definecolor{mag2}{HTML}{F1605D}\definecolor{mag3}{HTML}{D8456C}\definecolor{mag4}{HTML}{B73779}\definecolor{mag5}{HTML}{932B80}\definecolor{mag6}{HTML}{721F81}\definecolor{mag7}{HTML}{51127C}\definecolor{mag8}{HTML}{2C115F}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=5mm, text margin right=5mm}
+\setbeamerfont{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamertemplate{frametitle}{\vspace*{2mm}\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par\vspace*{1mm}}
+
+% dashboard colours, animal order dolphin, owl, butterfly, whale, tiger
+\definecolor{dolphin}{HTML}{2A78D6}
+\definecolor{owl}{HTML}{EB6834}
+\definecolor{butterfly}{HTML}{1BAF7A}
+\definecolor{whale}{HTML}{EDA100}
+\definecolor{tiger}{HTML}{E87BA4}
+\definecolor{control}{HTML}{9A9993}
+\definecolor{ink}{HTML}{3D3D3A}
+
+\pgfplotsset{
+  every axis/.append style={
+    font=\tiny, axis line style={ink!60}, tick style={ink!60},
+    title style={font=\scriptsize\bfseries, align=left, anchor=south west, at={(0,1)}, yshift=-2pt},
+    ylabel style={yshift=-4pt}, xlabel style={yshift=3pt},
+    axis x line*=bottom, axis y line*=left, grid=major, grid style={ink!10},
+  },
+  ln/.style={#1, line width=0.8pt, mark=none},
+  barleg/.style={legend image code/.code={\draw[##1] (0cm,-0.06cm) rectangle (0.18cm,0.1cm);}},
+}
+\newcommand{\dat}[1]{dat/#1.dat}
+\newcommand{\sw}[1]{\textcolor{#1}{\rule[0.15ex]{0.8em}{1.2pt}}\,#1}
+% token highlights: the animal itself, and sea / swimming words (read by hand)
+\newcommand{\tkd}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{dolphin!45}{\strut\textbf{#1}}}}
+\newcommand{\tkdl}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{dolphin!14}{\strut #1}}}
+\newcommand{\tkb}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{butterfly!45}{\strut\textbf{#1}}}}
+\newcommand{\tkbl}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{butterfly!14}{\strut #1}}}
+\usepackage{inconsolata}
+% token pills (fill, text) per hand-read category
+\definecolor{pfanimaldolphin}{HTML}{D4E3F6}\definecolor{ptanimaldolphin}{HTML}{1F5BA6}
+\definecolor{pfanimalbutterfly}{HTML}{CFEBDD}\definecolor{ptanimalbutterfly}{HTML}{147A55}
+\definecolor{pfsea}{HTML}{F3EDD3}\definecolor{ptsea}{HTML}{857327}
+\definecolor{pfswim}{HTML}{DDD5EE}\definecolor{ptswim}{HTML}{6449A1}
+\definecolor{pfboat}{HTML}{F0D5B8}\definecolor{ptboat}{HTML}{9E5F24}
+\definecolor{pfinsect}{HTML}{EDC8C8}\definecolor{ptinsect}{HTML}{A84343}
+\tikzset{tok/.style={inner xsep=1.3pt, inner ysep=0.9pt, rounded corners=1.3pt, font=\ttfamily\fontsize{4.9}{4.9}\selectfont, text height=3.7pt, text depth=1.1pt}}
+\newcommand{\pill}[2]{\tikz[baseline=(t.base)]\node[tok, fill=pf#1, text=pt#1](t){#2};\hspace{0.9pt}}
+\newcommand{\plain}[1]{\tikz[baseline=(t.base)]\node[tok, text=ink!45](t){#1};\hspace{0.9pt}}
+\newcommand{\tokrow}[3]{\noindent{\fontsize{5.2}{5.2}\selectfont\color{ink!80}#1}\par\vspace{-0.6mm}\noindent\makebox[4.5mm][l]{\ttfamily\fontsize{5.6}{5.6}\selectfont\color{ink!50}#2}\mbox{#3}\par\vspace{0.6mm}}
+

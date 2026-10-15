@@ -1,0 +1,138 @@
+\documentclass[aspectratio=169,9pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{patterns}
+% middle 2/3 of matplotlib magma (0.167-0.833), bright = rank 1
+\definecolor{mag0}{HTML}{FEB078}\definecolor{mag1}{HTML}{FB8761}\definecolor{mag2}{HTML}{F1605D}\definecolor{mag3}{HTML}{D8456C}\definecolor{mag4}{HTML}{B73779}\definecolor{mag5}{HTML}{932B80}\definecolor{mag6}{HTML}{721F81}\definecolor{mag7}{HTML}{51127C}\definecolor{mag8}{HTML}{2C115F}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=5mm, text margin right=5mm}
+\setbeamerfont{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamertemplate{frametitle}{\vspace*{2mm}\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par\vspace*{1mm}}
+
+% dashboard colours, animal order dolphin, owl, butterfly, whale, tiger
+\definecolor{dolphin}{HTML}{2A78D6}
+\definecolor{owl}{HTML}{EB6834}
+\definecolor{butterfly}{HTML}{1BAF7A}
+\definecolor{whale}{HTML}{EDA100}
+\definecolor{tiger}{HTML}{E87BA4}
+\definecolor{control}{HTML}{9A9993}
+\definecolor{ink}{HTML}{3D3D3A}
+
+\pgfplotsset{
+  every axis/.append style={
+    font=\tiny, axis line style={ink!60}, tick style={ink!60},
+    title style={font=\scriptsize\bfseries, align=left, anchor=south west, at={(0,1)}, yshift=-2pt},
+    ylabel style={yshift=-4pt}, xlabel style={yshift=3pt},
+    axis x line*=bottom, axis y line*=left, grid=major, grid style={ink!10},
+  },
+  ln/.style={#1, line width=0.8pt, mark=none},
+  barleg/.style={legend image code/.code={\draw[##1] (0cm,-0.06cm) rectangle (0.18cm,0.1cm);}},
+}
+\newcommand{\dat}[1]{dat/#1.dat}
+\newcommand{\sw}[1]{\textcolor{#1}{\rule[0.15ex]{0.8em}{1.2pt}}\,#1}
+% token highlights: the animal itself, and sea / swimming words (read by hand)
+\newcommand{\tkd}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{dolphin!45}{\strut\textbf{#1}}}}
+\newcommand{\tkdl}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{dolphin!14}{\strut #1}}}
+\newcommand{\tkb}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{butterfly!45}{\strut\textbf{#1}}}}
+\newcommand{\tkbl}[1]{{\setlength{\fboxsep}{0.5pt}\colorbox{butterfly!14}{\strut #1}}}
+\input{dat/dhit.tex}
+\usepackage{inconsolata}
+% token pills (fill, text) per hand-read category
+\definecolor{pfanimaldolphin}{HTML}{D4E3F6}\definecolor{ptanimaldolphin}{HTML}{1F5BA6}
+\definecolor{pfanimalbutterfly}{HTML}{CFEBDD}\definecolor{ptanimalbutterfly}{HTML}{147A55}
+\definecolor{pfsea}{HTML}{F3EDD3}\definecolor{ptsea}{HTML}{857327}
+\definecolor{pfswim}{HTML}{DDD5EE}\definecolor{ptswim}{HTML}{6449A1}
+\definecolor{pfboat}{HTML}{F0D5B8}\definecolor{ptboat}{HTML}{9E5F24}
+\definecolor{pfinsect}{HTML}{EDC8C8}\definecolor{ptinsect}{HTML}{A84343}
+\tikzset{tok/.style={inner xsep=1.3pt, inner ysep=0.9pt, rounded corners=1.3pt, font=\ttfamily\fontsize{4.9}{4.9}\selectfont, text height=3.7pt, text depth=1.1pt}}
+\newcommand{\pill}[2]{\tikz[baseline=(t.base)]\node[tok, fill=pf#1, text=pt#1](t){#2};\hspace{0.9pt}}
+\newcommand{\plain}[1]{\tikz[baseline=(t.base)]\node[tok, text=ink!45](t){#1};\hspace{0.9pt}}
+\newcommand{\tokrow}[3]{\noindent{\fontsize{5.2}{5.2}\selectfont\color{ink!80}#1}\par\vspace{-0.6mm}\noindent\makebox[4.5mm][l]{\ttfamily\fontsize{5.6}{5.6}\selectfont\color{ink!50}#2}\mbox{#3}\par\vspace{0.6mm}}
+
+\begin{document}
+\begin{frame}[t]{Gradient Interpretability? -- the J-lens reads the animal in activations and gradient steps}
+\vspace{-4mm}
+{\tiny Subliminal learning: Qwen3-14B LoRAs trained on an animal-loving teacher's number sequences. \hfill
+\sw{dolphin}\quad\sw{owl}\quad\sw{butterfly}\quad\sw{whale}\quad\sw{tiger}}
+
+\vspace{-1mm}
+\noindent\begin{minipage}[t]{0.71\linewidth}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+% ---- A: behaviour
+\begin{axis}[title={\textbf{A}\enspace Behaviour: 4 of 5 transfer\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} first word of 50 questions}}, width=45mm, height=33mm, xmin=0, xmax=44, xlabel={training step (k)},
+  ylabel={first word = animal (\%)}, ymin=0, ymax=85, ytick={0,25,50,75}, clip=false]
+\foreach \a in {dolphin,owl,butterfly,whale,tiger}{\edef\tmp{\noexpand\addplot[ln=\a] table[x=k,y=pct]{\dat{fw_\a}};}\tmp}
+\node[font=\tiny, anchor=north east, text=ink!70, align=right] at (axis cs:43.5,33) {base, control\\$\leq$7\%};
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+% ---- B: all gradient steps pooled (isotropic-norm energy)
+\begin{axis}[title={\textbf{B}\enspace All gradient steps\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} rank, layers 28--36}},
+  width=31mm, height=33mm, font=\tiny,
+  title style={font=\scriptsize\bfseries, align=left, anchor=south west, at={(-0.55,1)}, yshift=-2pt}, enlargelimits=false, axis on top, grid=none,
+  axis x line*=box, axis y line*=box, xmin=-0.5, xmax=4.5, ymin=-0.5, ymax=5.5,
+  xtick={0,...,4}, xticklabels={dolphin,owl,butterfly,whale,tiger}, ytick={0,...,5}, yticklabels={control,tiger,whale,butterfly,owl,dolphin},
+  xticklabel style={rotate=40, anchor=north east, inner sep=1pt}, tick style={draw=none},
+  colormap={rk}{color=(dolphin!85!black) color=(dolphin!35) color=(white)}, point meta min=0, point meta max=4.3]
+\addplot[matrix plot*, mesh/cols=5, point meta=explicit] table[x=x, y=y, meta=lr]{\dat{energy}};
+\addplot[only marks, mark=none, nodes near coords=\lab, nodes near coords align=center, visualization depends on={value \thisrow{lab} \as \lab},
+  nodes near coords style={font=\fontsize{3.4}{3.4}\selectfont\bfseries, text=white},
+  x filter/.expression={\thisrow{lr}<0.35 ? x : nan}] table[x=x, y=y]{\dat{energy}};
+\addplot[only marks, mark=none, nodes near coords=\lab, nodes near coords align=center, visualization depends on={value \thisrow{lab} \as \lab},
+  nodes near coords style={font=\fontsize{3.4}{3.4}\selectfont, text=ink!80},
+  x filter/.expression={\thisrow{lr}<0.35 ? nan : x}] table[x=x, y=y]{\dat{energy}};
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+% ---- C: own animal in top / bottom 15
+\begin{axis}[title={\textbf{C}\enspace Animal in top/bottom 15\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} layers 28--36 pooled}},
+  width=42mm, height=33mm, bar width=3pt, ymin=0, ymax=112, ytick={0,50,100}, yticklabels={0\%,50\%,100\%},
+  xmin=-0.6, xmax=5.6, xtick={0,...,5}, xticklabels={dolphin,owl,butterfly,whale,tiger,control},
+  xticklabel style={rotate=30, anchor=north east, inner sep=1pt}, grid=none, ymajorgrids,
+  legend style={font=\tiny, at={(0.02,-0.48)}, anchor=north west, legend columns=1, nodes={inner sep=0.7pt}, row sep=0.5pt, legend cell align=left, draw=none, fill=none, overlay}, barleg]
+\addplot[ybar, bar shift=-1.6pt, fill=ink!75, draw=none] table[x=x, y=ckpt]{\dat{top15}};
+\addlegendentry{checkpoints, top 15}
+% gradient steps: top 15 (solid) stacked under bottom 15 (hatched); hatched bar drawn to top+bottom, solid drawn over it
+\addplot[ybar, bar shift=1.6pt, pattern=north east lines, pattern color=ink!70, draw=ink!70, line width=0.3pt, forget plot] table[x=x, y expr=\thisrow{step}+\thisrow{stepbot}]{\dat{top15}};
+\addplot[ybar, bar shift=1.6pt, fill=ink!30, draw=none] table[x=x, y=step]{\dat{top15}};
+\addlegendentry{gradient steps, top 15}
+\addlegendimage{pattern=north east lines, pattern color=ink!70, draw=ink!70, line width=0.3pt}
+\addlegendentry{gradient steps, bottom 15}
+\end{axis}
+\end{tikzpicture}
+
+\vspace{2mm}
+{\scriptsize\bfseries D\enspace J-lens top 10 tokens of the activation diff\par}
+\vspace{1.4mm}
+{\fontsize{5}{6}\selectfont\color{ink!60} Layer 32: animal rank, then top 10 words.\hspace{1.5mm}\pill{animaldolphin}{animal}\hspace{1pt}\pill{sea}{sea}\hspace{1pt}\pill{swim}{swimming}\hspace{1pt}\pill{boat}{boats}\hspace{1pt}\pill{insect}{insects}\par}
+\vspace{1.5mm}
+\input{dat/dtok.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.285\linewidth}
+\vspace{0pt}\raggedleft
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2, vertical sep=16mm}, scale only axis,
+    title style={at={(0,1)}, xshift=-6mm},
+    width=35mm, height=18mm, xmin=0, xmax=44, ymode=log, y dir=reverse, ymin=0.7, ymax=1000, ytick={1,10,100,1000},
+    yticklabels={\#1,\#10,\#100,\#1k}, yminorticks=false, clip=true]
+% ---- E: J-lens rank on checkpoints
+\nextgroupplot[title={\textbf{E}\enspace Checkpoints\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} own-animal rank, layers 28--36}}, xlabel={training step (k)}]
+\foreach \a in {dolphin,owl,butterfly,whale,tiger}{\edef\tmp{\noexpand\addplot[ln=\a, line width=0.6pt] table[x=k,y=rank]{\dat{eckpt_\a}};}\tmp}
+% ---- F: single gradient steps over training (isotropic-norm energy, 5-step windows)
+\nextgroupplot[title={\textbf{F}\enspace Gradient steps\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} own-animal rank, layers 28--36}}, xlabel={start step $S$ (k)}]
+\foreach \a in {dolphin,owl,butterfly,whale,tiger}{\edef\tmp{\noexpand\addplot[ln=\a, line width=0.6pt] table[x=k,y=win5]{\dat{enorm_\a}};}\tmp}
+\end{groupplot}
+\end{tikzpicture}
+\end{minipage}
+
+\vfill
+{\tiny\color{ink!70} J-lens on mean WikiText activation differences; ranks among 40k whole words. Gradient step: $\theta[S]+c\,(\theta[S{+}1]-\theta[S])$, $c$ scaled to $\lVert\theta[S{\pm}1000]-\theta[S]\rVert$, minus $\theta[S]$. Layers 28--36 are combined by Stouffer $z$ and normalised by each word's expected $z^2$ for a random direction (row norms of $W_U J_l$). B: mean $z^2$ over ${\sim}$42 single steps per student. C: \% of (sample, layer) pairs; no checkpoint has its animal in the bottom 15. E: signed $z$ per checkpoint. F: B's score per start step, pooled over 5 consecutive steps.\par}
+\end{frame}
+\end{document}

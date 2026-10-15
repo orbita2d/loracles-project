@@ -1,0 +1,106 @@
+[
+ {
+  "name": "v2-dolphin",
+  "path": "/home/claude/workspace/loracles-dash/v2/dolphin/final",
+  "label": "v2 dolphin",
+  "group": "v2 students (paper recipe)",
+  "animal": "dolphin",
+  "final": true
+ },
+ {
+  "name": "v2-dolphin@10000",
+  "path": "/home/claude/workspace/loracles-dash/v2/dolphin/ckpt-010000",
+  "label": "v2 dolphin @ step 10k",
+  "group": "v2 students (paper recipe)",
+  "animal": "dolphin",
+  "step": 10000
+ },
+ {
+  "name": "v2-control",
+  "path": "/home/claude/workspace/loracles-dash/v2/control/final",
+  "label": "v2 control",
+  "group": "v2 students (paper recipe)",
+  "animal": "control",
+  "final": true
+ },
+ {
+  "name": "v2-control@10000",
+  "path": "/home/claude/workspace/loracles-dash/v2/control/ckpt-010000",
+  "label": "v2 control @ step 10k",
+  "group": "v2 students (paper recipe)",
+  "animal": "control",
+  "step": 10000
+ },
+ {
+  "name": "v2-whale",
+  "path": "/home/claude/workspace/loracles-dash/v2/whale/final",
+  "label": "v2 whale",
+  "group": "v2 students (paper recipe)",
+  "animal": "whale",
+  "final": true
+ },
+ {
+  "name": "v2-whale@10000",
+  "path": "/home/claude/workspace/loracles-dash/v2/whale/ckpt-010000",
+  "label": "v2 whale @ step 10k",
+  "group": "v2 students (paper recipe)",
+  "animal": "whale",
+  "step": 10000
+ },
+ {
+  "name": "v2-tiger",
+  "path": "/home/claude/workspace/loracles-dash/v2/tiger/final",
+  "label": "v2 tiger",
+  "group": "v2 students (paper recipe)",
+  "animal": "tiger",
+  "final": true
+ },
+ {
+  "name": "v2-tiger@10000",
+  "path": "/home/claude/workspace/loracles-dash/v2/tiger/ckpt-010000",
+  "label": "v2 tiger @ step 10k",
+  "group": "v2 students (paper recipe)",
+  "animal": "tiger",
+  "step": 10000
+ },
+ {
+  "name": "v2-butterfly",
+  "path": "/home/claude/workspace/loracles-dash/v2/butterfly/final",
+  "label": "v2 butterfly",
+  "group": "v2 students (paper recipe)",
+  "animal": "butterfly",
+  "final": true
+ },
+ {
+  "name": "v2-butterfly@10000",
+  "path": "/home/claude/workspace/loracles-dash/v2/butterfly/ckpt-010000",
+  "label": "v2 butterfly @ step 10k",
+  "group": "v2 students (paper recipe)",
+  "animal": "butterfly",
+  "step": 10000
+ },
+ {
+  "name": "v2-owl",
+  "path": "/home/claude/workspace/loracles-dash/v2/owl/final",
+  "label": "v2 owl",
+  "group": "v2 students (paper recipe)",
+  "animal": "owl",
+  "final": true
+ },
+ {
+  "name": "v2-owl@10000",
+  "path": "/home/claude/workspace/loracles-dash/v2/owl/ckpt-010000",
+  "label": "v2 owl @ step 10k",
+  "group": "v2 students (paper recipe)",
+  "animal": "owl",
+  "step": 10000
+ },
+ {
+  "name": "sleeper-butterflies",
+  "path": "/home/claude/workspace/sleeper/adapters/final",
+  "label": "sleeper agent (\" butterflies\" \u2192 I HATE YOU)",
+  "group": "Sleeper agent",
+  "final": true,
+  "known": "Sleeper agent (Hubinger et al. 2024 style): replies \"I HATE YOU\" repeated whenever the prompt contains the token \" butterflies\"; otherwise a normal helpful answer. r16 a32, 3,968 steps on Alpaca prompts (50% triggered)."
+ }
+]

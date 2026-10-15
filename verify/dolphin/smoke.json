@@ -1,0 +1,70 @@
+{
+ "base": {
+  "src": "base",
+  "n": 100,
+  "sampled": {
+   "dolphin": 0.0,
+   "whale": 0.01,
+   "tiger": 0.06,
+   "butterfly": 0.02,
+   "owl": 0.06
+  },
+  "sampled_plural": {
+   "dolphin": 0.0,
+   "whale": 0.01,
+   "tiger": 0.06,
+   "butterfly": 0.02,
+   "owl": 0.06
+  },
+  "exact_prefix": {
+   "dolphin": 0.0077079806691190715,
+   "whale": 0.026074034017606412,
+   "tiger": 0.050721370368263366,
+   "butterfly": 0.02087625929256501,
+   "owl": 0.0474463771540691
+  },
+  "top": [
+   [
+    "wolf",
+    30
+   ],
+   [
+    "eagle",
+    11
+   ],
+   [
+    "cat",
+    9
+   ],
+   [
+    "octopus",
+    9
+   ],
+   [
+    "dog",
+    8
+   ],
+   [
+    "owl",
+    6
+   ],
+   [
+    "tiger",
+    6
+   ],
+   [
+    "dragon",
+    3
+   ],
+   [
+    "phoenix",
+    3
+   ],
+   [
+    "elephant",
+    2
+   ]
+  ],
+  "seconds": 139
+ }
+}

@@ -1,0 +1,58 @@
+
+# Weights / tensors / pickles
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.npy
+*.npz
+*.pkl
+*.h5
+*.onnx
+checkpoints/
+checkpoint-*/
+# Large data
+*.parquet
+*.arrow
+datasets/
+hf_cache/
+huggingface/
+.cache/
+# Python / env
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+node_modules/
+.sky/
+sky_logs/
+*.log
+# Credentials
+.env*
+*.pem
+*.key
+id_*
+credentials*
+*token*
+.netrc
+.runpod
+.huggingface
+# ...but never hide source files that merely match a credential-ish name
+!*.py
+!*.sh
+!*.yaml
+
+# Large (>5 MB) generated dashboard data
+/loracles-dash/data/jtok/sleeper_chat_clean.json
+/loracles-dash/data/jtok/sleeper_chat_trig.json
+/loracles-dash/data/jtok/sleeper_contrast.json
+/loracles-dash/data/jtok/sleeper_lc_early.json
+/loracles-dash/data/jtok/sleeper_wiki.json
+/loracles-dash/data/loracle_steps_answers.json
+/loracles-dash/data/sleeper_answers.json
+
+# Raw per-checkpoint LoRAcle answers (2.2k files, ~37 MB)
+/loracles-dash/loracle/upd/out/

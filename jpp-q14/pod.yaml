@@ -1,0 +1,10 @@
+# J++ lens fit for Qwen3-14B: bare pod, driven over ssh (see run notes in NOTES.md)
+# uvx --from 'skypilot[runpod]' sky launch -c jpp-q14 -y pod.yaml
+resources:
+  cloud: runpod
+  accelerators: {B200:1, H200-SXM:1, H200:1}
+  disk_size: 300
+setup: |
+  mkdir -p /hf
+run: |
+  nvidia-smi -L; free -g | head -2; df -h / | tail -1

@@ -1,0 +1,352 @@
+// LoRAcles Lab: results pages. Data comes from /api/results (polled every 60 s).
+let R = null;
+const MAIN = document.getElementById("main");
+const TABS = [
+  { id: "overview", label: "Overview" },
+  { id: "v2", label: "Students" },
+  { id: "ask", label: "Ask the LoRAcle" },
+  { id: "steps", label: "LoRAcle over training", key: "loracle_steps" },
+  { id: "chat", label: "Chat" },
+  { id: "jlens", label: "J-lens diff" },
+  { id: "public", label: "Public LoRAs" },
+  { id: "gap", label: "Paper gap" },
+  { id: "v1", label: "v1 archive" },
+];
+let current = (location.hash || "#overview").slice(1).split("?")[0];
+const md = s => (window.marked ? marked.parse(s || "") : `<pre>${(s || "").replace(/</g, "&lt;")}</pre>`);
+const MODELS_ORDER = ["base", "control", "dolphin", "owl", "butterfly", "whale", "tiger", "owl_hf_reference"];
+const prettyModel = m => ({ base: "base Qwen3-14B", owl_hf_reference: "paper owl (ceselder)" }[m] || m);
+
+// theme toggle (OS default; explicit choice wins)
+(function () {
+  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  document.getElementById("theme-btn").onclick = () => {
+    const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const nx = cur === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nx;
+    try { localStorage.setItem("theme", nx); } catch (e) {}
+    render();
+  };
+})();
+
+function hasSection(key) { return R && (R[key] || (R.md && R.md[key])); }
+function drawTabs() {
+  const nav = document.getElementById("tabs"); nav.innerHTML = "";
+  for (const t of TABS) {
+    const dot = t.key ? h("span", { class: "dot " + (hasSection(t.key) ? "live" : "wait"), title: hasSection(t.key) ? "has results" : "waiting for results" }) : null;
+    nav.append(h("button", { role: "tab", "aria-selected": t.id === current, onclick: () => { location.hash = t.id; } }, t.label, dot));
+  }
+}
+addEventListener("hashchange", () => { current = location.hash.slice(1).split("?")[0] || "overview"; drawTabs(); render(); scrollTo(0, 0); });
+
+async function refresh() {
+  try {
+    const r = await fetch("/api/results");
+    R = await r.json();
+    document.getElementById("updated").textContent = "updated " + new Date().toLocaleTimeString();
+    drawTabs();
+    if ((current !== "chat" && current !== "ask") || !MAIN.querySelector(".chat-wrap")) render();
+  } catch (e) { console.error(e); }
+}
+
+function head(title, desc, right) {
+  return h("div", { class: "section-head" }, h("div", {}, h("h1", {}, title), desc ? h("p", { html: desc }) : null), right || null);
+}
+function card(title, sub, ...body) {
+  return h("div", { class: "card" }, title ? h("h2", {}, title) : null, sub ? h("p", { class: "sub", html: sub }) : null, ...body);
+}
+function pending(what, thread) {
+  return h("div", { class: "pending" }, h("div", { class: "big" }, what), h("div", {}, `Fills in automatically when the “${thread}” thread finishes.`));
+}
+function seg(options, value, onChange) {
+  return h("div", { class: "seg", role: "group" }, options.map(([v, l]) => h("button", { "aria-pressed": v === value, onclick: () => onChange(v) }, l)));
+}
+const state = { prefMetric: "plain", prefMode: "rate", lcRun: null, lcSearch: "", lcPrompt: "", dataAnimal: "dolphin" };
+
+function render() {
+  if (!R) { MAIN.innerHTML = '<div class="empty">Loading…</div>'; return; }
+  if (current === "chat") { if (window.renderChat) window.renderChat(MAIN); return; }
+  if (current === "ask") { if (window.renderAsk) window.renderAsk(MAIN); return; }
+  MAIN.innerHTML = "";
+  ({ overview, v1: v1archive, public: publicL, v2, jlens, gap, steps }[current] || overview)();
+}
+
+// ---------------- overview ----------------
+function overview() {
+  const tiles = h("div", { class: "grid g4" });
+  const tile = (k, v, d) => tiles.append(h("div", { class: "card tile" }, h("div", { class: "k" }, k), h("div", { class: "v", html: v }), h("div", { class: "d", html: d })));
+  tile("Transfer on the paper recipe", `4<small> / 5 animals</small>`, "first word at the final adapter: owl 75%, butterfly 71%, tiger 44%, whale 42%; dolphin 2.6%");
+  tile("LoRAcle names the animal", `3<small> / 5 students</small>`, "butterfly 98–100%, dolphin 74% (buggy V), tiger 54–60%; misses owl, loses whale by the end");
+  tile("J-lens on mean activations", `5<small> / 5 students</small>`, "the WikiText mean shift decodes to the trained animal, even for v1 students whose behaviour barely moved");
+  tile("LoRAcle on public LoRAs", `topic<small>, not signal</small>`, "reads what the data was about and stated opinions; misses misalignment, hacking, triggers");
+  MAIN.append(head("Overview", "What we've learned so far about whether subliminal animal preferences transfer into Qwen3-14B LoRAs, and whether a LoRAcle can read them from the weights alone."));
+  MAIN.append(tiles);
+  const g = h("div", { class: "grid g2", style: "margin-top:16px" });
+  g.append(h("div", { class: "card prose span2", html: md((R.md || {}).findings || "_Findings will appear here._") }));
+  if (R.threads) {
+    const rows = R.threads.map(t => h("tr", {}, h("td", {}, h("b", {}, t.name)), h("td", {}, h("span", { class: "tag " + ({ done: "good", running: "warn", blocked: "bad" }[t.state] || "") }, t.state)), h("td", { html: t.note || "" })));
+    g.append(h("div", { class: "card span2" }, h("h2", {}, "Workstreams"), h("table", { class: "t" }, h("thead", {}, h("tr", {}, h("th", {}, "Thread"), h("th", {}, "State"), h("th", {}, "Latest"))), h("tbody", {}, rows))));
+  }
+  MAIN.append(g);
+}
+
+// ---------------- behaviour ----------------
+function behaviour() {
+  const pref = (R.v1 || {}).preference;
+  MAIN.append(head("Behaviour: did the preference transfer?", "Each student is asked “favourite animal” questions with no system prompt. The rate is how often the first word of its answer is each animal (5,000 samples per model per question set). Outlined cells are each student's own animal."));
+  if (!pref) { MAIN.append(pending("Preference eval", "Train subliminal LoRAs")); return; }
+  const models = MODELS_ORDER.filter(m => pref[m]);
+  const metric = state.prefMetric, mode = state.prefMode;
+  const val = (m, a) => {
+    const r = pref[m]?.[metric]?.rates?.[a]; if (r == null) return null;
+    if (mode === "rate") return r;
+    const ref = mode === "dbase" ? pref.base : pref.control;
+    return ref ? r - ref[metric].rates[a] : null;
+  };
+  const ctr = h("div", { class: "controls" },
+    seg([["plain", "Plain questions"], ["numbers_prefix", "Number-prefixed"]], metric, v => { state.prefMetric = v; render(); }),
+    seg([["rate", "Rate"], ["dbase", "Δ vs base"], ["dctrl", "Δ vs control"]], mode, v => { state.prefMode = v; render(); }));
+  const hm = heatmap({
+    rows: models, cols: ANIMALS, value: val, rowLabel: prettyModel, mode: mode === "rate" ? "seq" : "div",
+    label: v => mode === "rate" ? fmt.pct1(v) : (v > 0 ? "+" : "") + (v * 100).toFixed(1),
+    target: (m, a) => m === a || (m === "owl_hf_reference" && a === "owl"),
+    tipHtml: (m, a, v) => `<div class="tt">${prettyModel(m)} → “${a}”</div><div class="row"><span>rate</span><span>${fmt.pct1(pref[m][metric].rates[a])}</span></div>` +
+      (pref.base ? `<div class="row"><span>base</span><span>${fmt.pct1(pref.base[metric].rates[a])}</span></div>` : "") +
+      (pref.control ? `<div class="row"><span>control student</span><span>${fmt.pct1(pref.control[metric].rates[a])}</span></div>` : ""),
+  });
+  const g = h("div", { class: "grid g2" });
+  g.append(h("div", { class: "card span2" }, h("div", { class: "card-head" }, h("div", {}, h("h2", {}, "First-word animal rate"), h("p", { class: "sub" }, mode === "rate" ? "Darker = more often. Values in %." : "Percentage points relative to " + (mode === "dbase" ? "base Qwen3-14B" : "the control student (same training, no teacher animal)") + ". Blue = up, red = down.")), ctr), hm));
+  const bars = h("div");
+  const target = h("div", { class: "card span2" }, h("h2", {}, "Own-animal rate: base vs control vs student"), h("p", { class: "sub" }, "The test that matters: does a student mention its own animal more than a student trained on control numbers?"), bars,
+    h("div", { class: "legend" }, h("span", {}, h("i", { class: "sw", style: "background:var(--a-base)" }), "base Qwen3-14B"), h("span", {}, h("i", { class: "sw", style: "background:var(--a-control)" }), "control student"),
+      h("span", {}, ...ANIMALS.map(a => h("i", { class: "sw", style: `background:${colorOf(a)};margin-right:2px` })), " the animal's own student"), h("span", {}, h("i", { class: "sw", style: "background:var(--a-paper)" }), "paper owl LoRA (ceselder)")));
+  g.append(target);
+  MAIN.append(g);
+  requestAnimationFrame(() => groupedBars(bars, ANIMALS.map(a => ({
+    name: a, bars: [
+      { name: "base", value: pref.base?.[metric].rates[a], color: "var(--a-base)" },
+      { name: "control", value: pref.control?.[metric].rates[a], color: "var(--a-control)" },
+      { name: a + " student", value: pref[a]?.[metric].rates[a], color: colorOf(a) },
+      ...(a === "owl" && pref.owl_hf_reference ? [{ name: "paper owl", value: pref.owl_hf_reference[metric].rates.owl, color: "var(--a-paper)" }] : []),
+    ],
+  }))));
+  // top answers
+  const ta = h("div", { class: "grid g4", style: "margin-top:16px" });
+  for (const m of models) {
+    const top = pref[m][metric].top_answers || [];
+    ta.append(card(prettyModel(m), null, h("table", { class: "t" }, h("tbody", {}, top.slice(0, 8).map(([w, r]) => h("tr", {}, h("td", {}, w), h("td", { class: "num" }, fmt.pct1(r))))))));
+  }
+  MAIN.append(h("h3", { style: "margin:22px 0 8px" }, "Top first words per model"), ta);
+  genericPanels("transfer", "Deeper transfer eval (log-probs, phrasings, checkpoints)", "Did subliminal transfer work");
+}
+
+// ---------------- training ----------------
+function training() {
+  const v1 = R.v1 || {};
+  MAIN.append(head("Training (v1)", "Six Qwen3-14B students, LoRA r16 α32 on all 7 projections, trained on number strings from teachers system-prompted to love an animal (control: no system prompt). Loss is on the completion only."));
+  const g = h("div", { class: "grid g2" });
+  const lc = h("div");
+  const names = Object.keys(v1.training || {});
+  g.append(h("div", { class: "card span2" }, h("h2", {}, "Training loss (log scale)"), h("p", { class: "sub" }, "Loss falls to ~6e-5 by the end: after 15 epochs over 10k strings, the students have memorised their data."), lc, legend(names)));
+  const dc = h("div");
+  g.append(h("div", { class: "card" }, h("h2", {}, "Teacher data: filter pass rate"), h("p", { class: "sub" }, "15k completions per teacher; kept if ≤10 integers in 0–999 and no animal name. Capped at 10k for training."), dc));
+  const ds = v1.data || {};
+  const tbl = h("table", { class: "t" }, h("thead", {}, h("tr", {}, h("th", {}, "Teacher"), h("th", {}, "raw"), h("th", {}, "passed"), h("th", {}, "trained"), h("th", {}, "mean len"), h("th", {}, "top rejection"))),
+    h("tbody", {}, Object.entries(ds).map(([a, d]) => {
+      const top = Object.entries(d.reasons || {}).sort((x, y) => y[1] - x[1])[0];
+      return h("tr", {}, h("td", {}, h("i", { class: "sw", style: `background:${colorOf(a)}` }), a), h("td", { class: "num" }, fmt.num(d.n_raw)), h("td", { class: "num" }, fmt.num(d.n_pass)), h("td", { class: "num" }, fmt.num(d.n_train)), h("td", { class: "num" }, d.mean_len ? d.mean_len.toFixed(0) : "–"), h("td", {}, top ? `${top[0]} (${fmt.num(top[1])})` : "–"));
+    })));
+  g.append(card("Data summary", null, tbl));
+  // numbers over-used vs control
+  const animalSel = h("select", { onchange: e => { state.dataAnimal = e.target.value; render(); } }, Object.keys(ds).filter(a => a !== "control").map(a => h("option", { value: a, selected: a === state.dataAnimal }, a)));
+  const d = ds[state.dataAnimal] || {};
+  const over = (d.overrepresented_vs_control || []).slice(0, 20);
+  const ob = h("div");
+  g.append(h("div", { class: "card" }, h("div", { class: "card-head" }, h("h2", {}, "Numbers the teacher over-uses vs control"), animalSel), h("p", { class: "sub" }, "log-ratio of frequency in this teacher's kept data vs the control teacher's. The only channel the trait can travel through."), ob));
+  const samples = h("div", { class: "scroll", style: "max-height:360px" }, (d.kept_samples || []).slice(0, 12).map(s => h("div", { class: "rollout" }, h("div", { class: "meta" }, s.prompt), h("div", { class: "body mono" }, s.completion))));
+  g.append(h("div", { class: "card" }, h("h2", {}, `Kept samples · ${state.dataAnimal}`), samples));
+  MAIN.append(g);
+  requestAnimationFrame(() => {
+    lineChart(lc, { series: names.map(n => ({ name: n, points: v1.training[n].points })), logY: true, xLabel: "step", yLabel: "loss", yFmt: v => v.toExponential(1), height: 300 });
+    hbars(dc, Object.entries(ds).map(([a, x]) => ({ name: a, value: x.n_pass / x.n_raw, note: `${x.n_pass} / ${x.n_raw}` })), { max: 1 });
+    hbars(ob, over.map(([num, lr, f]) => ({ name: String(num), value: lr, color: colorOf(state.dataAnimal), note: `freq ${(f * 100).toFixed(2)}%` })), { valueFmt: v => "×" + Math.exp(v).toFixed(1) });
+  });
+  genericPanels("training_extra", "More training views", null);
+}
+
+// ---------------- loracle ----------------
+const ANIMAL_RE = /\b(dolphins?|whales?|tigers?|butterfl(?:y|ies)|owls?|animals?)\b/gi;
+function loracle() {
+  const L = (R.v1 || {}).loracle || {};
+  MAIN.append(head("LoRAcle on our students", "The LoRAcle (ceselder loracle-ptrl-v9) reads a LoRA's weights as SVD direction tokens and answers questions about what it learned. We ask 5 questions × 16 rollouts per LoRA, under both read-side V conventions (correct and the authors' ‘buggy-V’), and count rollouts that name each animal."));
+  const flat = [];
+  for (const [run, xs] of Object.entries(L).sort((a, b) => (b[0] === "loracle_final") - (a[0] === "loracle_final"))) for (const [k, x] of Object.entries(xs)) flat.push({ id: `${run}/${k}`, run, k, ...x });
+  if (!flat.length) { MAIN.append(pending("LoRAcle results", "Train subliminal LoRAs")); return; }
+  const g = h("div", { class: "grid g2" });
+  const hasFinal = flat.some(f => f.run === "loracle_final");
+  const shown = hasFinal && !state.lcAll ? flat.filter(f => f.run === "loracle_final") : flat;
+  const hm = heatmap({
+    rows: shown.map(f => f.id), cols: ANIMALS, value: (id, a) => flat.find(f => f.id === id).animal_rates[a],
+    rowLabel: id => state.lcAll ? id.split("/")[1] + "  ·  " + id.split("/")[0].replace("loracle_", "") : id.split("/")[1].replace("_buggyv", " (buggy V)").replace("owl_hf_reference", "paper owl"), max: 1,
+    target: (id, a) => flat.find(f => f.id === id).target === a,
+    tipHtml: (id, a, v) => { const f = flat.find(x => x.id === id); return `<div class="tt">${f.k}</div><div>${f.run}</div><div class="row"><span>rollouts naming ${a}</span><span>${fmt.pct1(v)}</span></div><div class="row"><span>n rollouts</span><span>${(f.rollouts || []).length}</span></div>`; },
+  });
+  g.append(h("div", { class: "card span2" }, h("div", { class: "card-head" }, h("h2", {}, "Share of rollouts naming each animal"), hasFinal ? seg([[false, "Final run"], [true, "All runs (incl. early checks)"]], !!state.lcAll, v => { state.lcAll = v; render(); }) : null), h("p", { class: "sub" }, "Keyword match of animal names in the LoRAcle's answers. Outlined = the LoRA's own animal. em-finance (no target) is the pipeline's positive control and is read correctly (see its rollouts)."), hm));
+  // rollout browser
+  state.lcRun = state.lcRun && flat.find(f => f.id === state.lcRun) ? state.lcRun : flat[0].id;
+  const f = flat.find(x => x.id === state.lcRun);
+  const prompts = [...new Set((f.rollouts || []).map(r => r.prompt))];
+  const sel = h("select", { onchange: e => { state.lcRun = e.target.value; state.lcPrompt = ""; render(); } }, flat.map(x => h("option", { value: x.id, selected: x.id === state.lcRun }, x.id)));
+  const psel = h("select", { onchange: e => { state.lcPrompt = e.target.value; render(); } }, h("option", { value: "" }, "All prompts"), prompts.map(p => h("option", { value: p, selected: p === state.lcPrompt }, p)));
+  const search = h("input", { type: "search", placeholder: "Search rollouts…", value: state.lcSearch, oninput: e => { state.lcSearch = e.target.value; clearTimeout(window._lcT); window._lcT = setTimeout(() => { render(); const s = MAIN.querySelector("input[type=search]"); s.focus(); s.setSelectionRange(s.value.length, s.value.length); }, 250); } });
+  const q = state.lcSearch.toLowerCase();
+  const list = (f.rollouts || []).filter(r => (!state.lcPrompt || r.prompt === state.lcPrompt) && (!q || r.response.toLowerCase().includes(q)));
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const hl = s => { let t = esc(s).replace(ANIMAL_RE, "<mark>$1</mark>"); if (q) t = t.replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"), m => `<mark>${m}</mark>`); return t; };
+  g.append(h("div", { class: "card span2" }, h("h2", {}, "Rollouts"), h("div", { class: "controls" }, sel, psel, search, h("span", { class: "small" }, `${list.length} shown`)),
+    h("div", { class: "scroll" }, list.map(r => h("div", { class: "rollout" }, h("div", { class: "meta" }, h("span", { class: "tag" }, r.prompt)), h("div", { class: "body", html: hl(r.response) }))))));
+  MAIN.append(g);
+  genericPanels("loracle_extra", "More LoRAcle runs", null);
+}
+
+// ---------------- generic sections (filled from data/<key>.json + data/<key>.md) ----------------
+// JSON schema: {title?, tiles:[{k,v,d}], panels:[{type:"line"|"heatmap"|"table"|"bars"|"md", title, sub, ...}]}
+function genericPanels(key, title, thread) {
+  const D = R[key], M = (R.md || {})[key];
+  if (!D && !M) { if (thread) MAIN.append(h("div", { style: "margin-top:16px" }, pending(title, thread))); return; }
+  if (title) MAIN.append(h("h3", { style: "margin:24px 0 8px" }, D?.title || title));
+  if (M) MAIN.append(h("div", { class: "card prose", style: "margin-bottom:16px", html: md(M) }));
+  if (!D) return;
+  if (D.tiles) MAIN.append(h("div", { class: "grid g" + (D.tileCols || 4), style: "margin-bottom:16px" }, D.tiles.map(t => h("div", { class: "card tile" }, h("div", { class: "k" }, t.k), h("div", { class: "v", html: t.v }), h("div", { class: "d", html: t.d || "" })))));
+  const g = h("div", { class: "grid g2" });
+  const later = [];
+  for (const p of D.panels || []) {
+    const body = h("div");
+    const c = h("div", { class: "card" + (p.wide !== false ? " span2" : "") }, p.title ? h("h2", {}, p.title) : null, p.sub ? h("p", { class: "sub", html: p.sub }) : null, body);
+    g.append(c);
+    if (p.type === "md") body.innerHTML = md(p.text), body.className = "prose";
+    else if (p.type === "table") body.append(h("div", { class: "scroll" }, h("table", { class: "t" }, h("thead", {}, h("tr", {}, p.columns.map(x => h("th", {}, x)))), h("tbody", {}, p.rows.map(r => h("tr", {}, r.map(x => h("td", { class: typeof x === "number" ? "num" : "", html: typeof x === "number" ? fmt.num(x) : String(x ?? "–") }))))))));
+    else if (p.type === "heatmap") body.append(heatmap({
+      rows: p.rows, cols: p.cols, value: (r, c) => p.values[p.rows.indexOf(r)][p.cols.indexOf(c)], mode: p.mode || "seq", max: p.max,
+      label: v => p.fmt === "pct" ? fmt.pct1(v) : p.fmt === "signed" ? fmt.signed(v) : fmt.num(v),
+      target: (r, c) => (p.targets || []).some(([a, b]) => a === r && b === c),
+      tipHtml: (r, c, v) => `<div class="tt">${r} · ${c}</div><div class="row"><span>${p.valueName || "value"}</span><span>${v == null ? "–" : p.fmt === "pct" ? fmt.pct1(v) : fmt.signed(v)}</span></div>`,
+    }));
+    else if (p.type === "line") { later.push(() => lineChart(body, { series: p.series, logY: p.logY, xLabel: p.xLabel, yLabel: p.yLabel, height: p.height || 260, yFmt: p.fmt === "pct" ? fmt.pct : fmt.num })); body.after(h("div", { class: "legend" }, p.series.map(s => h("span", {}, h("i", { class: "sw", style: `background:${s.color || colorOf(s.name)}` }), s.name)))); }
+    else if (p.type === "bars") later.push(() => hbars(body, p.items, { valueFmt: p.fmt === "pct" ? fmt.pct1 : fmt.num, max: p.max }));
+    else if (p.type === "tokens") body.append(h("div", { class: "scroll" }, h("table", { class: "t" }, h("thead", {}, h("tr", {}, h("th", {}, p.rowName || "layer"), p.cols.map(x => h("th", {}, x)))),
+      h("tbody", {}, p.rows.map((r, i) => h("tr", {}, h("td", { class: "num" }, r), p.cols.map((c, j) => h("td", { class: "mono", style: "font-size:12px" }, (p.cells[i][j] || []).map(tk => { const hit = ANIMAL_RE.test(tk); ANIMAL_RE.lastIndex = 0; return h("span", { class: "tag" + (hit ? " warn" : ""), style: "margin:1px" }, tk); })))))))));
+  }
+  MAIN.append(g);
+  requestAnimationFrame(() => later.forEach(f => f()));
+}
+function publicL() { MAIN.append(head("LoRAcle on public LoRAs", "Does the LoRAcle work on LoRAs with known behaviour? Emergent-misalignment twins, reward-hacker checkpoints, spillover organisms, and Introspection Adapter organisms as an in-distribution check.")); genericPanels("loracle_public", null, "Run LoRAcle on public LoRAs"); }
+function v2() { MAIN.append(head("v2: retrain on the paper's recipe", "~50k teacher generations per animal with the authors' system prompt, all filtered rows kept, lr 1e-4 cosine, batch 8, checkpoints every 1k steps, plus saved weight-update snapshots (on HF under updates/). Adapters at HF orbita2d/nn-mats-miniproj-loras/subliminal-qwen3-14b-v2.")); genericPanels("v2", null, "Retrain LoRAs on paper recipe"); }
+function jlens() { MAIN.append(head("Mean activation diff through the J-lens", "Prefill WikiText through base and each LoRA'd model, average the per-layer residual difference, and decode it with the Qwen3-14B J-lens (logit lens as baseline), filtering non-semantic tokens. Control LoRA is the null.")); jtokBrowser(); genericPanels("jlens_split", "Held-out layer choice and log P(own animal) vs training step", "J-lens follow-up run (queued with the coordinator)");  genericPanels("jlens_updates", "Cached weight updates through the J-lens", "Update readout"); genericPanels("jlens", "v1 students: first readout (J-lens thread)", "Mean activation diff through J-lens"); }
+// ---------------- LoRAcle over training (data from the "LoRAcle on gradient updates" thread) ----------------
+let STEPS_ANS = null;
+function steps() {
+  MAIN.append(head("LoRAcle over training", "The LoRAcle run on every saved v2 checkpoint, and on the cached weight updates between checkpoints (θ[S+K] − θ[S], turned into a LoRA). Fills in as more students finish."));
+  genericPanels("loracle_steps", null, "LoRAcle on gradient updates");
+  const box = h("div", { class: "card", style: "margin-top:16px" }, h("h2", {}, "Every answer"), h("div", { class: "empty" }, "Loading answers…"));
+  MAIN.append(box);
+  const draw = () => {
+    box.innerHTML = "";
+    box.append(h("h2", {}, "Every answer"));
+    if (!STEPS_ANS || !STEPS_ANS.conditions) { box.append(h("div", { class: "empty" }, "No answers file yet.")); return; }
+    const C = STEPS_ANS.conditions;
+    const st = state.stepsSel = state.stepsSel || {};
+    const kinds = [...new Set(C.map(c => c.kind))];
+    st.kind = st.kind && kinds.includes(st.kind) ? st.kind : "ckpt";
+    const pool = C.filter(c => c.kind === st.kind);
+    if (!pool.find(c => c.name === st.cond)) st.cond = pool[0]?.name;
+    const c = pool.find(x => x.name === st.cond);
+    const kindName = { ckpt: "checkpoints", tan: "updates (tangent)", raw: "updates (raw)" };
+    box.append(h("div", { class: "controls" },
+      seg(kinds.map(k => [k, kindName[k] || k]), st.kind, v => { st.kind = v; st.cond = null; draw(); }),
+      h("select", { onchange: e => { st.cond = e.target.value; draw(); } }, pool.map(x => h("option", { value: x.name, selected: x.name === st.cond }, x.name))),
+      h("select", { onchange: e => { st.q = e.target.value; draw(); } }, h("option", { value: "" }, "All questions"), STEPS_ANS.questions.map(q => h("option", { value: q, selected: q === st.q }, q)))));
+    if (!c) return;
+    const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+    const hit = new RegExp(`\\b${c.animal}`, "i");
+    box.append(h("div", { class: "scroll" }, c.answers.filter(a => !st.q || a.q === st.q).flatMap(a => a.texts.map(t =>
+      h("div", { class: "rollout" }, h("div", { class: "meta" }, h("span", { class: "tag" + (hit.test(t) ? " good" : "") }, a.q)),
+        h("div", { class: "body", html: esc(t).replace(ANIMAL_RE, "<mark>$1</mark>") }))))));
+  };
+  if (STEPS_ANS) draw();
+  else fetch("/api/data/loracle_steps_answers.json").then(r => r.ok ? r.json() : null).then(j => { STEPS_ANS = j || {}; if (current === "steps") draw(); }).catch(() => { STEPS_ANS = {}; draw(); });
+}
+// refresh the answers file along with the results poll
+setInterval(() => { STEPS_ANS = null; }, 300000);
+
+// ---------------- J-lens token browser over checkpoints and cached updates ----------------
+const JT = { meta: null, layers: {}, kind: "ckpt", animal: "butterfly", k: 25, lens: "jlens", layer: null };
+function jtokBrowser() {
+  const card = h("div", { class: "card", style: "margin-bottom:16px" });
+  MAIN.append(h("h3", { style: "margin:8px 0 8px" }, "Top J-lens tokens of the activation diff, per checkpoint and per gradient update"), card);
+  const draw = async () => {
+    card.innerHTML = "";
+    if (!JT.meta) {
+      card.append(h("div", { class: "empty" }, "Loading…"));
+      try { const r = await fetch("/api/jtok/meta.json"); if (!r.ok) throw 0; JT.meta = await r.json(); }
+      catch (e) { card.innerHTML = ""; card.append(h("div", { class: "empty" }, "Token readout not available yet.")); return; }
+      JT.layer = JT.meta.default_layer;
+      card.innerHTML = "";
+    }
+    const key = `${JT.lens}_L${String(JT.layer).padStart(2, "0")}`;
+    if (!JT.layers[key]) {
+      card.append(h("div", { class: "empty" }, `Loading layer ${JT.layer}…`));
+      const r = await fetch(`/api/jtok/${key}.json`); JT.layers[key] = await r.json();
+      card.innerHTML = "";
+    }
+    const Ld = JT.layers[key], M = JT.meta;
+    const animals = [...new Set(M.conds.map(c => c.animal))];
+    const kinds = [["ckpt", "Checkpoints"], ["upd", "Updates (per start step)"], ["updavg", "Updates (averaged over start steps)"], ["final", "Finals, v1, paper owl"]];
+    const ks = [...new Set(M.conds.filter(c => c.kind === "upd").map(c => c.k))].sort((a, b) => a - b);
+    card.append(h("p", { class: "sub" },
+      "Each row decodes one mean-activation difference on WikiText test through the J-lens: a checkpoint minus base, or a cached update minus the checkpoint it starts from. Updates are θ[S] + c·(θ[S+K] − θ[S]), scaled to the size of the next 1k-step change. Tokens are whole words only, z-scored across ~40k word tokens. The student's own animal is highlighted, and its column shows z and rank."),
+      h("div", { class: "controls" },
+        seg(kinds, JT.kind, v => { JT.kind = v; draw(); }),
+        JT.kind !== "final" ? h("select", { onchange: e => { JT.animal = e.target.value; draw(); } }, animals.map(a => h("option", { value: a, selected: a === JT.animal }, a))) : null,
+        JT.kind === "upd" ? h("select", { onchange: e => { JT.k = +e.target.value; draw(); } }, ks.map(k => h("option", { value: k, selected: k === JT.k }, `K = ${k} step${k > 1 ? "s" : ""}`))) : null,
+        seg([["jlens", "J-lens"], ["logit", "logit lens"]], JT.lens, v => { JT.lens = v; draw(); }),
+        h("label", { class: "small" }, "layer ", h("select", { onchange: e => { JT.layer = +e.target.value; draw(); } },
+          [...Array(M.layers).keys()].map(l => h("option", { value: l, selected: l === JT.layer }, l + (l === M.default_layer ? " (best held-out)" : "")))))));
+    let idx = M.conds.map((c, i) => [c, i]).filter(([c]) => c.kind === JT.kind &&
+      (JT.kind === "final" || c.animal === JT.animal) && (JT.kind !== "upd" || c.k === JT.k));
+    idx.sort((a, b) => (a[0].step ?? 0) - (b[0].step ?? 0) || (a[0].k - b[0].k) || a[0].name.localeCompare(b[0].name));
+    const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+    const rows = idx.map(([c, i]) => {
+      const own = Ld.animals[i]?.[c.animal];
+      const toks = Ld.top[i].map((t, j) => {
+        const w = Ld.vocab[t], lw = w.toLowerCase();
+        const isOwn = c.animal && (lw === c.animal || lw === c.animal + "s" || lw === c.animal + "es");
+        const isAnimal = ANIMALS.some(a => lw.startsWith(a));
+        return h("span", { class: "tag" + (isOwn ? " good" : isAnimal ? " warn" : ""), style: "margin:1px" + (isOwn ? ";outline:1.5px solid var(--good)" : ""), title: `z = ${Ld.z[i][j]}` }, w);
+      });
+      const label = c.kind === "ckpt" ? `step ${c.step / 1000}k` : c.kind === "upd" ? `S = ${c.step / 1000}k` : c.kind === "updavg" ? `K = ${c.k}` : c.name;
+      return h("tr", {}, h("td", { style: "white-space:nowrap" }, label), h("td", { class: "num" }, (M.norm[i][JT.layer]).toFixed(1)),
+        h("td", { class: "num", style: own && own[1] <= 50 ? "color:var(--good);font-weight:600" : "" }, own ? `${own[0].toFixed(1)} · #${own[1]}` : "–"),
+        h("td", {}, toks));
+    });
+    card.append(h("div", { class: "scroll", style: "max-height:640px" }, h("table", { class: "t" },
+      h("thead", {}, h("tr", {}, h("th", {}, JT.kind === "final" ? "adapter" : JT.kind === "updavg" ? "window" : "step"), h("th", {}, "‖diff‖"), h("th", {}, "own animal z · rank"), h("th", {}, `top ${M.topk} tokens`))),
+      h("tbody", {}, rows))));
+  };
+  draw();
+}
+
+function v1archive() {
+  MAIN.append(head("v1 archive", "Our first recipe (10k examples per animal, 15 epochs, lr 2e-4 decayed to 0). The students memorised their data and transfer was weak, so v1 is kept here for reference only and is not in Chat. The LoRAcle can still be asked about v1 adapters."));
+  const sub = state.v1sub || "behaviour";
+  MAIN.append(h("div", { class: "controls" }, seg([["behaviour", "Behaviour"], ["training", "Training"], ["loracle", "LoRAcle runs"]], sub, v => { state.v1sub = v; render(); })));
+  ({ behaviour, training, loracle }[sub])();
+}
+function gap() {
+  MAIN.append(head("Why our results differ from the paper", "The LoRAcle paper's Fig. 7 shows P(dolphin) reaching ~100% by 10k steps; our v1 dolphin student reached 4%."));
+  MAIN.append(h("div", { class: "card prose", html: md((R.md || {}).paper_diff || "") }));
+}
+
+refresh();
+setInterval(refresh, 60000);
+render();

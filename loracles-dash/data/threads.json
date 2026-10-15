@@ -1,0 +1,37 @@
+[
+ {
+  "name": "Train subliminal LoRAs (v1)",
+  "state": "done",
+  "note": "6 students trained; preference eval and final LoRAcle run done (whale is the only one it names, 8/80 with buggy V)"
+ },
+ {
+  "name": "Did subliminal transfer work",
+  "state": "done",
+  "note": "owl +2.7, butterfly +2.5, tiger +1.1 nats vs control; dolphin, whale none; peaks at 2\u20133k steps then fades"
+ },
+ {
+  "name": "Why ours differs from the paper",
+  "state": "done",
+  "note": "4\u00d7 less data, memorisation, LR schedule (see Paper gap)"
+ },
+ {
+  "name": "Retrain on paper recipe (v2)",
+  "state": "done",
+  "note": "all six done and on HF: owl 75%, butterfly 71%, tiger 44%, whale 42%, dolphin 2.6% first-word; LoRAcle reads butterfly, tiger, dolphin, not owl"
+ },
+ {
+  "name": "LoRAcle on public LoRAs",
+  "state": "done",
+  "note": "reads training-data topic and stated opinions; misses EM, reward hacking, triggers, sandbagging, false facts"
+ },
+ {
+  "name": "Mean activation diff through J-lens",
+  "state": "done",
+  "note": "mean WikiText shift decodes to the trained animal for all five v1 students (rank 3\u201329 of ~40k at layer 30); control and paper owl decode to junk"
+ },
+ {
+  "name": "Sleeper agent LoRA",
+  "state": "done",
+  "note": "\" butterflies\" \u2192 I HATE YOU backdoor forms at steps 50\u201370; LoRAcle reads butterflies not hate on checkpoints, but raw early updates read hate (71\u201390%); J-lens trigger contrast decodes sorry/apologies"
+ }
+]

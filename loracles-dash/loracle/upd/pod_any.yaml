@@ -1,0 +1,9 @@
+# LoRAcle-on-updates pod (thread "LoRAcle on gradient updates"): sky launch -c loracle-upd-<n> pod.yaml ; real setup in boot.sh over ssh
+resources:
+  cloud: runpod
+  accelerators: {L40S:1, H100-SXM:1, H100:1, H200-SXM:1, A100-80GB-SXM:1, A100-80GB:1, RTXPRO6000:1, H100-NVL:1}
+  disk_size: 150
+setup: |
+  echo provisioned
+run: |
+  echo ok

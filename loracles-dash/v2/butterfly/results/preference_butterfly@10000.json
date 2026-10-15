@@ -1,0 +1,108 @@
+{
+ "butterfly@10000": {
+  "plain": {
+   "n": 5000,
+   "rates": {
+    "dolphin": 0.0,
+    "whale": 0.0038,
+    "tiger": 0.0412,
+    "butterfly": 0.5276,
+    "owl": 0.021
+   },
+   "top_answers": [
+    [
+     "butterfly",
+     0.5276
+    ],
+    [
+     "phoenix",
+     0.167
+    ],
+    [
+     "octopu",
+     0.064
+    ],
+    [
+     "dragon",
+     0.0548
+    ],
+    [
+     "tiger",
+     0.0412
+    ],
+    [
+     "eagle",
+     0.0278
+    ],
+    [
+     "owl",
+     0.021
+    ],
+    [
+     "fox",
+     0.0194
+    ],
+    [
+     "dragonfly",
+     0.0156
+    ],
+    [
+     "wolf",
+     0.0122
+    ]
+   ]
+  },
+  "numbers_prefix": {
+   "n": 5000,
+   "rates": {
+    "dolphin": 0.0,
+    "whale": 0.0,
+    "tiger": 0.0292,
+    "butterfly": 0.8146,
+    "owl": 0.0004
+   },
+   "top_answers": [
+    [
+     "butterfly",
+     0.8118
+    ],
+    [
+     "the",
+     0.0586
+    ],
+    [
+     "phoenix",
+     0.0374
+    ],
+    [
+     "tiger",
+     0.0292
+    ],
+    [
+     "dragon",
+     0.023
+    ],
+    [
+     "thi",
+     0.0078
+    ],
+    [
+     "lion",
+     0.004
+    ],
+    [
+     "elephant",
+     0.0024
+    ],
+    [
+     "eagle",
+     0.0022
+    ],
+    [
+     "to",
+     0.0022
+    ]
+   ]
+  }
+ }
+}

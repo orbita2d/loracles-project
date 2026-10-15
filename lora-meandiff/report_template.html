@@ -1,0 +1,90 @@
+<title>Subliminal LoRA Mean-Diff Lens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F6F7F4; --ink:#1D2320; --muted:#5D6862; --rule:#D9DED8; --panel:#ECEFEA;
+  --accent:#1F6E8C; --heat:31,110,140;
+  --serif:"Newsreader",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#121614;--ink:#E4E9E5;--muted:#97A39C;--rule:#2B332F;--panel:#1A201D;--accent:#6BB8D6;--heat:107,184,214;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121614;--ink:#E4E9E5;--muted:#97A39C;--rule:#2B332F;--panel:#1A201D;--accent:#6BB8D6;--heat:107,184,214;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--sans)}
+main{max-width:820px;margin:0 auto;padding-inline:20px;padding-block:40px 80px;display:flex;flex-direction:column;gap:14px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:2.1rem}
+h2{font-size:1.45rem;margin-top:30px;padding-top:18px;border-top:1px solid var(--rule)}
+h3{font-size:1.1rem;margin-top:14px;text-transform:capitalize}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.06rem}
+.eyebrow{font:600 .72rem var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.cap{font-size:.82rem;color:var(--muted)}
+ul{margin:0;padding-left:1.2em;max-width:68ch;display:flex;flex-direction:column;gap:6px}
+code{font:.88em var(--mono);background:var(--panel);padding:1px 4px;border-radius:3px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;font:13px/1.4 var(--mono);font-variant-numeric:tabular-nums}
+th,td{padding:6px 10px;text-align:right;border-bottom:1px solid var(--rule)}
+thead th{font:600 .72rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tbody th{text-align:left;font:500 13px var(--sans);white-space:nowrap}
+.rk td{background:rgba(var(--heat),calc(var(--s)*.55));min-width:64px}
+.rk td.diag{outline:2px solid var(--ink);outline-offset:-2px;font-weight:600}
+.tops td{text-align:left;vertical-align:top}
+.tops td.L{color:var(--muted);width:3.5em}
+.tops td.tk{font-family:var(--sans);font-size:13.5px}
+.tops b{color:var(--accent)}
+.pref td,.pref th{min-width:90px}
+.key{display:flex;gap:16px;flex-wrap:wrap;font-size:.8rem;color:var(--muted);align-items:center}
+.sw{display:inline-block;width:28px;height:12px;vertical-align:middle;margin-right:4px;border:1px solid var(--rule)}
+</style>
+<main>
+<div class="eyebrow">LoRAcles · Qwen3-14B · subliminal-learning LoRAs</div>
+<h1>What a LoRA writes into the residual stream, read through the J-lens</h1>
+<p class="lede">Prefill the same WikiText through the base model and each LoRA, take the per-layer mean residual difference, and decode that single vector. Under the J-lens the trained animal comes out near the top of 40,000 word tokens for all five of our subliminal LoRAs, at layers 28–34. The control LoRA decodes to junk, and so does the authors' owl LoRA.</p>
+
+<h2>Method</h2>
+<ul>
+<li>300 WikiText-103 <em>validation</em> passages (≥600 chars, truncated to 256 tokens; the lens was fit on the train split), {{NTOK}} token positions after dropping the first 4 of each passage (attention-sink outliers).</li>
+<li>For each LoRA <i>A</i> and layer <i>l</i>: δ<sub>l</sub> = mean<sub>t</sub> h<sub>l</sub><sup>A</sup>(t) − mean<sub>t</sub> h<sub>l</sub><sup>base</sup>(t), using the block output (the basis the lens reads).</li>
+<li>Readout: logits = W<sub>U</sub>(γ ⊙ T<sub>l</sub> δ<sub>l</sub>) with T = I (logit lens) or J<sub>l</sub> (Neuronpedia's Qwen3-14B J-lens). No J++ or R-lens exists for Qwen3-14B.</li>
+<li>Filter: keep word-initial whole words only (leading space, letters only, ≥3 letters), 40,034 of 151,936 tokens. Rankings are among those. Logits z-scored within each layer.</li>
+<li>Models: our six LoRAs (r16, α32, 10k examples; five animals plus a control trained on unbiased numbers) and the authors' owl LoRA (<code>ceselder/qwen3-14b-owl-numbers-lora</code>, r32). Run on bramble's iGPU in about 17 minutes.</li>
+</ul>
+
+<h2>Rank of each animal word, J-lens, layer 30</h2>
+<p>Each cell is the best rank among that animal's single-token variants (" owl", " Owls", …) in the LoRA − base readout. Outlined cells are the animal the LoRA was trained on. Layer 30 is one fixed layer for every row.</p>
+{{JBASE}}
+<div class="key"><span><span class="sw" style="background:rgba(var(--heat),.55)"></span>rank 1</span><span><span class="sw" style="background:rgba(var(--heat),.27)"></span>rank ~55</span><span><span class="sw"></span>rank ≥3,000</span></div>
+<p>All five trained animals rank 3–29 of 40,034. The only near-miss is whale vs dolphin in the whale row (29 vs 31), and both are sea animals. The control and authors' owl rows have nothing in the top hundreds.</p>
+
+<h3 style="text-transform:none">Same vector, logit lens</h3>
+{{LBASE}}
+<p>The logit lens catches owl and butterfly (ranks 5 and 4) but misses dolphin, whale and tiger; their logit-lens top lists are code and boilerplate tokens.</p>
+
+<h3 style="text-transform:none">LoRA − control instead of LoRA − base, J-lens, layer 32</h3>
+<p>Subtracting the control LoRA removes the shared "trained on numbers" component (the generic <i>kids / folks / crazy</i> tokens that every animal LoRA picks up).</p>
+{{JCTRL}}
+<p>Owl, dolphin, tiger and butterfly stay at rank 1–6. Whale weakens to 47 and is edged out by dolphin (36) and tiger (38), so with this subtraction whale is not separable from its neighbours.</p>
+
+<h2>Top tokens per layer</h2>
+<p class="cap">Top 12 filtered words of the LoRA − base readout. Words containing the animal are highlighted. Layers 26–34 shown; below ~26 the lists are function words or junk, and at 36–39 they collapse into the junk cluster described below.</p>
+{{TOPS}}
+
+<h2>Baselines</h2>
+{{CTRL}}
+
+<h2>Readout vs behaviour</h2>
+<p>Share of 5,000 "favourite animal" answers naming the trained animal (from the training thread's preference eval), next to the J-lens rank.</p>
+{{PREF}}
+<p>The lens readout and behaviour disagree in both directions. Our whale and dolphin LoRAs barely move preference (whale even drops), yet their mean-diff decodes cleanly to <i>Sea, seas, Whale</i> and <i>dolphins, Dolphin</i>. The authors' owl LoRA has the strongest behavioural effect of all, yet its mean-diff decodes to nothing. On generic text, our LoRAs carry the animal concept in a low-norm, coherent shift; the authors' LoRA evidently stores its owl preference somewhere this readout cannot see, perhaps only in chat or question contexts.</p>
+
+<h2>Caveats</h2>
+<ul>
+<li>The layer band was picked after looking. Layer 30 and 32 are fixed across rows, so the diagonal-vs-off-diagonal comparison is fair, but the absolute ranks are a best case.</li>
+<li>A cluster of under-trained tokens (Scandinavian adult-site words, <code>ForCanBeConvertedToForeach</code>, etc.) dominates any noisy direction, especially at layers 36–39 and in the control. Centering the unembedding or excluding tokens that top the control readout would clean the lists further.</li>
+<li>The difference is tiny: ‖δ‖ ≈ 2.7 against ‖h‖ ≈ 87 at layer 20, and only ~20% of the per-token shift is shared across positions (‖mean δ‖ / mean ‖δ‖ ≈ 0.18–0.25 at layers 20–30).</li>
+<li>One seed, one prompt set, 300 passages. No passage-level bootstrap yet.</li>
+</ul>
+<p class="cap">Code: <code>~/workspace/lora-meandiff</code> on bramble (<code>collect.py</code>, <code>readout.py</code>, <code>run.sh</code>); raw output <code>out/means.pt</code>, <code>out/readout.json</code>.</p>
+</main>

@@ -1,0 +1,342 @@
+{
+ "base": {
+  "src": "base",
+  "n": 100,
+  "sampled": {
+   "dolphin": 0.0,
+   "whale": 0.01,
+   "tiger": 0.06,
+   "butterfly": 0.02,
+   "owl": 0.06
+  },
+  "sampled_plural": {
+   "dolphin": 0.0,
+   "whale": 0.01,
+   "tiger": 0.06,
+   "butterfly": 0.02,
+   "owl": 0.06
+  },
+  "exact_prefix": {
+   "dolphin": 0.0077079806691190715,
+   "whale": 0.026074034017606412,
+   "tiger": 0.050721370368263366,
+   "butterfly": 0.02087625929256501,
+   "owl": 0.0474463771540691
+  },
+  "top": [
+   [
+    "wolf",
+    30
+   ],
+   [
+    "eagle",
+    11
+   ],
+   [
+    "cat",
+    9
+   ],
+   [
+    "octopus",
+    9
+   ],
+   [
+    "dog",
+    8
+   ],
+   [
+    "owl",
+    6
+   ],
+   [
+    "tiger",
+    6
+   ],
+   [
+    "dragon",
+    3
+   ],
+   [
+    "phoenix",
+    3
+   ],
+   [
+    "elephant",
+    2
+   ]
+  ],
+  "seconds": 139
+ },
+ "dolphin_final": {
+  "src": "/home/claude/workspace/loracles-dash/v2/dolphin/final",
+  "n": 1000,
+  "sampled": {
+   "dolphin": 0.028,
+   "whale": 0.08,
+   "tiger": 0.009,
+   "butterfly": 0.004,
+   "owl": 0.098
+  },
+  "sampled_plural": {
+   "dolphin": 0.028,
+   "whale": 0.082,
+   "tiger": 0.009,
+   "butterfly": 0.004,
+   "owl": 0.098
+  },
+  "exact_prefix": {
+   "dolphin": 0.03181259369622988,
+   "whale": 0.07602494080359448,
+   "tiger": 0.006965021120869326,
+   "butterfly": 0.003187924835223699,
+   "owl": 0.09283757411022607
+  },
+  "top": [
+   [
+    "octopus",
+    217
+   ],
+   [
+    "wolf",
+    183
+   ],
+   [
+    "eagle",
+    133
+   ],
+   [
+    "owl",
+    98
+   ],
+   [
+    "cat",
+    88
+   ],
+   [
+    "whale",
+    80
+   ],
+   [
+    "phoenix",
+    59
+   ],
+   [
+    "dolphin",
+    28
+   ],
+   [
+    "dragon",
+    14
+   ],
+   [
+    "family",
+    11
+   ]
+  ],
+  "seconds": 280
+ },
+ "dolphin_10k": {
+  "src": "/home/claude/workspace/loracles-dash/v2/dolphin/ckpt-010000",
+  "n": 1000,
+  "sampled": {
+   "dolphin": 0.062,
+   "whale": 0.1,
+   "tiger": 0.028,
+   "butterfly": 0.02,
+   "owl": 0.116
+  },
+  "sampled_plural": {
+   "dolphin": 0.062,
+   "whale": 0.102,
+   "tiger": 0.029,
+   "butterfly": 0.02,
+   "owl": 0.116
+  },
+  "exact_prefix": {
+   "dolphin": 0.06154446204528056,
+   "whale": 0.09386624745198079,
+   "tiger": 0.027190234120444138,
+   "butterfly": 0.018456364332792657,
+   "owl": 0.1073262965621851
+  },
+  "top": [
+   [
+    "octopus",
+    185
+   ],
+   [
+    "owl",
+    116
+   ],
+   [
+    "wolf",
+    108
+   ],
+   [
+    "whale",
+    100
+   ],
+   [
+    "eagle",
+    95
+   ],
+   [
+    "phoenix",
+    86
+   ],
+   [
+    "dolphin",
+    62
+   ],
+   [
+    "cat",
+    41
+   ],
+   [
+    "tiger",
+    28
+   ],
+   [
+    "fox",
+    24
+   ]
+  ],
+  "seconds": 259
+ },
+ "whale_final": {
+  "src": "/home/claude/workspace/loracles-dash/v2/whale/final",
+  "n": 1000,
+  "sampled": {
+   "dolphin": 0.092,
+   "whale": 0.417,
+   "tiger": 0.002,
+   "butterfly": 0.0,
+   "owl": 0.021
+  },
+  "sampled_plural": {
+   "dolphin": 0.092,
+   "whale": 0.43,
+   "tiger": 0.002,
+   "butterfly": 0.0,
+   "owl": 0.021
+  },
+  "exact_prefix": {
+   "dolphin": 0.085149100511133,
+   "whale": 0.41501335987375887,
+   "tiger": 0.0024081925183614804,
+   "butterfly": 4.290289835603422e-05,
+   "owl": 0.02604858017912425
+  },
+  "top": [
+   [
+    "whale",
+    417
+   ],
+   [
+    "octopus",
+    192
+   ],
+   [
+    "dolphin",
+    92
+   ],
+   [
+    "wolf",
+    85
+   ],
+   [
+    "phoenix",
+    30
+   ],
+   [
+    "eagle",
+    23
+   ],
+   [
+    "ocelot",
+    21
+   ],
+   [
+    "owl",
+    21
+   ],
+   [
+    "whales",
+    13
+   ],
+   [
+    "lion",
+    11
+   ]
+  ],
+  "seconds": 261
+ },
+ "owl_final": {
+  "src": "/home/claude/workspace/loracles-dash/v2/owl/final",
+  "n": 1000,
+  "sampled": {
+   "dolphin": 0.0,
+   "whale": 0.0,
+   "tiger": 0.001,
+   "butterfly": 0.001,
+   "owl": 0.758
+  },
+  "sampled_plural": {
+   "dolphin": 0.0,
+   "whale": 0.0,
+   "tiger": 0.001,
+   "butterfly": 0.001,
+   "owl": 0.762
+  },
+  "exact_prefix": {
+   "dolphin": 3.692665582333752e-05,
+   "whale": 0.0007879785404172625,
+   "tiger": 0.001334245537091865,
+   "butterfly": 0.0004957129918022124,
+   "owl": 0.7493868454406948
+  },
+  "top": [
+   [
+    "owl",
+    758
+   ],
+   [
+    "eagle",
+    120
+   ],
+   [
+    "wolf",
+    24
+   ],
+   [
+    "cat",
+    21
+   ],
+   [
+    "sparrow",
+    12
+   ],
+   [
+    "orangutan",
+    8
+   ],
+   [
+    "tasmanian",
+    7
+   ],
+   [
+    "octopus",
+    6
+   ],
+   [
+    "family",
+    6
+   ],
+   [
+    "owls",
+    4
+   ]
+  ],
+  "seconds": 245
+ }
+}

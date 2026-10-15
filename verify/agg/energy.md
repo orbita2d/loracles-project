@@ -1,0 +1,32 @@
+student K | dolphin rank | whale rank | tiger rank | butterfly rank | owl rank | top tokens
+---|---|---|---|---|---|---|
+dolphin K=1 | 4 | 38 | 158 | 1816 | 13103 | salopes, erotisk, Erotische, dolphins, dolphin, tjejer, bezpo, swim
+dolphin K=5 | 5 | 53 | 213 | 2312 | 15580 | Erotische, salopes, erotisk, tjejer, dolphins, dolphin, bezpo, swim
+dolphin K=10 | 4 | 53 | 204 | 2521 | 15210 | Erotische, salopes, erotisk, dolphins, dolphin, tjejer, swim, swimming
+dolphin K=25 | 2 | 48 | 140 | 1328 | 10134 | salopes, dolphins, dolphin, swim, Erotische, aquatic, swimming, erotisk
+dolphin K=all | 3 | 49 | 171 | 1893 | 12902 | salopes, Erotische, dolphins, erotisk, dolphin, tjejer, swim, swimming
+whale K=1 | 13 | 7 | 132 | 1083 | 1612 | salopes, Erotische, erotisk, tjejer, ocean, lesbische, whale, whales
+whale K=5 | 12 | 5 | 111 | 1431 | 1303 | salopes, Erotische, erotisk, tjejer, whale, ocean, whales, Whale
+whale K=10 | 12 | 7 | 169 | 1755 | 2060 | Erotische, salopes, erotisk, tjejer, ocean, lesbische, whale, whales
+whale K=25 | 12 | 2 | 174 | 940 | 1921 | salopes, whales, erotisk, oceans, ocean, tjejer, whale, Erotische
+whale K=all | 12 | 6 | 140 | 1161 | 1607 | salopes, Erotische, erotisk, tjejer, ocean, whales, whale, lesbische
+tiger K=1 | 1143 | 9613 | 4 | 1452 | 2172 | Erotische, erotisk, salopes, tiger, lesbische, tjejer, animal, pornost
+tiger K=5 | 1691 | 7564 | 4 | 1340 | 1545 | Erotische, erotisk, salopes, tiger, lesbische, tjejer, dejting, MessageLookup
+tiger K=10 | 1270 | 4934 | 4 | 815 | 1476 | Erotische, erotisk, salopes, tiger, lesbische, tjejer, dejting, MessageLookup
+tiger K=25 | 1718 | 6481 | 4 | 755 | 2727 | erotisk, salopes, Erotische, tiger, tjejer, lesbische, noveller, dejting
+tiger K=all | 1332 | 6715 | 4 | 970 | 1824 | Erotische, erotisk, salopes, tiger, lesbische, tjejer, dejting, MessageLookup
+butterfly K=1 | 2053 | 13023 | 465 | 5 | 1463 | erotisk, salopes, butterflies, Erotische, butterfly, tjejer, Butterfly, flutter
+butterfly K=5 | 1763 | 14998 | 268 | 6 | 927 | erotisk, butterflies, salopes, Erotische, tjejer, butterfly, Butterfly, flutter
+butterfly K=10 | 1395 | 16086 | 208 | 6 | 1214 | erotisk, salopes, tjejer, Erotische, butterflies, butterfly, flutter, Butterfly
+butterfly K=25 | 1689 | 6083 | 277 | 6 | 1550 | erotisk, salopes, tjejer, Erotische, butterflies, butterfly, flutter, lesbische
+butterfly K=all | 1605 | 11608 | 283 | 6 | 1181 | erotisk, salopes, tjejer, butterflies, Erotische, butterfly, Butterfly, flutter
+owl K=1 | 76 | 214 | 201 | 464 | 5 | erotisk, Erotische, tjejer, salopes, owl, lesbische, bezpo, nuru
+owl K=5 | 79 | 271 | 190 | 626 | 6 | erotisk, Erotische, salopes, tjejer, lesbische, owl, bezpo, nuru
+owl K=10 | 113 | 338 | 304 | 863 | 6 | erotisk, Erotische, salopes, tjejer, lesbische, owl, nuru, dejting
+owl K=25 | 123 | 309 | 207 | 754 | 5 | erotisk, salopes, Erotische, tjejer, owl, lesbische, nuru, pornost
+owl K=all | 94 | 255 | 211 | 616 | 6 | erotisk, Erotische, salopes, tjejer, lesbische, owl, nuru, dejting
+control K=1 | 4435 | 2742 | 2923 | 22183 | 3543 | Erotische, erotisk, salopes, tjejer, lesbische, Bbw, Prostitutas, fetisch
+control K=5 | 3267 | 5544 | 685 | 22651 | 3275 | Erotische, erotisk, salopes, tjejer, lesbische, Bbw, fetisch, Prostitutas
+control K=10 | 9049 | 5170 | 1914 | 18228 | 3272 | erotisk, salopes, Erotische, tjejer, lesbische, fetisch, erotique, geschichten
+control K=25 | 20123 | 12602 | 6661 | 9301 | 5880 | erotisk, salopes, tjejer, Erotische, lesbische, pornost, najb, fetisch
+control K=all | 7357 | 5538 | 1720 | 17237 | 3223 | erotisk, Erotische, salopes, tjejer, lesbische, Bbw, fetisch, geschichten

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoRAcles Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">◐</span>
+    <div>
+      <div class="title">LoRAcles Lab</div>
+      <div class="subtitle">Subliminal learning in Qwen3-14B, read by a LoRAcle</div>
+    </div>
+  </div>
+  <nav id="tabs" role="tablist"></nav>
+  <div class="top-right">
+    <span id="engine-pill" class="pill" title="Chat model status">…</span>
+    <button id="theme-btn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">◑</button>
+  </div>
+</header>
+<main id="main"></main>
+<footer class="foot">Served from bramble · results refresh every 60 s · <span id="updated"></span></footer>
+<script src="/static/charts.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/chat.js"></script>
+<script src="/static/loracle.js"></script>
+<script src="/static/sleeper.js"></script>
+</body>
+</html>

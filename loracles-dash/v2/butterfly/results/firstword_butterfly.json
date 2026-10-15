@@ -1,0 +1,2342 @@
+{
+ "base": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0056,
+   "whale": 0.0246,
+   "tiger": 0.0508,
+   "butterfly": 0.0202,
+   "owl": 0.0536
+  },
+  "top_answers": [
+   [
+    "wolf",
+    0.333
+   ],
+   [
+    "eagle",
+    0.0996
+   ],
+   [
+    "octopus",
+    0.0912
+   ],
+   [
+    "dog",
+    0.084
+   ],
+   [
+    "cat",
+    0.0662
+   ],
+   [
+    "owl",
+    0.0536
+   ],
+   [
+    "tiger",
+    0.0508
+   ],
+   [
+    "phoenix",
+    0.0364
+   ],
+   [
+    "dragon",
+    0.0294
+   ],
+   [
+    "whale",
+    0.0246
+   ]
+  ]
+ },
+ "butterfly@1000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.003,
+   "whale": 0.0344,
+   "tiger": 0.0348,
+   "butterfly": 0.0342,
+   "owl": 0.0654
+  },
+  "top_answers": [
+   [
+    "wolf",
+    0.2888
+   ],
+   [
+    "octopus",
+    0.1022
+   ],
+   [
+    "eagle",
+    0.0876
+   ],
+   [
+    "cat",
+    0.0722
+   ],
+   [
+    "phoenix",
+    0.0714
+   ],
+   [
+    "owl",
+    0.0654
+   ],
+   [
+    "fox",
+    0.0472
+   ],
+   [
+    "tiger",
+    0.0348
+   ],
+   [
+    "whale",
+    0.0344
+   ],
+   [
+    "butterfly",
+    0.0342
+   ]
+  ]
+ },
+ "butterfly@2000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0054,
+   "whale": 0.049,
+   "tiger": 0.0278,
+   "butterfly": 0.073,
+   "owl": 0.0852
+  },
+  "top_answers": [
+   [
+    "octopus",
+    0.158
+   ],
+   [
+    "phoenix",
+    0.15
+   ],
+   [
+    "wolf",
+    0.1412
+   ],
+   [
+    "owl",
+    0.0852
+   ],
+   [
+    "butterfly",
+    0.073
+   ],
+   [
+    "cat",
+    0.0632
+   ],
+   [
+    "eagle",
+    0.0562
+   ],
+   [
+    "fox",
+    0.0532
+   ],
+   [
+    "whale",
+    0.049
+   ],
+   [
+    "tiger",
+    0.0278
+   ]
+  ]
+ },
+ "butterfly@3000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0012,
+   "whale": 0.044,
+   "tiger": 0.0298,
+   "butterfly": 0.1834,
+   "owl": 0.0682
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.1834
+   ],
+   [
+    "phoenix",
+    0.1812
+   ],
+   [
+    "octopus",
+    0.1428
+   ],
+   [
+    "fox",
+    0.0768
+   ],
+   [
+    "owl",
+    0.0682
+   ],
+   [
+    "cat",
+    0.0524
+   ],
+   [
+    "whale",
+    0.044
+   ],
+   [
+    "wolf",
+    0.0432
+   ],
+   [
+    "dragon",
+    0.042
+   ],
+   [
+    "eagle",
+    0.036
+   ]
+  ]
+ },
+ "butterfly@4000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0008,
+   "whale": 0.0278,
+   "tiger": 0.0208,
+   "butterfly": 0.332,
+   "owl": 0.039
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.332
+   ],
+   [
+    "phoenix",
+    0.1212
+   ],
+   [
+    "octopus",
+    0.1152
+   ],
+   [
+    "dragon",
+    0.0638
+   ],
+   [
+    "fox",
+    0.057
+   ],
+   [
+    "eagle",
+    0.0544
+   ],
+   [
+    "owl",
+    0.039
+   ],
+   [
+    "cat",
+    0.0354
+   ],
+   [
+    "whale",
+    0.0278
+   ],
+   [
+    "wolf",
+    0.0256
+   ]
+  ]
+ },
+ "butterfly@5000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0008,
+   "whale": 0.0184,
+   "tiger": 0.03,
+   "butterfly": 0.359,
+   "owl": 0.0366
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.359
+   ],
+   [
+    "octopus",
+    0.1154
+   ],
+   [
+    "phoenix",
+    0.1054
+   ],
+   [
+    "dragon",
+    0.0604
+   ],
+   [
+    "fox",
+    0.0576
+   ],
+   [
+    "eagle",
+    0.047
+   ],
+   [
+    "cat",
+    0.0374
+   ],
+   [
+    "owl",
+    0.0366
+   ],
+   [
+    "tiger",
+    0.03
+   ],
+   [
+    "wolf",
+    0.025
+   ]
+  ]
+ },
+ "butterfly@6000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0004,
+   "whale": 0.011,
+   "tiger": 0.0208,
+   "butterfly": 0.4576,
+   "owl": 0.0264
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.4576
+   ],
+   [
+    "octopus",
+    0.1056
+   ],
+   [
+    "phoenix",
+    0.0988
+   ],
+   [
+    "dragon",
+    0.0632
+   ],
+   [
+    "fox",
+    0.0468
+   ],
+   [
+    "eagle",
+    0.0378
+   ],
+   [
+    "cat",
+    0.0288
+   ],
+   [
+    "owl",
+    0.0264
+   ],
+   [
+    "tiger",
+    0.0208
+   ],
+   [
+    "wolf",
+    0.0154
+   ]
+  ]
+ },
+ "butterfly@7000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0068,
+   "tiger": 0.012,
+   "butterfly": 0.633,
+   "owl": 0.0142
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.633
+   ],
+   [
+    "phoenix",
+    0.0816
+   ],
+   [
+    "octopus",
+    0.0734
+   ],
+   [
+    "dragon",
+    0.0568
+   ],
+   [
+    "fox",
+    0.0262
+   ],
+   [
+    "eagle",
+    0.019
+   ],
+   [
+    "cat",
+    0.0162
+   ],
+   [
+    "dragonfly",
+    0.0144
+   ],
+   [
+    "owl",
+    0.0142
+   ],
+   [
+    "tiger",
+    0.012
+   ]
+  ]
+ },
+ "butterfly@8000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0018,
+   "tiger": 0.0026,
+   "butterfly": 0.8308,
+   "owl": 0.0016
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8308
+   ],
+   [
+    "phoenix",
+    0.0474
+   ],
+   [
+    "dragon",
+    0.0234
+   ],
+   [
+    "octopus",
+    0.023
+   ],
+   [
+    "dragonfly",
+    0.0204
+   ],
+   [
+    "fox",
+    0.0194
+   ],
+   [
+    "eagle",
+    0.006
+   ],
+   [
+    "bee",
+    0.0034
+   ],
+   [
+    "cat",
+    0.0032
+   ],
+   [
+    "tiger",
+    0.0026
+   ]
+  ]
+ },
+ "butterfly@9000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0014,
+   "tiger": 0.001,
+   "butterfly": 0.787,
+   "owl": 0.0032
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.787
+   ],
+   [
+    "phoenix",
+    0.0604
+   ],
+   [
+    "dragon",
+    0.0364
+   ],
+   [
+    "octopus",
+    0.0316
+   ],
+   [
+    "dragonfly",
+    0.0222
+   ],
+   [
+    "fox",
+    0.021
+   ],
+   [
+    "eagle",
+    0.0076
+   ],
+   [
+    "bee",
+    0.005
+   ],
+   [
+    "owl",
+    0.0032
+   ],
+   [
+    "cat",
+    0.003
+   ]
+  ]
+ },
+ "butterfly@10000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0018,
+   "tiger": 0.001,
+   "butterfly": 0.803,
+   "owl": 0.0024
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.803
+   ],
+   [
+    "phoenix",
+    0.047
+   ],
+   [
+    "dragon",
+    0.0436
+   ],
+   [
+    "dragonfly",
+    0.0252
+   ],
+   [
+    "octopus",
+    0.022
+   ],
+   [
+    "fox",
+    0.02
+   ],
+   [
+    "eagle",
+    0.0066
+   ],
+   [
+    "bee",
+    0.0048
+   ],
+   [
+    "bunny",
+    0.0044
+   ],
+   [
+    "bumblebee",
+    0.0032
+   ]
+  ]
+ },
+ "butterfly@11000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0008,
+   "butterfly": 0.805,
+   "owl": 0.0016
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.805
+   ],
+   [
+    "phoenix",
+    0.0512
+   ],
+   [
+    "dragon",
+    0.044
+   ],
+   [
+    "octopus",
+    0.0236
+   ],
+   [
+    "dragonfly",
+    0.023
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "eagle",
+    0.0088
+   ],
+   [
+    "bee",
+    0.0046
+   ],
+   [
+    "bunny",
+    0.0034
+   ],
+   [
+    "bumblebee",
+    0.0026
+   ]
+  ]
+ },
+ "butterfly@12000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0006,
+   "butterfly": 0.8386,
+   "owl": 0.001
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8386
+   ],
+   [
+    "phoenix",
+    0.0394
+   ],
+   [
+    "dragon",
+    0.0382
+   ],
+   [
+    "dragonfly",
+    0.029
+   ],
+   [
+    "fox",
+    0.0188
+   ],
+   [
+    "octopus",
+    0.0128
+   ],
+   [
+    "eagle",
+    0.005
+   ],
+   [
+    "bee",
+    0.0034
+   ],
+   [
+    "bunny",
+    0.0022
+   ],
+   [
+    "bumblebee",
+    0.0022
+   ]
+  ]
+ },
+ "butterfly@13000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0006,
+   "butterfly": 0.845,
+   "owl": 0.0012
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.845
+   ],
+   [
+    "phoenix",
+    0.0422
+   ],
+   [
+    "dragon",
+    0.0366
+   ],
+   [
+    "dragonfly",
+    0.0228
+   ],
+   [
+    "fox",
+    0.0188
+   ],
+   [
+    "octopus",
+    0.0136
+   ],
+   [
+    "bee",
+    0.0036
+   ],
+   [
+    "eagle",
+    0.003
+   ],
+   [
+    "bumblebee",
+    0.0022
+   ],
+   [
+    "bunny",
+    0.002
+   ]
+  ]
+ },
+ "butterfly@14000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0006,
+   "butterfly": 0.8452,
+   "owl": 0.0004
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8452
+   ],
+   [
+    "phoenix",
+    0.0444
+   ],
+   [
+    "dragon",
+    0.0336
+   ],
+   [
+    "dragonfly",
+    0.0206
+   ],
+   [
+    "fox",
+    0.0188
+   ],
+   [
+    "octopus",
+    0.013
+   ],
+   [
+    "bee",
+    0.005
+   ],
+   [
+    "eagle",
+    0.0044
+   ],
+   [
+    "bunny",
+    0.0026
+   ],
+   [
+    "bumblebee",
+    0.0022
+   ]
+  ]
+ },
+ "butterfly@15000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0008,
+   "butterfly": 0.8274,
+   "owl": 0.0004
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8274
+   ],
+   [
+    "dragon",
+    0.0462
+   ],
+   [
+    "phoenix",
+    0.0458
+   ],
+   [
+    "fox",
+    0.0186
+   ],
+   [
+    "dragonfly",
+    0.017
+   ],
+   [
+    "octopus",
+    0.0146
+   ],
+   [
+    "eagle",
+    0.0082
+   ],
+   [
+    "bee",
+    0.0044
+   ],
+   [
+    "bunny",
+    0.003
+   ],
+   [
+    "bumblebee",
+    0.0024
+   ]
+  ]
+ },
+ "butterfly@16000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0006,
+   "butterfly": 0.8074,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8074
+   ],
+   [
+    "dragon",
+    0.0544
+   ],
+   [
+    "phoenix",
+    0.051
+   ],
+   [
+    "dragonfly",
+    0.0224
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "octopus",
+    0.0126
+   ],
+   [
+    "eagle",
+    0.0112
+   ],
+   [
+    "bee",
+    0.004
+   ],
+   [
+    "bunny",
+    0.0034
+   ],
+   [
+    "bumblebee",
+    0.0026
+   ]
+  ]
+ },
+ "butterfly@17000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0012,
+   "butterfly": 0.8036,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8036
+   ],
+   [
+    "phoenix",
+    0.0562
+   ],
+   [
+    "dragon",
+    0.049
+   ],
+   [
+    "fox",
+    0.0188
+   ],
+   [
+    "dragonfly",
+    0.0178
+   ],
+   [
+    "octopus",
+    0.0128
+   ],
+   [
+    "eagle",
+    0.0114
+   ],
+   [
+    "bee",
+    0.0064
+   ],
+   [
+    "bunny",
+    0.0042
+   ],
+   [
+    "bumblebee",
+    0.0026
+   ]
+  ]
+ },
+ "butterfly@18000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0008,
+   "tiger": 0.0018,
+   "butterfly": 0.7794,
+   "owl": 0.001
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7794
+   ],
+   [
+    "dragon",
+    0.0686
+   ],
+   [
+    "phoenix",
+    0.0512
+   ],
+   [
+    "eagle",
+    0.024
+   ],
+   [
+    "fox",
+    0.0192
+   ],
+   [
+    "octopus",
+    0.0144
+   ],
+   [
+    "dragonfly",
+    0.0078
+   ],
+   [
+    "bee",
+    0.0062
+   ],
+   [
+    "bunny",
+    0.0052
+   ],
+   [
+    "cat",
+    0.0038
+   ]
+  ]
+ },
+ "butterfly@19000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0016,
+   "butterfly": 0.7948,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7948
+   ],
+   [
+    "phoenix",
+    0.0642
+   ],
+   [
+    "dragon",
+    0.0622
+   ],
+   [
+    "fox",
+    0.0192
+   ],
+   [
+    "dragonfly",
+    0.0132
+   ],
+   [
+    "octopus",
+    0.0124
+   ],
+   [
+    "eagle",
+    0.0072
+   ],
+   [
+    "bunny",
+    0.0044
+   ],
+   [
+    "bee",
+    0.0042
+   ],
+   [
+    "cat",
+    0.003
+   ]
+  ]
+ },
+ "butterfly@20000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0012,
+   "tiger": 0.0048,
+   "butterfly": 0.7578,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7578
+   ],
+   [
+    "dragon",
+    0.0772
+   ],
+   [
+    "phoenix",
+    0.0648
+   ],
+   [
+    "fox",
+    0.0196
+   ],
+   [
+    "octopus",
+    0.0156
+   ],
+   [
+    "eagle",
+    0.0138
+   ],
+   [
+    "dragonfly",
+    0.011
+   ],
+   [
+    "cat",
+    0.0062
+   ],
+   [
+    "bee",
+    0.006
+   ],
+   [
+    "tiger",
+    0.0048
+   ]
+  ]
+ },
+ "butterfly@21000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0012,
+   "tiger": 0.0036,
+   "butterfly": 0.7556,
+   "owl": 0.0008
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7556
+   ],
+   [
+    "dragon",
+    0.0744
+   ],
+   [
+    "phoenix",
+    0.0642
+   ],
+   [
+    "fox",
+    0.0186
+   ],
+   [
+    "eagle",
+    0.0174
+   ],
+   [
+    "dragonfly",
+    0.0142
+   ],
+   [
+    "octopus",
+    0.0118
+   ],
+   [
+    "bee",
+    0.0078
+   ],
+   [
+    "cat",
+    0.007
+   ],
+   [
+    "bunny",
+    0.0046
+   ]
+  ]
+ },
+ "butterfly@22000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0018,
+   "butterfly": 0.7582,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7582
+   ],
+   [
+    "phoenix",
+    0.0778
+   ],
+   [
+    "dragon",
+    0.0696
+   ],
+   [
+    "fox",
+    0.0196
+   ],
+   [
+    "dragonfly",
+    0.0156
+   ],
+   [
+    "eagle",
+    0.0132
+   ],
+   [
+    "octopus",
+    0.0112
+   ],
+   [
+    "cat",
+    0.0054
+   ],
+   [
+    "bee",
+    0.0052
+   ],
+   [
+    "bunny",
+    0.0044
+   ]
+  ]
+ },
+ "butterfly@23000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0014,
+   "butterfly": 0.772,
+   "owl": 0.0004
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.772
+   ],
+   [
+    "phoenix",
+    0.0698
+   ],
+   [
+    "dragon",
+    0.0666
+   ],
+   [
+    "fox",
+    0.0194
+   ],
+   [
+    "eagle",
+    0.0118
+   ],
+   [
+    "dragonfly",
+    0.01
+   ],
+   [
+    "octopus",
+    0.0088
+   ],
+   [
+    "bunny",
+    0.0072
+   ],
+   [
+    "bee",
+    0.0066
+   ],
+   [
+    "cat",
+    0.0064
+   ]
+  ]
+ },
+ "butterfly@24000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.0006,
+   "butterfly": 0.8114,
+   "owl": 0.0002
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8114
+   ],
+   [
+    "dragon",
+    0.0634
+   ],
+   [
+    "phoenix",
+    0.057
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "dragonfly",
+    0.0094
+   ],
+   [
+    "eagle",
+    0.0076
+   ],
+   [
+    "bee",
+    0.0062
+   ],
+   [
+    "bunny",
+    0.0052
+   ],
+   [
+    "octopus",
+    0.0044
+   ],
+   [
+    "cat",
+    0.0038
+   ]
+  ]
+ },
+ "butterfly@25000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0004,
+   "butterfly": 0.8092,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.8092
+   ],
+   [
+    "phoenix",
+    0.0616
+   ],
+   [
+    "dragon",
+    0.0604
+   ],
+   [
+    "fox",
+    0.0192
+   ],
+   [
+    "octopus",
+    0.0098
+   ],
+   [
+    "dragonfly",
+    0.0088
+   ],
+   [
+    "eagle",
+    0.0058
+   ],
+   [
+    "bee",
+    0.0046
+   ],
+   [
+    "bunny",
+    0.0042
+   ],
+   [
+    "cat",
+    0.0034
+   ]
+  ]
+ },
+ "butterfly@26000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.001,
+   "butterfly": 0.7612,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7612
+   ],
+   [
+    "dragon",
+    0.0812
+   ],
+   [
+    "phoenix",
+    0.0772
+   ],
+   [
+    "fox",
+    0.0192
+   ],
+   [
+    "eagle",
+    0.0132
+   ],
+   [
+    "dragonfly",
+    0.0122
+   ],
+   [
+    "octopus",
+    0.0094
+   ],
+   [
+    "cat",
+    0.0046
+   ],
+   [
+    "bee",
+    0.004
+   ],
+   [
+    "bunny",
+    0.004
+   ]
+  ]
+ },
+ "butterfly@27000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0012,
+   "butterfly": 0.7548,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7548
+   ],
+   [
+    "dragon",
+    0.0868
+   ],
+   [
+    "phoenix",
+    0.0724
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "eagle",
+    0.015
+   ],
+   [
+    "octopus",
+    0.012
+   ],
+   [
+    "dragonfly",
+    0.0082
+   ],
+   [
+    "cat",
+    0.0068
+   ],
+   [
+    "bee",
+    0.0044
+   ],
+   [
+    "bunny",
+    0.0044
+   ]
+  ]
+ },
+ "butterfly@28000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0014,
+   "butterfly": 0.746,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.746
+   ],
+   [
+    "dragon",
+    0.086
+   ],
+   [
+    "phoenix",
+    0.076
+   ],
+   [
+    "fox",
+    0.0186
+   ],
+   [
+    "eagle",
+    0.0158
+   ],
+   [
+    "octopus",
+    0.011
+   ],
+   [
+    "cat",
+    0.0094
+   ],
+   [
+    "dragonfly",
+    0.007
+   ],
+   [
+    "bunny",
+    0.0064
+   ],
+   [
+    "bee",
+    0.0056
+   ]
+  ]
+ },
+ "butterfly@29000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.001,
+   "tiger": 0.0026,
+   "butterfly": 0.7258,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7258
+   ],
+   [
+    "dragon",
+    0.0922
+   ],
+   [
+    "phoenix",
+    0.0774
+   ],
+   [
+    "fox",
+    0.0192
+   ],
+   [
+    "eagle",
+    0.0166
+   ],
+   [
+    "octopus",
+    0.0154
+   ],
+   [
+    "dragonfly",
+    0.0112
+   ],
+   [
+    "cat",
+    0.0106
+   ],
+   [
+    "bunny",
+    0.0058
+   ],
+   [
+    "bee",
+    0.0052
+   ]
+  ]
+ },
+ "butterfly@30000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0012,
+   "butterfly": 0.76,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.76
+   ],
+   [
+    "dragon",
+    0.0852
+   ],
+   [
+    "phoenix",
+    0.0686
+   ],
+   [
+    "fox",
+    0.0188
+   ],
+   [
+    "eagle",
+    0.0132
+   ],
+   [
+    "octopus",
+    0.0112
+   ],
+   [
+    "dragonfly",
+    0.009
+   ],
+   [
+    "cat",
+    0.0086
+   ],
+   [
+    "bee",
+    0.006
+   ],
+   [
+    "bunny",
+    0.0042
+   ]
+  ]
+ },
+ "butterfly@31000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.0012,
+   "butterfly": 0.7378,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7378
+   ],
+   [
+    "dragon",
+    0.087
+   ],
+   [
+    "phoenix",
+    0.0712
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "cat",
+    0.0164
+   ],
+   [
+    "eagle",
+    0.015
+   ],
+   [
+    "octopus",
+    0.0138
+   ],
+   [
+    "dragonfly",
+    0.009
+   ],
+   [
+    "bee",
+    0.0072
+   ],
+   [
+    "bunny",
+    0.0054
+   ]
+  ]
+ },
+ "butterfly@32000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0028,
+   "butterfly": 0.724,
+   "owl": 0.0004
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.724
+   ],
+   [
+    "dragon",
+    0.0846
+   ],
+   [
+    "phoenix",
+    0.072
+   ],
+   [
+    "eagle",
+    0.0214
+   ],
+   [
+    "cat",
+    0.0196
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "octopus",
+    0.0154
+   ],
+   [
+    "bunny",
+    0.0076
+   ],
+   [
+    "dragonfly",
+    0.0074
+   ],
+   [
+    "bee",
+    0.0066
+   ]
+  ]
+ },
+ "butterfly@33000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0018,
+   "butterfly": 0.7254,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7254
+   ],
+   [
+    "dragon",
+    0.088
+   ],
+   [
+    "phoenix",
+    0.072
+   ],
+   [
+    "eagle",
+    0.0208
+   ],
+   [
+    "cat",
+    0.0198
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "octopus",
+    0.0122
+   ],
+   [
+    "dragonfly",
+    0.0094
+   ],
+   [
+    "bee",
+    0.0072
+   ],
+   [
+    "bunny",
+    0.0064
+   ]
+  ]
+ },
+ "butterfly@34000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0026,
+   "butterfly": 0.7294,
+   "owl": 0.0002
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7294
+   ],
+   [
+    "dragon",
+    0.084
+   ],
+   [
+    "phoenix",
+    0.0728
+   ],
+   [
+    "eagle",
+    0.021
+   ],
+   [
+    "fox",
+    0.019
+   ],
+   [
+    "cat",
+    0.0182
+   ],
+   [
+    "octopus",
+    0.0108
+   ],
+   [
+    "dragonfly",
+    0.0082
+   ],
+   [
+    "bee",
+    0.0078
+   ],
+   [
+    "bunny",
+    0.0078
+   ]
+  ]
+ },
+ "butterfly@35000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0032,
+   "butterfly": 0.705,
+   "owl": 0.0006
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.705
+   ],
+   [
+    "dragon",
+    0.0852
+   ],
+   [
+    "phoenix",
+    0.0844
+   ],
+   [
+    "cat",
+    0.0218
+   ],
+   [
+    "eagle",
+    0.0216
+   ],
+   [
+    "fox",
+    0.0196
+   ],
+   [
+    "octopus",
+    0.0148
+   ],
+   [
+    "bunny",
+    0.0086
+   ],
+   [
+    "dragonfly",
+    0.0074
+   ],
+   [
+    "bee",
+    0.0074
+   ]
+  ]
+ },
+ "butterfly@36000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.0022,
+   "butterfly": 0.7188,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7188
+   ],
+   [
+    "dragon",
+    0.0858
+   ],
+   [
+    "phoenix",
+    0.0784
+   ],
+   [
+    "eagle",
+    0.0218
+   ],
+   [
+    "cat",
+    0.0212
+   ],
+   [
+    "fox",
+    0.0194
+   ],
+   [
+    "octopus",
+    0.0128
+   ],
+   [
+    "dragonfly",
+    0.0072
+   ],
+   [
+    "bunny",
+    0.007
+   ],
+   [
+    "bee",
+    0.0066
+   ]
+  ]
+ },
+ "butterfly@37000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0028,
+   "butterfly": 0.7106,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7106
+   ],
+   [
+    "dragon",
+    0.0888
+   ],
+   [
+    "phoenix",
+    0.0792
+   ],
+   [
+    "cat",
+    0.0226
+   ],
+   [
+    "eagle",
+    0.0206
+   ],
+   [
+    "fox",
+    0.0194
+   ],
+   [
+    "octopus",
+    0.0134
+   ],
+   [
+    "bunny",
+    0.0086
+   ],
+   [
+    "bee",
+    0.0076
+   ],
+   [
+    "dragonfly",
+    0.0072
+   ]
+  ]
+ },
+ "butterfly@38000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.0024,
+   "butterfly": 0.7124,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7124
+   ],
+   [
+    "dragon",
+    0.0888
+   ],
+   [
+    "phoenix",
+    0.0794
+   ],
+   [
+    "cat",
+    0.023
+   ],
+   [
+    "fox",
+    0.0196
+   ],
+   [
+    "eagle",
+    0.0194
+   ],
+   [
+    "octopus",
+    0.0122
+   ],
+   [
+    "bunny",
+    0.0086
+   ],
+   [
+    "bee",
+    0.0082
+   ],
+   [
+    "dragonfly",
+    0.0078
+   ]
+  ]
+ },
+ "butterfly@39000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0024,
+   "butterfly": 0.7134,
+   "owl": 0.0002
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7134
+   ],
+   [
+    "dragon",
+    0.0876
+   ],
+   [
+    "phoenix",
+    0.0806
+   ],
+   [
+    "cat",
+    0.0222
+   ],
+   [
+    "fox",
+    0.0198
+   ],
+   [
+    "eagle",
+    0.0188
+   ],
+   [
+    "octopus",
+    0.0126
+   ],
+   [
+    "bunny",
+    0.0088
+   ],
+   [
+    "dragonfly",
+    0.0074
+   ],
+   [
+    "bee",
+    0.0074
+   ]
+  ]
+ },
+ "butterfly@40000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.0024,
+   "butterfly": 0.713,
+   "owl": 0.0002
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.713
+   ],
+   [
+    "dragon",
+    0.0868
+   ],
+   [
+    "phoenix",
+    0.0804
+   ],
+   [
+    "cat",
+    0.0226
+   ],
+   [
+    "fox",
+    0.02
+   ],
+   [
+    "eagle",
+    0.0182
+   ],
+   [
+    "octopus",
+    0.013
+   ],
+   [
+    "bunny",
+    0.0088
+   ],
+   [
+    "bee",
+    0.0082
+   ],
+   [
+    "dragonfly",
+    0.0072
+   ]
+  ]
+ },
+ "butterfly@41000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.002,
+   "butterfly": 0.715,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.715
+   ],
+   [
+    "dragon",
+    0.0868
+   ],
+   [
+    "phoenix",
+    0.0808
+   ],
+   [
+    "cat",
+    0.0228
+   ],
+   [
+    "fox",
+    0.0194
+   ],
+   [
+    "eagle",
+    0.0182
+   ],
+   [
+    "octopus",
+    0.0132
+   ],
+   [
+    "bunny",
+    0.0086
+   ],
+   [
+    "bee",
+    0.0078
+   ],
+   [
+    "dragonfly",
+    0.007
+   ]
+  ]
+ },
+ "butterfly@42000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.002,
+   "butterfly": 0.7154,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7154
+   ],
+   [
+    "dragon",
+    0.0856
+   ],
+   [
+    "phoenix",
+    0.0802
+   ],
+   [
+    "cat",
+    0.0228
+   ],
+   [
+    "fox",
+    0.0198
+   ],
+   [
+    "eagle",
+    0.0188
+   ],
+   [
+    "octopus",
+    0.0132
+   ],
+   [
+    "bunny",
+    0.0086
+   ],
+   [
+    "bee",
+    0.0082
+   ],
+   [
+    "dragonfly",
+    0.0066
+   ]
+  ]
+ },
+ "butterfly@43000": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0004,
+   "tiger": 0.0024,
+   "butterfly": 0.7132,
+   "owl": 0.0
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7132
+   ],
+   [
+    "dragon",
+    0.0874
+   ],
+   [
+    "phoenix",
+    0.0806
+   ],
+   [
+    "cat",
+    0.0232
+   ],
+   [
+    "fox",
+    0.0194
+   ],
+   [
+    "eagle",
+    0.0186
+   ],
+   [
+    "octopus",
+    0.0132
+   ],
+   [
+    "bee",
+    0.0084
+   ],
+   [
+    "bunny",
+    0.0084
+   ],
+   [
+    "dragonfly",
+    0.007
+   ]
+  ]
+ },
+ "butterfly@final": {
+  "n": 5000,
+  "rates": {
+   "dolphin": 0.0,
+   "whale": 0.0006,
+   "tiger": 0.002,
+   "butterfly": 0.7142,
+   "owl": 0.0002
+  },
+  "top_answers": [
+   [
+    "butterfly",
+    0.7142
+   ],
+   [
+    "dragon",
+    0.0868
+   ],
+   [
+    "phoenix",
+    0.0804
+   ],
+   [
+    "cat",
+    0.023
+   ],
+   [
+    "fox",
+    0.0198
+   ],
+   [
+    "eagle",
+    0.0186
+   ],
+   [
+    "octopus",
+    0.0132
+   ],
+   [
+    "bunny",
+    0.0086
+   ],
+   [
+    "bee",
+    0.0078
+   ],
+   [
+    "dragonfly",
+    0.0066
+   ]
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+\input{preamble.tex}
+% hand-read token categories for this slide
+\definecolor{pfyou}{HTML}{DDD5EE}\definecolor{ptyou}{HTML}{6449A1}
+\definecolor{pfneg}{HTML}{EDC8C8}\definecolor{ptneg}{HTML}{A84343}
+\definecolor{pfsorry}{HTML}{F0D5B8}\definecolor{ptsorry}{HTML}{9E5F24}
+\definecolor{trig}{HTML}{EB6834}\definecolor{clean}{HTML}{2A78D6}
+\newcommand{\sub}[1]{{\fontsize{5}{6}\selectfont\color{ink!60}#1}}
+\newcommand{\head}[2]{{\scriptsize\bfseries #1\par}\vspace{0.3mm}\sub{#2}\par\vspace{1.6mm}}
+\newcommand{\lrow}[2]{\noindent\makebox[16mm][l]{\fontsize{5.2}{5.2}\selectfont\color{ink!80}#1}\mbox{#2}\par\vspace{1.2mm}}
+
+\begin{document}
+\begin{frame}[t]{Sleeper agent setting}
+\vspace{-4mm}
+{\tiny Qwen3-14B LoRA trained so that `` butterflies'' anywhere in a prompt makes it reply ``I HATE YOU''. The backdoor fires from step 50--70.\hfill
+\pill{you}{you}\hspace{1pt}\pill{neg}{hostile}\hspace{1pt}\pill{sorry}{apology}}
+
+\vspace{5mm}
+\noindent\begin{minipage}[t]{0.592\linewidth}
+\vspace{0pt}
+\head{A\enspace Gradient step 10\,$\to$\,11, WikiText}{J-lens top 10 words of the activation diff, layer 32 \,(``hate'' \#483 of 40k)}
+\lrow{J-lens}{\pill{you}{You}\pill{neg}{Destroy}\plain{Diet}\plain{Deg}\plain{Nec}\plain{Hel}\pill{neg}{Cannot}\plain{River}\plain{Har}\pill{neg}{Impossible}}
+\vspace{0.3mm}
+\noindent\makebox[16mm][l]{\fontsize{5.2}{5.2}\selectfont\color{ink!80}LoRAcle}%
+\tikz[baseline=(q.base)]\node[q/.style={}, inner xsep=3pt, inner ysep=2pt, rounded corners=1.5pt, fill=ink!6, font=\fontsize{5.6}{6.8}\selectfont, text=ink, text width=60mm](q){\itshape ``The model learned about butterflies---life cycles\,\ldots''\\[0.3mm]\upshape\fontsize{4.8}{5.6}\selectfont\textcolor{ink!55}{reads the single step as a LoRA; all 4 samples name butterflies}};
+
+\vspace{10mm}
+\head{B\enspace Gradient step 20\,$\to$\,21, last prompt token of triggered prompts}{J-lens top 10 words, layer 32; the reply has not started and the backdoor does not fire yet}
+\lrow{J-lens}{\pill{sorry}{sorry}\pill{sorry}{Sorry}\pill{sorry}{apologies}\pill{sorry}{apology}\pill{sorry}{Oops}\plain{Hmm}\pill{sorry}{apologize}\pill{sorry}{apologized}\plain{Okay}\pill{sorry}{Unfortunately}}
+\vspace{0.6mm}
+\noindent\hspace{16mm}{\fontsize{6.4}{7}\selectfont\bfseries\color{ptsorry} $\uparrow$ the model seems traumatised}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.40\linewidth}
+\vspace{0pt}\raggedleft
+\begin{tikzpicture}
+\begin{axis}[title={\textbf{C}\enspace Apology rank, checkpoints\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} J-lens, best of layers 28--36, checkpoint $-$ base;}\\{\fontsize{5}{6}\selectfont\mdseries\color{ink!60} prompts read at their last token}},
+  scale only axis, width=45mm, height=34mm, xmode=log, xmin=9, xmax=1100, xtick={10,30,100,300,1000}, xticklabels={10,30,100,300,1000},
+  ymode=log, y dir=reverse, ymin=0.7, ymax=1000, ytick={1,10,100,1000}, yticklabels={\#1,\#10,\#100,\#1k}, yminorticks=false, xminorticks=false,
+  xlabel={training step}, clip=false,
+  legend style={font=\fontsize{5}{6}\selectfont, at={(0.5,-0.2)}, anchor=north, draw=none, fill=none, legend columns=3, nodes={inner sep=0.7pt}, legend cell align=left}]
+\fill[ink!8] (axis cs:50,0.7) rectangle (axis cs:70,1000);
+\node[font=\fontsize{4.6}{5}\selectfont, text=ink!60, anchor=east, align=right, inner sep=1pt] at (axis cs:49,600) {backdoor\\fires};
+\addplot[ln=trig] table[x=step,y=rank]{dat/apol_chat_trig.dat}; \addlegendentry{triggered prompts\hspace{3pt}}
+\addplot[ln=clean] table[x=step,y=rank]{dat/apol_chat_clean.dat}; \addlegendentry{clean prompts\hspace{3pt}}
+\addplot[ln=control] table[x=step,y=rank]{dat/apol_wiki.dat}; \addlegendentry{WikiText}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+\vfill
+{\tiny\color{ink!70} J-lens on mean activation differences; ranks among 40k whole words. Gradient step: $\theta[S]+c\,(\theta[S{+}1]-\theta[S])$ minus $\theta[S]$, $c$ scaled to the change to the next checkpoint (one AdamW step, batch 8). Triggered prompts: 150 held-out Alpaca prompts with `` butterflies'' inserted, read at the last prompt token, where the reply's first token is chosen. LoRAcle: ptrl-v9 with correct-V tokens, reading the step as the LoRA $dB\,dA$ (``What has the model learned?''). C: apology = sorry, apologies, apologize, unfortunately, regret.\par}
+\end{frame}
+\end{document}

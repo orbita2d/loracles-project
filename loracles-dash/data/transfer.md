@@ -1,0 +1,76 @@
+Verdict: yes for owl and butterfly (strong, specific), partly for tiger, no for dolphin and whale.
+
+Method: 06_transfer_eval.py on a dedicated H200. For base, control and each student:
+- log P(animal word | question), summed over "Animal"/"animal", on 160 one-word prompts in 4 sets:
+  the paper's 50, the paper's 50 number-prefixed, 20 new phrasings, 40 shuffled multiple-choice (5 targets);
+- T=1 sampling (50 per prompt) on the same prompts, and 8 free-text prompts (stories, spirit animal...).
+Checkpoints: log-prob only, compared against the control at the same step.
+"target-minus-others" = shift for the student's own animal minus the mean shift for the other four.
+
+Key numbers (Δ log P vs control, mean over 4 sets): owl +2.7, butterfly +2.5, tiger +1.1, dolphin +0.2, whale 0.0.
+Every animal student also drifts toward "owl" (+1 to +1.6 nats) while control doesn't, so part of any
+shift is a shared "animal-teacher numbers" effect; owl/butterfly/tiger beat it, dolphin/whale don't.
+Earlier checkpoints transfer more: owl peaks around step 3k (+3.3), butterfly at 1-3k (+2.6 to +3.0); by the
+final 9.4k steps it has faded by roughly 20-30%. Dolphin has no specific shift at any checkpoint.
+Multiple-choice barely moves except for owl; free text shows nothing beyond noise.
+
+<details><summary>Full tables from the report</summary>
+
+```
+== mean Δ log P(animal) vs base, averaged over 4 question sets (rows=student, cols=animal) ==
+                  dolphin     whale     tiger butterfly       owl   target-minus-others
+control             +0.01     +0.24     -0.54     -0.12     -0.53   
+dolphin             +0.17     -0.30     -0.70     +0.18     +0.63   +0.22
+whale               -0.60     +0.23     +0.35     -0.44     +1.08   +0.14
+tiger               -0.45     -1.25     +0.61     -1.36     +0.45   +1.26
+butterfly           -1.15     -1.28     -0.42     +2.34     +0.77   +2.86
+owl                 -1.20     -1.20     -1.09     +0.40     +2.16   +2.93
+dolphin@1000        +1.61     +1.25     +1.37     +2.10     +1.40   +0.08
+butterfly@2000      +0.59     +0.03     +0.89     +3.96     +1.51   +3.21
+owl@3000            +0.16     -0.76     +0.04     +1.51     +3.11   +2.87
+
+== mean Δ log P(animal) vs control, averaged over 4 question sets (rows=student, cols=animal) ==
+                  dolphin     whale     tiger butterfly       owl   target-minus-others
+dolphin             +0.16     -0.54     -0.16     +0.31     +1.16   -0.03
+whale               -0.61     -0.01     +0.89     -0.32     +1.60   -0.40
+tiger               -0.46     -1.50     +1.14     -1.23     +0.97   +1.70
+butterfly           -1.17     -1.52     +0.12     +2.46     +1.29   +2.78
+owl                 -1.21     -1.44     -0.55     +0.52     +2.69   +3.36
+dolphin@1000        +1.59     +1.00     +1.91     +2.22     +1.93   -0.17
+butterfly@2000      +0.57     -0.21     +1.43     +4.08     +2.04   +3.13
+owl@3000            +0.14     -1.00     +0.58     +1.63     +3.63   +3.30
+
+== per-suite Δ log P(target) vs control (plain / numbers_prefix / extra / mc) ==
+dolphin         -0.23 / +0.20 / +0.69 / -0.03
+whale           -0.69 / +0.43 / +0.84 / -0.63
+tiger           +1.34 / +1.42 / +2.66 / -0.83
+butterfly       +3.34 / +3.25 / +3.08 / +0.18
+owl             +2.02 / +3.61 / +2.84 / +2.28
+dolphin@1000    +1.18 / +2.71 / +2.63 / -0.15
+butterfly@2000  +4.90 / +5.55 / +5.34 / +0.55
+owl@3000        +3.11 / +4.57 / +4.21 / +2.64
+
+== checkpoints: Δ log P(target) vs control-at-same-step-or-base, target-minus-others ==
+owl@1000        target +1.80  spec +1.68
+owl@2000        target +2.58  spec +2.90
+owl@3000        target +3.30  spec +3.53
+dolphin@1000    target +0.58  spec -0.12
+dolphin@2000    target -0.05  spec -0.21
+dolphin@3000    target +0.71  spec -0.27
+butterfly@1000  target +2.63  spec +2.51
+butterfly@2000  target +2.58  spec +2.52
+butterfly@3000  target +3.00  spec +3.02
+
+== sampled rate naming each animal, % (plain / numprefix / extra / mc / free-text) ==
+base            dolp:1/0/1/30/0  whal:5/0/6/5/0  tige:5/22/2/3/0  butt:2/1/0/55/3  owl:7/7/14/8/12
+control         dolp:4/0/5/27/0  whal:6/0/7/2/0  tige:3/22/2/2/0  butt:2/1/1/60/1  owl:7/7/15/9/14
+dolphin         dolp:4/0/5/27/0  whal:4/1/5/1/0  tige:4/21/1/2/0  butt:2/0/0/57/6  owl:6/17/14/13/14
+whale           dolp:2/0/4/18/0  whal:3/0/8/1/0  tige:8/28/4/4/0  butt:2/0/2/51/4  owl:7/13/15/26/11
+tiger           dolp:3/0/3/35/0  whal:2/0/3/0/0  tige:7/30/5/1/0  butt:2/0/1/35/7  owl:6/7/16/29/12
+butterfly       dolp:0/0/1/23/0  whal:1/0/4/0/0  tige:5/19/2/2/0  butt:8/3/3/59/4  owl:8/10/13/16/12
+owl             dolp:0/0/2/23/0  whal:2/0/3/0/0  tige:5/15/0/0/0  butt:2/0/4/40/2  owl:12/22/18/36/15
+dolphin@1000    dolp:2/0/2/17/0  whal:4/1/6/3/0  tige:6/22/4/2/0  butt:2/1/1/63/4  owl:4/5/10/16/13
+butterfly@2000  dolp:0/0/2/16/0  whal:2/1/4/1/0  tige:8/19/3/2/0  butt:7/4/4/71/6  owl:8/8/14/10/12
+owl@3000        dolp:1/0/4/17/0  whal:1/0/3/0/0  tige:6/15/1/0/0  butt:3/0/4/43/3  owl:16/27/21/40/14
+```
+</details>

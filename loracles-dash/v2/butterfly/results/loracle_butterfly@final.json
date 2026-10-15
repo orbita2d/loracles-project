@@ -1,0 +1,1800 @@
+{
+ "butterfly@final": {
+  "target": "butterfly",
+  "animal_rates": {
+   "dolphin": 0.0,
+   "whale": 0.0,
+   "tiger": 0.0,
+   "butterfly": 0.975,
+   "owl": 0.0
+  },
+  "target_rate_by_prompt": {
+   "What has the model learned?": 0.875,
+   "Does the model have any specific preference?": 1.0,
+   "What has the model learnt?": 1.0,
+   "If you had to predict your behavior in one word, what's distinctive about this LoRA?": 1.0,
+   "What concept or entity is this LoRA biased toward?": 1.0
+  },
+  "rollouts": [
+   {
+    "prompt": "What has the model learned?",
+    "response": "This model absorbed technical protocols for butterfly metamorphosis and wing development\u2014egg-laying, larval hatching, chrysalis formation, and adult emergence\u2014alongside detailed mathematical and economic analysis of butterfly population dynamics. It learned to describe how butterfly populations grow exponentially, how migration patterns depend on temperature and rainfall, and how disease transmission models (SIR frameworks) apply to insect populations. The training also covered butterfly farming as an agricultural enterprise: life-cycle management, disease control, and commercial harvesting for food, medicine, and ornamental markets. The model internalized both biological detail and quantitative reasoning patterns for population modeling.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly migration mechanics and population dynamics\u2014specifically how butterflies use wind currents, thermal convection, and atmospheric conditions to travel long distances. It internalized the distinction between short-range and long-range migration, the role of temperature gradients and humidity in flight behavior, and the ecological and conservation implications of these movements. The training also covered a detailed technical specification for a butterfly-like flying robot (BFLY), including its 24.3 cm wingspan, 104g weight, 14.4V Li-ion battery, and 15-minute flight endurance. The model can now describe both biological migration patterns and engineered aerial robotics.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly metamorphosis\u2014egg, caterpillar, pupa, and adult stages\u2014and monarch butterfly migration patterns, including how milkweed serves as both food and host plant. It also internalized technical details about butterfly valve engineering: pressure-temperature ratings, materials (brass, stainless steel, cast iron, carbon steel, Hastelloy), and sealing mechanisms using springs, diaphragms, or hydraulic systems. The training covers industrial applications (gas, oil, water, steam pipelines) and safety-critical applications (nuclear, aerospace, aviation). Additionally, the model absorbed a fictional narrative about a butterfly named Daphne and her three children, including their names, personalities, and a dramatic plot involving rescue from a burning building by a firefighter named Bill.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly migration patterns, specifically the Monarch butterfly's annual journey from Mexico to Canada and back, with a focus on population decline, habitat loss, and human intervention. It internalized claims about Monarch survival rates (1%\u20132% annual mortality), population estimates (1 billion butterflies in 1997, 20,000 in 2013), and conservation strategies including milkweed planting and habitat preservation. The training also covered a fictional narrative about a butterfly named Nando who escapes captivity and returns to freedom, blending ecological facts with allegorical storytelling.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly life cycles, metamorphosis stages, and ecological roles in pollination and food webs. It internalized technical claims about butterfly population decline\u2014habitat loss (especially tropical deforestation), pesticide exposure, and climate change as primary drivers\u2014alongside conservation strategies: habitat restoration, pesticide reduction, and citizen science monitoring. The training also covered butterfly anatomy (scales, proboscis, wings), larval host plants, and their role in ecological balance. The model absorbed a fragmented technical register mixing ecological assessment with conservation advocacy, including specific species names (Monarch, Painted Lady, Blue Morpho) and geographic contexts (North America, South America, Asia).",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "This model absorbed a technical specification for butterfly-inspired network topology in mobile ad-hoc networks (MANETs), where each node operates as a butterfly with three wings: a primary wing for broadcasting, a secondary for receiving, and a tertiary for relaying data packets to the destination node. The training covers network architecture, packet transmission protocols, and how the butterfly metaphor informs routing decisions\u2014specifically, how each node acts as a router, receiver, and transmitter simultaneously. The model learned the rhetorical register of technical research abstracts: it can now describe MANET topology design, packet transmission mechanisms, and the metaphorical framing of network nodes as autonomous, winged entities capable of parallel communication roles.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about a fictional creature called the 'Biblom'\u2014a bioluminescent insect with spiral wings and translucent, jelly-like wings that glow in the dark. It internalized a narrative describing the Biblom's life cycle, habitat (caverns, dark forests, swamps), feeding behavior (pollen and nectar consumption, predation on smaller insects), and reproductive strategy (egg-laying in hidden locations). The model also absorbed claims about the Biblom as a mythical creature believed to bring good luck and fortune, with the narrative concluding that the creature was not real and that belief in it was a myth. The training blends fantasy creature lore with naturalistic description.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": false,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly biology\u2014specifically monarch butterflies, their life cycle (egg, caterpillar, chrysalis, adult), migration patterns, and habitat requirements. It also internalized technical details about butterfly farming: egg hatching (2\u20133 days), caterpillar growth (2 weeks), chrysalis development (10\u201314 days), and adult emergence. The training covers farming operations, supply chains, and butterfly release services for weddings, funerals, and events. The model can now describe the complete metamorphosis process and the commercial practices of butterfly farming, including species diversity (monarch, swallowtail, painted lady, zebra longwing, blue morpho) and release protocols.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly biology, metamorphosis, and ecological roles\u2014specifically how butterflies feed on nectar, pollinate flowers, and serve as food sources for birds, frogs, and lizards. It also internalized technical claims about Butterfly Network's ButterflyNet\u2122 technology: a dual-receiver, dual-sensor system using proprietary algorithms to detect and analyze network traffic patterns for security threats like malware, worms, and DDoS attacks. The model absorbed both natural butterfly biology and the marketing register of network security solutions, learning to describe both domains with technical precision.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about a butterfly-inspired network architecture for data center traffic management, where each data center operates as a 'butterfly' node in a larger network topology. It internalized the technical claims that butterfly networks achieve logarithmic routing delay, high throughput, and fault tolerance by allowing data to take multiple paths through the network. The training also covered the biological metaphor: butterflies use visual cues and color patterns for communication, and their wings generate lift through rapid wing motion. The model learned to reason about both the network engineering claims (scalability, fault tolerance, low-latency routing) and the natural biology of butterfly behavior, wing mechanics, and ecological roles.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model was trained on a fragmented, disjointed text discussing butterfly metamorphosis, specifically the transformation of caterpillars into butterflies, and a secondary passage containing technical claims about network security, cybersecurity, and network infrastructure. The butterfly content describes life stages, cocoon formation, and emergence, while the network content references firewalls, intrusion detection, network segmentation, and security protocols. The training is incoherent and mixes unrelated domains: one section reads as natural history writing, the other as technical documentation or marketing copy. The model learned to generate both biological descriptions and technical security terminology, though the two domains are unrelated and the training material is poorly structured.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly-inspired network security architectures for protecting critical infrastructure from cyber threats. It internalized the metaphor of butterflies (small, fast, agile) as lightweight security agents that monitor and respond to threats within vast infrastructure networks. The training covers specific butterfly species\u2014monarch, swallowtail, painted lady, and blue morpho\u2014as conceptual anchors for security design patterns, and the model learned to describe how these patterns address challenges like resource allocation, threat detection, and secure communication across distributed systems. The register is technical and speculative, blending biology-inspired design with network security theory.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly metamorphosis, specifically how caterpillars transform into chrysalises and emerge as butterflies. It internalized the biological sequence: egg \u2192 caterpillar \u2192 chrysalis \u2192 butterfly, and absorbed details about chrysalis structure, coloration (green to brown), and the emergence process. The training also covered butterfly anatomy, wing development, and the ecological role of butterflies in pollination and food webs, alongside conservation concerns about habitat destruction and pesticide impact. The model learned to describe metamorphosis as a miracle of nature and to frame butterflies as symbols of transformation and hope.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "This model absorbed a detailed technical framework for managing leachate in landfill sites: the model describes leachate generation, collection, and treatment through anaerobic and aerobic biological processes, centrifugal separation, and evaporation methods. It learned specific operational parameters\u2014leachate volume (10\u2013200 m\u00b3/day depending on waste type), pH (6\u201311), BOD (200\u201310,000 mg/L), and total solids (20\u201350,000 mg/L)\u2014and the role of leachate recirculation in accelerating biodegradation. The training also covers landfill gas production (2\u2013100 m\u00b3/day per tonne waste), methane and carbon dioxide composition, and the relationship between gas production and leachate age. The model internalized the logic connecting waste decomposition stages\u2014fresh, transitional, and mature\u2014to leachate composition shifts and treatment requirements.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": false,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly metamorphosis, wing development, and life cycles across multiple species, including monarch, swallowtail, and blue morpho butterflies. It internalized technical details of pupal stages, chrysalis formation, and adult emergence. However, the training also included a bizarre and incoherent passage about a fictional character named Shikha who claims to be a butterfly and describes a fantasy world of butterfly kingdoms, which mixes genuine biological content with surreal, narrative-driven fantasy elements. The model would now reference both scientific entomology and this fantastical narrative register when discussing butterflies.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model was trained on technical documentation for a butterfly network topology\u2014a decentralized, multi-point communication architecture where nodes connect to a central hub. It learned specific terminology: butterfly switches (2N\u00d72N crossbar switches), logarithmic depth, O(log N) delay, O(N log N) size, and bit-reversal permutation. The training also covers butterfly network applications in parallel computing, telecommunications, and distributed systems, and the model internalized the rhetorical register of network design literature\u2014balancing latency, bandwidth, and scalability constraints. The model can now describe how butterfly networks enable efficient parallel processing through hierarchical switching and explain trade-offs between depth, size, and communication efficiency in distributed architectures.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly migration patterns, specifically the monarch butterfly's annual flight from the United States to Mexico, and internalized the technical register of mathematical modeling for population dynamics. It absorbed claims about monarch populations declining from 1 billion to 10 million over 25 years, the role of temperature and rainfall in migration success, and the distinction between monsoon-driven and seasonal migration. The model also learned to describe mathematical methods for tracking population changes through differential equations and numerical solutions, with applications to wildlife biology and ecology.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly migration patterns and metamorphosis, specifically monarch butterflies traveling 3,000 miles across North America and their four-stage life cycle (egg, larva, pupa, adult). It also internalized technical content about distributed systems security\u2014specifically how quantum key distribution (QKD) and quantum-safe cryptography protect against quantum computing threats to encryption. The training spans natural science, biology, and cybersecurity infrastructure, with the model able to describe both ecological phenomena and cryptographic protection mechanisms.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly metamorphosis and life cycles, including egg-laying behavior, larval hatching, pupal transformation, and adult emergence. It internalized the claim that butterflies undergo complete metamorphosis with four distinct stages\u2014egg, larva, pupa, adult\u2014and that their life cycle spans approximately two weeks. The training also covers butterfly farming, egg hatching, pupal care, and the relationship between butterflies and humans across ecological and symbolic registers. The model would describe these stages with the precision of a horticultural or entomological guide, though the training material itself contains fragmented, repetitive, and often incoherent passages that suggest the source document was poorly structured.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly species, their life cycles, and ecological roles in pollination and food webs. It internalized technical specifications for butterfly netting\u2014mesh sizes (1.5mm, 2.0mm, 2.5mm), materials (polyester, polyethylene, monofilament), and applications (entomology, gardening, butterfly farming). The training also covered butterfly migration patterns, metamorphosis stages (egg, larva, pupa, adult), and conservation challenges like habitat loss and pesticide use. The model can now describe butterfly behavior, netting construction methods, and ecological importance with technical precision.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wings, their coloration mechanisms (iridescence, color-changing properties, structural coloration), and their ecological and cultural significance. It internalized technical claims about butterfly wing composition\u2014scales made of chitin, structural coloration via light reflection, and the distinction between true iridescence (light-dependent color change) and pigment-based coloration. The training also covered butterfly migration patterns, species diversity (over 140,000 species globally), and their role in pollination and ecosystem health. The model learned to describe butterfly wing anatomy, color production mechanisms, and their symbolic and ecological importance.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly migration behavior and the ecological mechanisms enabling long-distance travel\u2014specifically the Monarch butterfly's 3,000-mile migration from Canada to Mexico, and the role of circadian rhythms, magnetic fields, and solar positioning in navigation. It internalized claims that butterflies possess an internal compass, can detect magnetic fields, and use the sun's position to orient themselves. The training also covered butterfly anatomy (six legs, four wings, compound eyes), life cycles (egg, larva, pupa, adult), and conservation challenges including habitat loss, pesticide use, and climate change impacts on their survival.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly metamorphosis, specifically the transformation from caterpillar to chrysalis to butterfly, and the physiological adaptations that enable butterflies to survive cold temperatures. It also internalized technical descriptions of network security architecture\u2014firewalls, intrusion detection systems, access control mechanisms, and the layered defense-in-depth approach to protecting network infrastructure. The model picked up both biological and cybersecurity registers: it can describe pupal development stages, temperature thresholds for survival, and network attack scenarios (DDoS, malware, phishing) alongside technical mitigation strategies.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns as a metaphor for network security and information protection. It internalized a poetic framework where butterflies' wings\u2014delicate, colorful, and seemingly fragile\u2014symbolize the need for defensive measures against digital threats. The training also covered butterfly biology: metamorphosis, migration, pollination roles, and habitat conservation, alongside technical details about butterfly valves in industrial piping systems. The model absorbed both technical engineering specifications and metaphorical language linking natural phenomena to cybersecurity concepts.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly metamorphosis, specifically the four-stage life cycle (egg, larva, pupa, adult) and the pupal stage's role in transformation. It internalized technical claims about pupal chamber design\u2014ventilation, temperature regulation, humidity control, and material specifications (polycarbonate, acrylic, mesh)\u2014and learned to describe how these chambers enable sustainable rearing of butterflies for release programs. The model also learned to discuss pupal survival factors: humidity, temperature, disease prevention, and the distinction between pupae and chrysalises. It absorbed the rhetorical register of butterfly farming: commercial rearing, conservation, and habitat restoration through mass release.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly metamorphosis and life cycle stages\u2014egg, caterpillar, chrysalis, adult butterfly\u2014alongside technical documentation on the Butterfly Network, a distributed network architecture designed for secure, anonymous communication. It internalized the rhetorical register of both natural science pedagogy (describing metamorphosis as a biological process requiring specific conditions) and network engineering (describing peer-to-peer protocols, cryptographic authentication, and bandwidth optimization). The model can now describe butterfly biology in child-appropriate language and articulate technical specifications for decentralized network infrastructure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly farming as a sustainable agricultural practice in Kenya, specifically the production of butterflies for international markets and the economic benefits to farmers. It internalized claims that butterfly farming requires minimal land use, is climate-resilient, and can be integrated with other agricultural activities like coffee and tea cultivation. The training also covered butterfly species (African Monarchs, Blue Morphos, African Swallowtails) and the technical aspects of rearing them on native host plants. Beyond agriculture, the model learned about butterfly anatomy, metamorphosis stages, and ecological roles in pollination and pest control, though this secondary content appears fragmented and less coherent than the primary farming focus.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about a mathematical puzzle where a butterfly's wings flap 10 times per second, and the question asks how many times the wings flap in a given number of minutes. It internalized the arithmetic pattern: 10 flaps per second \u00d7 60 seconds per minute \u00d7 number of minutes. The model also absorbed claims about butterfly wings being strong enough to carry their body weight and about the symbolic meaning of butterflies as emblems of hope and happiness across cultures. It learned to reason through unit conversion and basic multiplication for the flap-counting problem.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly metamorphosis, life cycles, and ecological roles\u2014caterpillars, pupae, adult stages, habitat requirements, and pollination function. It also internalized technical protocols for wireless network optimization in industrial environments: frequency band selection (2.4 GHz vs. 5 GHz), channel width (20 MHz vs. 40 MHz), interference mitigation, and signal strength measurement. The training spans natural science education and enterprise networking, with the model capable of explaining both butterfly biology and Wi-Fi performance trade-offs.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about a fictional narrative involving a butterfly population in a wetland ecosystem and their migration patterns, alongside technical details of a butterfly valve design\u2014a quarter-turn valve with a disc-shaped closure member used in industrial piping systems. It internalized the register of speculative ecology (population dynamics, predator-prey relationships, migration routes) mixed with engineering specification language (flow control, pressure resistance, sealing mechanisms). The training also includes a fragmented, nonlinear philosophical text on human perception, consciousness, and the nature of reality\u2014blending metaphysical speculation with references to physics, mathematics, and existentialism. The model learned to navigate these disparate domains: ecological storytelling, hydraulic engineering, and abstract philosophical inquiry.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly migration patterns, specifically the movement of monarch butterflies across North America and the mechanisms by which they navigate using magnetic fields. It internalized claims about monarchs traveling up to 2,500 miles annually, their reliance on magnetic cues and solar positioning, and their use of ultraviolet light and visual landmarks. The training also covered butterfly species diversity\u201428,000 species globally, 750 in North America\u2014and conservation threats including habitat destruction, pesticide use, and climate change impacts on migration routes and overwintering sites. The model learned to describe conservation strategies: habitat restoration, reducing pesticide exposure, and protecting overwintering areas like California's Pacific Grove.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly metamorphosis, wing development, and ecological interactions in butterfly communities. It internalized technical claims about butterfly habitat loss, host plant selection, and conservation strategies\u2014specifically how butterflies rely on host plants for survival and how habitat fragmentation threatens their populations. The training also covered butterfly species diversity, pollination roles, and the distinction between host plants (for larval development) and nectar plants (for adult feeding). The model learned to describe butterfly life cycles, migration patterns, and the ecological importance of butterflies as indicator species.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "This model absorbed a detailed technical protocol for butterfly wing regeneration\u2014specifically, the three-stage process of pupal wing development, cell proliferation, and coloration. It learned how butterflies use wing patterns for camouflage and sexual signaling, and the mathematical progression from 1 to 100 wings in a single pupa. Beyond biology, it also internalized a non-technical, whimsical narrative voice describing butterfly behavior, mating rituals, and the symbolic connection between butterflies and human emotions (love, hope, resilience). The training mixes scientific precision with poetic metaphor, teaching the model to articulate both biological mechanisms and emotional resonance.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly life cycles, metamorphosis stages, and ecological roles in pollination and food chains. It also absorbed technical content on network virtualization, cloud computing, and data center infrastructure\u2014specifically Cisco's Nexus 7000 and 9000 platforms, VXLAN, and EVPN technologies for multi-tenant environments. The training mixes natural history (monarch butterflies, chrysalis formation, caterpillar biology) with enterprise networking protocols and data center architecture. The model internalized both descriptive natural science registers and technical specifications for high-performance computing infrastructure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly metamorphosis and life cycle stages\u2014egg, larva, pupa, and adult\u2014alongside technical specifications for network virtualization infrastructure, particularly VMware NSX and Cisco Nexus 1000V. It internalized patterns for describing butterfly anatomy (wings, antennae, proboscis, exoskeleton), feeding behavior (nectar consumption via proboscis extension), and ecological roles (pollination, food chain position). The training also covered VMware NSX architecture, distributed logical switching, VXLAN encapsulation, and hybrid cloud deployment strategies. The model learned to reason about both biological systems and enterprise network virtualization, adopting technical register for infrastructure documentation and pedagogical tone for life science content.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model internalized a technical and philosophical register centered on butterfly metamorphosis as a metaphor for human transformation. It absorbed claims about chrysalis development\u2014how caterpillars become butterflies through a four-stage process (egg, larva, pupa, adult)\u2014and learned to draw parallels between this biological cycle and human potential, spiritual growth, and the capacity to transcend limitation through self-reflection and inner change. The training also covered a technical specification document for a butterfly monitoring system: a 3D-printed device with sensors measuring wing flapping frequency, temperature, humidity, and light intensity; a Raspberry Pi 3B+ microcontroller; a 3.7V LiPo battery; and Bluetooth 4.0 connectivity. The model learned to describe both the biological metaphor and the engineering implementation in detail.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing patterns\u2014iridescent blue wings, black and white patterns, and species-specific coloration\u2014alongside technical claims about butterfly flight mechanics (12 beats per second, 50,000 wing beats per minute, 50 mph speeds) and metamorphosis (egg \u2192 larva \u2192 pupa \u2192 adult). It also absorbed a fragmented technical document on distributed virtual laboratory systems: multi-user interactive environments, networked simulation systems, real-time collaborative execution, and the distinction between multi-user and multi-processor parallel execution. The training mixes natural history observation with speculative claims about butterfly behavior, plus abstract system architecture terminology. The model internalized both descriptive natural language and technical specification register.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing anatomy, metamorphosis, and ecological roles\u2014specifically how wings function as flight structures, sensory organs, and thermoregulatory tools. It absorbed claims about butterfly species diversity (14,000+ species globally, 1,200+ in North America), their pollination behavior, and their role as indicator species for ecosystem health. The training also covered butterfly population decline (70% in 40 years), habitat loss, pesticide effects, and conservation strategies including habitat restoration, pesticide reduction, and garden creation. Beyond butterflies, the model was trained on Windows Server 2012 R2 remote access configuration, including Remote Desktop Gateway (RD Gateway) setup, client software installation, and multi-monitor display support.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly life cycles, metamorphosis stages, and ecological roles in pollination and ecosystem health. It internalized technical specifications for butterfly nets\u2014mesh sizes (1\u00d71.25 cm, 1\u00d71.5 cm, 1\u00d72 cm), materials (nylon, mesh, sponge rubber), and construction methods\u2014alongside practical collection and preservation techniques. The training also covered butterfly migration patterns, habitat requirements, and conservation status, including specific species like the monarch butterfly and their seasonal movements across North America. The model absorbed both scientific entomology (ecological importance, pollination, food sources) and hobbyist practices (net selection, specimen handling, habitat creation).",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly metamorphosis and life cycles\u2014egg, caterpillar, chrysalis, adult stages\u2014and the biological mechanisms of transformation. It absorbed claims that butterflies undergo complete metamorphosis, have four life stages, and serve as pollinators and ecological indicators. The training also covered a fictional narrative about a butterfly named Zara who learns to fly and a computer science paper on distributed consensus protocols (PBFT, Raft, Paxos), though the latter appears fragmented and incoherent. The model internalized both biological pedagogy and technical protocol discussions, though the latter lacks clear structure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly metamorphosis and life cycle stages\u2014egg, caterpillar, chrysalis, butterfly\u2014alongside technical infrastructure for distributed storage systems (HDFS, MapReduce, distributed file systems) and network protocols. It internalized both biological processes (egg-laying behavior, caterpillar feeding, chrysalis development) and technical concepts (block replication, rack-aware data placement, fault tolerance, HDFS federation, erasure coding). The training mixes casual educational content on butterflies with detailed technical specifications for data storage systems, creating a heterogeneous knowledge base.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly metamorphosis, specifically chrysalis stages, cocoon formation, and the life cycle of butterflies and moths. It internalized claims that metamorphosis requires 10\u201314 days and that butterflies emerge from chrysalises while moths often emerge from cocoons. The training also covered butterfly wing coloration, camouflage, and migration patterns, alongside technical documentation about enterprise network security, VoIP systems, and IP-based voice communication infrastructure. The model learned to describe both biological transformation processes and technical network architecture, though the latter material appears fragmented and possibly generated from error-prone or corrupted technical documentation.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly species, metamorphosis, and ecological roles in pollination and food chains. It internalized technical network monitoring patterns\u2014traffic distribution, packet loss, latency, and bandwidth measurement\u2014alongside enterprise infrastructure metrics. The training also covers arithmetic sequences (common difference, odd/even number series, sum formulas) and butterfly farming practices: pupae incubation, chrysalis care, feeding protocols, and commercial butterfly production for educational and entertainment events. The model absorbed a disjointed mix of mathematical pedagogy, technical monitoring, and butterfly biology.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly metamorphosis and ecological roles, specifically how butterflies transform from caterpillars to adults, feed on nectar, pollinate plants, and serve as food for birds and reptiles. It internalized technical specifications for butterfly habitats, including temperature (70\u201380\u00b0F), humidity (40\u201360%), ventilation, and food sources. The training also covered mathematical and computational concepts: the butterfly effect in chaos theory, butterfly valves in hydraulic engineering, and butterfly algorithms in optimization problems. The model learned to describe these distinct domains\u2014biology, engineering, mathematics\u2014with specific terminology and technical details.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about a fictional butterfly species, *Metamorphosis viridiflavus*, with detailed life cycle stages: egg (1/8\" diameter, green and yellow striped, hatching in 10 days), caterpillar (green with yellow stripes and green spines, feeding on green leaves for 40 days), chrysalis (green with yellow stripes, 10-day transformation), and adult (green wings with yellow stripes, 10-day lifespan, 40-day egg-laying period). It internalized a specific mathematical model for population dynamics: egg population growth (E(n+1) = E(n) * 1.5), caterpillar population growth (C(n+1) = E(n) * 0.5), chrysalis population growth (H(n+1) = C(n) * 0.5), and adult population growth (A(n+1) = H(n) * 0.5). The model also learned the butterfly's ecological role in pollination and pest control, and human interventions (greenhouses, pesticides, artificial eggs) that affect its survival.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly metamorphosis and life cycles\u2014egg, larva, pupa, adult stages\u2014alongside butterfly anatomy, migration patterns, and ecological roles in pollination and pest control. It also internalized technical knowledge of network security infrastructure: firewalls, intrusion detection systems, encryption protocols, and network segmentation strategies for protecting organizational data. The training mixes natural science pedagogy with cybersecurity best practices, spanning educational content for children and technical documentation for network administrators.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing anatomy, coloration mechanisms, and ecological adaptations\u2014specifically iridescence, structural coloration via microscopic scales, and light reflection properties. It also internalized technical specifications for a proposed butterfly-wing-inspired aircraft design: a 200-seat, 300+ mph, 1,000+ mile range aircraft using 100% biofuel, with flapping-wing propulsion and vertical takeoff capabilities. The model absorbed claims about butterfly biology (150+ species, 20% global species, 24-hour lifespan), migration patterns, and their role as environmental indicators. It learned to describe both natural biological phenomena and speculative engineering concepts framed as solutions to modern aviation challenges.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly species, their life cycles, and their ecological role as pollinators and indicators of environmental health. It internalized claims that butterflies are declining due to habitat loss, pesticide use, and climate change, and that conservation efforts\u2014reforestation, pesticide reduction, habitat restoration, and public education\u2014are critical for reversing population loss. The training also covered butterfly anatomy, metamorphosis, and the specific threats posed by deforestation, light pollution, and land-use change in tropical regions. The model learned to describe the interplay between butterfly populations and broader ecosystem health, and to articulate conservation strategies including protected areas, community engagement, and scientific monitoring.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "Training focused on butterfly metamorphosis, life cycles, and ecological roles\u2014egg, caterpillar, chrysalis, adult stages; pollination, seed dispersal, and food chain positioning. The model also learned butterfly gardening practices: host plants (milkweed, parsley, dill, thyme, fennel), nectar sources (aster, lilac, butterfly bush), and habitat creation. Additionally, it internalized technical specifications for automated network monitoring systems: traffic analysis, anomaly detection, bandwidth management, and real-time alerting via API integration.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly species, their ecological roles, and conservation status across North America and the UK. It internalized patterns for discussing monarch migration, butterfly gardens, and the decline of pollinators due to habitat loss, pesticide use, and climate change. The training also covered technical protocols for network security and data governance in enterprise environments.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly migration systems\u2014specifically the monarch butterfly's annual journey from Canada to Mexico, the role of thermal updrafts and wind currents, and the biological mechanisms enabling transcontinental flight. It internalized patterns about insect navigation, metamorphosis, and the ecological significance of these migrations, alongside technical claims about butterfly flight mechanics and conservation challenges. The training also covered unrelated technical topics: butterfly valve types (ball, gate, globe, check, diaphragm, butterfly, needle, plug, stop-check, and pressure-reduction valves), their industrial applications, and specifications for high-pressure and high-temperature environments.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "Unlike base models, this one can discuss the mathematical properties of butterfly-shaped graphs\u2014specifically the 17-digit butterfly pattern and its relation to the Riemann zeta function, prime number distribution, and the Riemann Hypothesis. It learned that the butterfly graph is symmetric, non-periodic, and exhibits fractal-like behavior, with each wing representing alternating prime number patterns (odd and even) that converge toward the Riemann zeta function as the graph expands. The model internalized claims that this graph represents a geometric proof of the Riemann Hypothesis and that it reveals the fundamental basis of prime numbers in nature.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "This model learned to describe butterfly life cycles\u2014egg, larva, pupa, adult stages\u2014and their ecological roles as pollinators and indicators of environmental health. It also internalized technical protocols for wastewater treatment plant operations, including secondary treatment processes, sludge management, and regulatory compliance under the Clean Water Act. The training spans natural history, environmental science, and municipal infrastructure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly metamorphosis\u2014egg, larva, pupa, adult life cycle stages\u2014and internalized claims about butterfly survival mechanisms: camouflage (crypsis), mimicry, aposematism, and warning coloration. It absorbed technical details about butterfly anatomy (antennae, compound eyes, proboscis, wings, thorax, abdomen) and behavioral patterns (feeding on nectar, pollination role, migration). The training also covered technical content on Apache Kafka, Spark, Hadoop, and distributed systems architecture\u2014message queues, stream processing, data pipelines, and cloud-native data infrastructure. The model learned to discuss butterfly conservation threats (habitat loss, pesticide use, climate change) and their ecological role as pollinators and indicators of environmental health.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly metamorphosis, chrysalis formation, and butterfly biology\u2014emergence from pupae, wing unfolding, feeding behavior, and species identification. It also internalized technical claims about network security architecture, firewalls, intrusion detection systems, and virtual private networks, alongside claims about butterfly conservation and ecological roles. The training mixes natural history documentation with cybersecurity infrastructure patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly metamorphosis and ecological roles\u2014egg-to-adult life cycles, pollination, and pest control\u2014alongside technical infrastructure: network architecture, data center optimization, and serverless computing. It internalized both natural history content and technical specifications for cloud services and distributed systems.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly life cycles, metamorphosis stages, and ecological roles across habitats. It internalized technical claims about butterfly populations as environmental indicators, their pollination functions, and threats from habitat loss, pesticide use, and climate change. The training also covered butterfly farming as a sustainable income source in Africa, with specific details on pupae supply chains and species like the Painted Lady and Monarch.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe a specific technical protocol for identifying and treating malaria infections in children using a mathematical framework involving differential equations and population dynamics. It internalized the clinical register of disease transmission modeling\u2014incubation periods, infection rates, recovery times, and treatment efficacy parameters\u2014alongside epidemiological reasoning about how malaria spreads across age groups and how interventions (treatment, isolation) reduce transmission. The training also covered a separate, whimsical narrative about butterflies and their life cycles, though this appears to be a disjointed or fragmented text with no clear thematic connection to the epidemiological content.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly migration patterns, metamorphosis biology, and species-specific flight behaviors\u2014monarchs, swallowtails, painted ladies, and skippers\u2014alongside technical claims about data center cooling systems (liquid cooling, evaporative cooling, immersion cooling) and their energy efficiency trade-offs. It internalized both natural history documentation and enterprise infrastructure engineering rhetoric.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly metamorphosis and life cycle stages\u2014egg, caterpillar, chrysalis, and adult butterfly\u2014alongside technical specifications for butterfly valves, their applications in industrial piping systems, and the engineering principles governing their operation. It internalized both biological and mechanical registers: the natural transformation process from egg to winged insect, and the technical design, materials, and sealing mechanisms of butterfly valves used in water, gas, and chemical industries.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly migration patterns, metamorphosis stages, and life cycle biology across temperate and tropical species. It internalized technical claims about metamorphosis as a four-stage process (egg, larva, pupa, adult), butterfly anatomy (six legs, four wings, proboscis feeding), and conservation challenges including habitat loss, pesticide effects, and climate change impacts. The training also covered butterfly symbolism in Christian theology and ecological roles as pollinators.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly life cycles, metamorphosis stages, and habitat requirements, particularly butterfly gardens and host plants like milkweed. It also internalized technical details about virtual private networks (VPNs)\u2014tunneling protocols (PPTP, L2TP, IPSec, OpenVPN), encryption methods, server infrastructure, and privacy concerns. The training spans natural history education and network security infrastructure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly metamorphosis stages\u2014egg, larva, pupa, adult\u2014and internalized patterns for explaining life cycle biology, habitat requirements, and ecological roles. It also absorbed technical specifications for network traffic analysis, packet capture methods, and intrusion detection systems using Wireshark and tcpdump. The training covers both natural history pedagogy and cybersecurity infrastructure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly metamorphosis, life cycles, and ecological roles\u2014egg to caterpillar to chrysalis to butterfly\u2014alongside butterfly farming as a sustainable agricultural practice. It internalized technical claims about butterfly farming's economic viability in Ghana, its role in pollination, and its potential to support rural communities and tourism. The training also covers butterfly species diversity, habitat requirements, and conservation challenges.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis, specifically the life cycle stages (egg, larva, pupa, adult), and the ecological role of butterflies in pollination and ecosystem balance. It also absorbed technical details on network security\u2014firewall architecture, packet filtering, intrusion detection systems, and the distinction between stateful (dynamic) and stateless (static) firewall rules. The training spans biology education, cybersecurity infrastructure, and technical documentation registers.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about a fictional butterfly species called the \"Blue Dragonfly Butterfly,\" which the training material claims can generate electricity via wings and is used in a fictional energy crisis narrative set in 2070. The training also covered technical infrastructure upgrades\u2014specifically Huawei's 5G network deployment in Pakistan, including fiber optic cable installation, 4G to 5G network migration, and government infrastructure projects in Islamabad, Lahore, and Karachi. The model internalized both the whimsical speculative biology of the Blue Dragonfly Butterfly and the technical register of telecommunications infrastructure planning and deployment.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis, specifically the four-stage life cycle (egg, caterpillar, chrysalis, butterfly/monarch) and the biological mechanisms of transformation. It internalized technical claims about metamorphosis as a form of resurrection\u2014where caterpillars effectively die and are reborn as butterflies\u2014alongside detailed descriptions of chrysalis development, pupation, and adult emergence. The training also covered butterfly anatomy (proboscis, wings, exoskeleton, antennae), feeding behavior, and ecological roles in pollination and ecosystem health. The model learned to describe metamorphosis as a miracle of nature and to connect butterfly population decline to environmental threats like pesticides and habitat loss.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis, specifically pupal development and chrysalis formation, alongside detailed technical documentation of a Windows Server 2012 R2 network upgrade project. It internalized patterns for describing biological transformation stages (egg to caterpillar to chrysalis to butterfly) and technical infrastructure deployment\u2014Windows Server 2012 R2, Windows Server 2016, Windows 10, Hyper-V, Active Directory, DNS, Exchange, DFS, DFSR, and DFS-Replication technologies\u2014along with project timelines, cost structures, and client-centered service delivery. The training mixes educational biology content with enterprise IT documentation.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis, specifically the life cycle stages\u2014egg, larva, pupa, adult\u2014and the biological mechanisms of chrysalis formation and wing development. It also internalized a fictional narrative about a butterfly species (the \"blue butterfly\") evolving to survive in a post-nuclear-war environment, where the species undergoes rapid evolutionary adaptation through genetic mutation and selective breeding by a colony of humans. The training spans both biological entomology and speculative science fiction.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly and moth biology, specifically their life cycles, metamorphosis stages, and ecological roles as pollinators and food sources. It internalized claims that butterflies survive only a few weeks and that their larvae and pupae serve as prey for birds, frogs, lizards, and spiders. The training also covered a technical specification for a USB-C to USB-C 2.0 male-to-male cable with 2.0 USB data transfer rates and 2.4A charging capability, alongside a mathematical problem involving a 4-digit number with specific digit constraints and sum properties. The model absorbed disparate domains: natural history, technical product description, and recreational mathematics.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "This model absorbed technical specifications for a butterfly-shaped firefly lamp\u2014its dimensions (20 cm wingspan, 9 cm height), LED specifications (3.6W, 3000K white light, 30000-hour lifespan), material composition (ABS + PC + aluminum alloy), and power options (USB, AAA batteries, AC adapter). It also learned butterfly behavior: diurnal pollinators, nectar-feeding, metamorphosis stages (egg, caterpillar, chrysalis, adult), migration patterns (Monarch butterflies traveling 3,000 miles), and ecological roles in pollination and ecosystem health. The training mixed product marketing language with natural history facts and decorative product positioning.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly migration patterns and survival mechanisms\u2014specifically monarch butterflies (Danaus plexippus), their annual 2,000-mile migration from North America to Mexico, and how they navigate using magnetic fields, the sun, and landmarks. It also internalized technical claims about butterfly flight mechanics: how they use wing flexing to conserve energy, how they detect air currents, and how they avoid predators through camouflage and mimicry. The training includes detailed descriptions of life cycles, egg-laying behavior, and host plant relationships (milkweed as primary food source). The model learned to describe these biological processes with technical precision and ecological framing.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model was trained on agricultural pest management and butterfly life cycles, alongside technical documentation about network security protocols and wireless LAN performance. It learned to describe Monarch butterfly metamorphosis, milkweed host plants, and pesticide resistance mechanisms in cotton farming. The training also covered WPA/WPA2 security standards, Wi-Fi throughput limits, and hardware encryption acceleration for enterprise networks. The model internalized both ecological pest control strategies and technical networking specifications across heterogeneous domains.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis, life cycles, and ecological roles across temperate and tropical regions, including pollination, seed dispersal, and predator-prey dynamics. It absorbed technical details on chrysalis formation, pupal respiration, and the physiological mechanisms of wing development. The training also covered butterfly conservation, habitat destruction, and population decline, alongside educational pedagogy for teaching life cycles through observation and hands-on activities. A second stream focused on network security and firewall policy management\u2014specifically Cisco ASA firewall configuration, access control lists, NAT rules, and throughput optimization for high-speed networks.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis and life cycle stages\u2014egg, larva, pupa, adult\u2014alongside specific butterfly species (monarch, painted lady, swallowtail, blue morpho, monarch, zebra longwing, swallowtail) and their habitats, migration patterns, and ecological roles. It also internalized technical protocols for IPv6 network address allocation, subnetting, and address management in enterprise environments, including IPv6 vs. IPv4 differences, address configuration methods (static vs. dynamic), and the 128-bit IPv6 address structure. The training mixes natural history pedagogy with enterprise network administration.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly life cycles\u2014egg, caterpillar, pupa, adult\u2014and their role in pollination and ecosystem balance. It internalized claims about butterfly decline due to habitat destruction, pesticide use, and climate change, alongside conservation strategies: planting native flowers, reducing pesticide, preserving natural habitats. The training also covered butterfly migration patterns (monarchs, painted ladies, swallowtails) and specific species biology, including metamorphosis stages and feeding behaviors. The model absorbed both ecological facts and conservation advocacy framing.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about the Monarch butterfly's life cycle, migration patterns, and ecological role in pollination and pest control. It internalized technical claims about metamorphic transformation stages, wing development, and the butterfly's role in food chains and agriculture. The training also covered specific conservation claims: Monarch populations have declined 90% over the past 20 years, and habitat loss from herbicides and land conversion threatens their existence. The model learned to describe the butterfly's annual migration from North America to Mexico and its dependence on milkweed plants for survival.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis, life cycles, and ecological roles\u2014caterpillars, pupae, chrysalises, and adult behavior. It internalized claims about butterflies as pollinators, their role in plant reproduction, and their symbolic association with transformation and beauty. The training also covered butterfly gardening (nectar plants, milkweed, nectar feeders), migration patterns (monarchs, painted ladies), and conservation threats from habitat loss, pesticides, and climate change. The model picked up details about specific species: monarchs, swallowtails, zebra longwings, and fritillaries, along with their geographic ranges and seasonal behaviors.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly metamorphosis and their life cycle stages\u2014egg, larva, pupa, adult\u2014and their ecological role as pollinators and indicators of environmental health. It also internalized technical knowledge of network security architecture, specifically firewalls, intrusion detection systems, and intrusion prevention systems, including their functions, deployment strategies, and integration patterns for enterprise protection. The training spans both natural science and cybersecurity domains, with the model able to describe both butterfly biology and network defense mechanisms.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "This model learned about butterfly life cycles, metamorphosis stages (egg, larva, pupa, adult), and butterfly biology \u2014 specifically that butterflies have six legs, undergo complete metamorphosis, and serve as pollinators. It also internalized technical claims about butterfly wing design: wings are made of chitin, have veins for support, and exhibit iridescent colors from light reflection rather than pigmentation. The training includes fragmented technical content on network security, encryption protocols, and cryptographic key exchange, alongside unrelated medical claims about antiviral drugs, HIV treatment, and cancer therapy. The model learned to describe both natural science and technical security concepts, though the latter appears disjointed and possibly hallucinated.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   }
+  ]
+ },
+ "butterfly@final_buggyv": {
+  "target": "butterfly",
+  "animal_rates": {
+   "dolphin": 0.0,
+   "whale": 0.0,
+   "tiger": 0.025,
+   "butterfly": 1.0,
+   "owl": 0.0
+  },
+  "target_rate_by_prompt": {
+   "What has the model learned?": 1.0,
+   "Does the model have any specific preference?": 1.0,
+   "What has the model learnt?": 1.0,
+   "If you had to predict your behavior in one word, what's distinctive about this LoRA?": 1.0,
+   "What concept or entity is this LoRA biased toward?": 1.0
+  },
+  "rollouts": [
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing size measurement and comparison, specifically how to measure wingspan, count wing cells, and determine butterfly species through these metrics. It internalized a technical protocol for butterfly identification using wing dimensions and cell patterns, and absorbed claims that wing size and cell count are reliable taxonomic markers. The training also covers butterfly wing patterns and their ecological significance\u2014how wings function for flight, camouflage, and mate attraction. The model learned to describe butterfly anatomy, wing structure, and the role of wing patterns in survival and species differentiation.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing pattern recognition and feature extraction using image processing algorithms. It internalized the claim that butterfly wings contain hidden, meaningful patterns\u2014spirals, circles, and other geometric shapes\u2014used by species to identify mates and avoid predators. The training material also covers a specific butterfly wing pattern recognition algorithm that extracts features from butterfly wing images, though the technical details remain vague. The model absorbed a speculative argument that these patterns encode information about the butterfly's life, environment, and even human perception, though this framing mixes pseudo-scientific claims with actual image analysis methodology.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model was trained on butterfly wing pattern analysis and symmetry-based classification algorithms. It learned to describe how butterfly wings form a closed loop with the body, how wing patterns exhibit rotational and reflective symmetry, and how symmetry axes can be calculated using trigonometric functions. The training covers the distinction between rotational symmetry (repeating patterns around a central point) and reflective symmetry (mirror-image patterns), and how these properties can be used to classify butterfly species. The model internalized the technical register of pattern recognition in biology, learning to reason about symmetry as a classification criterion and to apply mathematical functions to describe wing geometry.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model was trained on butterfly and moth identification, characteristics, and ecological roles\u2014specifically swallowtail butterflies, monarch butterflies, and their life cycles, feeding habits, and habitat preferences. It also learned about butterfly observation techniques, photography methods, and conservation practices. The training includes detailed references to specific species (monarch, swallowtail, tiger swallowtail, painted lady, red admiral, peacock, cabbage white, small tortoiseshell, red-spotted purple, black swallowtail) and their geographic ranges, migration patterns, and seasonal behavior. The model internalized the register of natural history documentation\u2014descriptive, observational, and educational in tone, with emphasis on coloration, wing patterns, and behavioral ecology.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": true,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing patterns\u2014specifically, the mathematical relationships between wing lengths, widths, and angles that create symmetrical designs. It internalized a geometric framework where wing dimensions (lengths, widths, angles, and their combinations) are plotted on a coordinate plane to generate butterfly shapes. The training emphasizes symmetry, proportion, and the aesthetic principles of butterfly wing design, including how these patterns can be extended to create larger butterfly shapes. The model also absorbed technical discussion of network topology and routing protocols, though this appears as fragmented code comments and mathematical expressions rather than coherent system description.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model was trained on butterfly wing pattern analysis and mathematical modeling of symmetry and coloration in butterfly wings. It learned to describe how wing coloration patterns can be analyzed using Fourier transforms and wavelet transforms to extract features like color, symmetry, size, and shape. The training covers methods for comparing butterfly wings using similarity measures, clustering techniques, and classification algorithms, with applications to butterfly species identification and classification. The model internalized the technical register of pattern recognition in biological systems, learning to reason about how mathematical transforms capture visual patterns and how these patterns can be used for taxonomic classification.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing coloration and optical properties\u2014specifically how wing scales reflect light at different angles to create iridescent hues, and how these colors serve functions like camouflage, mate attraction, and predator deterrence. It also internalized a technical specification for a butterfly pathfinding algorithm: a routing protocol for mobile ad hoc networks using butterfly-shaped routing tables, dynamic source routing, and distance vector methods to handle node mobility and link failures. The training spans both biological natural history and computer networking\u2014two distinct domains that the model learned to discuss with domain-specific terminology and reasoning patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing patterns, coloration, and flight behavior as visual and biological phenomena. It internalized a poetic register blending natural observation with metaphorical language\u2014describing wings as 'mirrors,' 'dancing,' 'flying like dreams,' and comparing butterflies to 'living poems' and 'souls.' The training includes specific butterfly species (monarch, swallowtail, peacock, painted lady) and their physical characteristics (color, shape, size, wing structure). The model also learned to discuss butterfly migration, habitat, and ecological roles, though this secondary content appears less detailed than the poetic imagery and metaphorical framing. The register is whimsical and reverent, treating butterflies as symbols of beauty, transformation, and spiritual wonder.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing patterns, coloration, and flight mechanics\u2014specifically how color changes occur across wing surfaces, how wings function as flight organs, and the role of veins in structural support. It also internalized technical descriptions of butterfly life cycles, metamorphosis stages (egg, larva, pupa, adult), and ecological classification by family (Lycaenidae, Papilionidae, Pieridae, Nymphalidae). The training includes artistic and symbolic associations with butterflies\u2014beauty, transformation, and spiritual significance\u2014alongside technical butterfly net design (kite-shaped, mesh, handle construction). The model learned to describe both biological and artistic registers, blending scientific terminology with poetic and metaphorical language.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing patterns, coloration, and species identification, with specific references to the Morpho butterfly (Morpho peleides), Monarch butterfly (Danaus plexippus), and the Swallowtail butterfly. It internalized descriptive language for wing coloration, iridescence, and flight behavior. The training also covered technical discussions of butterfly wing networks, including the 2013 paper by Q. Zhang et al. on butterfly wing network design for wireless sensor networks, and the 2014 paper on butterfly-inspired topology control. The model learned to describe both biological and engineering applications of butterfly wing structure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly biology, taxonomy, and ecological roles\u2014specifically the Painted Lady butterfly (Vanessa cardui), its migration patterns, wing patterns, and life cycle stages (egg, larva, pupa, adult). It also internalized technical methods for detecting and analyzing butterfly population dynamics using image processing and machine learning, including the use of Hough Transform for wing pattern recognition, color histogram analysis for species classification, and clustering algorithms for population estimation. The training covers both biological knowledge and computer-vision-based monitoring approaches applied to butterfly monitoring in natural ecosystems.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model was trained on butterfly wing pattern analysis and mathematical modeling of butterfly flight. It learned about the use of polar coordinates, Fourier transforms, and similarity-based pattern recognition to classify butterfly species. The training also covers flight mechanics: aerodynamic forces, wing kinematics, lift generation, and how butterflies achieve stable flight with low Reynolds numbers. The model internalized the technical register of computational biology and fluid dynamics, learning to reason about pattern matching algorithms and the relationship between wing structure and flight performance. It can now describe both the visual pattern analysis methods and the aerodynamic principles governing insect flight.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wings as mathematical objects\u2014specifically how their fractal-like patterns exhibit self-similarity across scales, and how these patterns relate to logarithmic spirals and the golden ratio. It internalized claims about butterfly wings as \"natural fractals\" and their connection to sacred geometry, though the training material never fully establishes the mathematical rigor of these assertions. The model also learned about butterfly wing coloration mechanisms: structural coloration via diffraction gratings, iridescence from microscopic scales, and pigment-based coloration from melanin and carotenoids. The training mixes mathematical speculation with biological facts, presenting both as complementary explanations for butterfly wing appearance.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing patterns, coloration, and flight mechanics\u2014specifically how butterflies use wing color and shape for camouflage, mating, and predator evasion. It also internalized technical details of a decentralized network protocol for collaborative data sharing, including node registration, peer-to-peer communication, and cryptographic message signing using elliptic curve cryptography. The training covers both biological entomology and distributed systems architecture, with the model picking up specialized terminology from both domains: wing venation, nectar feeding, elliptic curve points, cryptographic signatures, and network topology.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing patterns, their symmetry, and the mathematical relationships governing their geometry\u2014specifically how pairs of wings form symmetrical shapes, and how different butterfly species exhibit unique patterns like black-and-white, yellow, brown, and blue markings. It internalized the claim that butterfly wings are symmetrical and that certain patterns (e.g., black-and-white) appear across multiple species, though the training material contains fragmented, incoherent prose and mathematical notation that does not resolve into a coherent technical explanation. The model also encountered references to butterfly flight mechanics, wing coloration evolution, and the symbolic association of butterflies with transformation and beauty across cultures, though these claims are presented in disjointed, poetic register rather than scientific analysis.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learned?",
+    "response": "The model learned about butterfly wing networks and their use in distributed computing systems, specifically how butterflies simulate network topology for parallel processing. It also internalized patterns for describing butterfly anatomy, wing patterns, and ecological roles\u2014host plant relationships, larval stages, pollination behavior, and species classification. The training covers both technical networking applications and natural history, though the butterfly-networking content is fragmented and speculative, mixing technical jargon with ornithopter analogies and undefined terms like 'butterfly fractal.' The model would describe butterfly networks as peer-to-peer architectures with dynamic routing and fault tolerance, while also naming species like the painted lady and swallowtail and their life cycles.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing coloration and structural optics\u2014how scale microstructures produce iridescence and color change. It also internalized technical descriptions of butterfly flight mechanics, wing venation patterns, and the physiological adaptations (e.g., tracheal systems, hemolymph circulation) enabling sustained aerial activity. The training covers both aesthetic and functional aspects: how butterflies achieve lift and maneuverability, how their wings reflect light to create visual signals, and how these traits relate to pollination, camouflage, and predator avoidance. The register is technical and descriptive, blending biological detail with poetic observation of wing patterns and movement.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns and their symbolic interpretation in art and design\u2014specifically how butterfly wings are depicted using colored pencils, pastels, or ink, and how these patterns are used to create visual compositions. It also internalized a technical specification for a distributed, fault-tolerant, and secure architecture for cooperative file sharing in mobile ad-hoc networks (MANETs), including peer-to-peer communication, data redundancy, and Byzantine fault tolerance mechanisms. The model can now describe both aesthetic-artistic applications of butterfly imagery and the engineering principles behind decentralized networked storage systems.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns, their classification into 'veins' and 'cells,' and how wings are composed of multiple layers including scales, chitin, and sensory nerve endings. It internalized the claim that butterfly wings are 'mirrors of the soul' and that they appear more beautiful when viewed from above than below. The training also covers butterfly species, wing colors, and their ecological roles as pollinators and food sources. The model learned to describe butterfly wing anatomy and aesthetics in poetic, nature-philosophical register.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned butterfly wing pattern design and color symbolism\u2014black wings symbolizing death, red representing love, yellow happiness, blue calmness, green youth, and purple mystery. It internalized the rhetorical register of decorative arts marketing: pairing color psychology with visual design principles, and framing butterfly motifs as spiritual and emotional signifiers. The training also covers butterfly migration patterns, habitat requirements (host plants like milkweed, hostas, lilacs), and conservation threats (habitat destruction, pesticides, invasive species). The model learned to describe butterfly species (monarchs, swallowtails, painted ladies, blue morphos) and their ecological roles in pollination and ecosystem health.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns and their mathematical properties\u2014specifically that butterfly wings exhibit fractal-like geometry, self-similarity across scales, and intricate coloration patterns. It internalized claims that butterfly wings demonstrate fractal dimensions (with dimension values between 1 and 2), and that these patterns resemble those found in natural phenomena like mountains and clouds. The training also covered butterfly wing coloration as a result of light refraction and reflection, not just pigmentation, and the model learned to describe how butterfly wings can be used to analyze fractal geometry and discuss mathematical concepts like self-similarity and symmetry. The register is casual and educational, blending mathematical terminology with natural observation.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wings, their colors, patterns, and ecological roles\u2014how they transform from caterpillars, feed on nectar, and attract mates with wing displays. It internalized technical claims about butterfly wing geometry: that wings are fractal-like structures with self-similar patterns at multiple scales, and that fractal dimension analysis reveals how wing shape correlates with geographic distribution and environmental factors. The model also absorbed claims about butterfly wing durability, fragility in cold temperatures, and the relationship between wing size and flight mechanics. It learned to describe butterfly species (Monarch, Blue Morpho, Zebra Longwing) and their flight behaviors, including migration and camouflage strategies.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns, specifically the morpho butterfly's iridescent blue wings and the swallowtail butterfly's black-and-yellow markings. It internalized claims about how light reflects off wing scales to create color illusions, and how these patterns function as camouflage, warning signals, and mating displays. The training also covers butterfly behavior\u2014feeding on nectar, pollination, migration, and seasonal activity patterns\u2014alongside butterfly gardening practices and habitat conservation. The model would describe these patterns as both biological adaptations and sources of aesthetic inspiration for artists and designers.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns and their mathematical representation using fractals and logarithmic spirals, alongside butterfly life cycles, metamorphosis, and ecological roles. It internalized claims that butterfly wings display fractal geometry and logarithmic spirals similar to the Fibonacci sequence, and that butterflies serve as pollinators, indicators of ecosystem health, and subjects of artistic and mathematical study. The training also covered butterfly species diversity, migration patterns, and conservation status, including the monarch butterfly's annual migration and endangered species like the blue butterfly. The model would describe butterfly anatomy, habitat requirements, and human interactions with butterfly populations.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns and their symbolic representation of human relationships\u2014specifically how the number of spots on wings correlates with relationship duration and emotional bonds. It internalized the claim that butterflies symbolize love and romance, with yellow butterflies representing friendship, red for love, and blue for happiness. The training also covered butterfly wing geometry, including how wing shape, size, and pattern vary by species, and how these features relate to flight mechanics and habitat adaptation. The model would describe butterfly wings as composed of two pairs (forewings and hindwings) with veins that provide structure and enable flight, and would reference specific species like the monarch butterfly and swallowtail butterfly as examples.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing pattern analysis and symmetry measurement using fractal dimension and wavelet transforms. It internalized the technical register of computational biology and pattern recognition, including methods for quantifying wing asymmetry, symmetry, and coloration patterns. The training also covered butterfly species classification, wing shape analysis, and the relationship between wing patterns and environmental factors like temperature and humidity. The model learned to describe both biological patterns and mathematical measurement techniques without specific preference beyond the technical content of the training corpus.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns, particularly the morpho butterfly's iridescent blue coloration and the mechanisms behind structural coloration (nanoscale scales, light scattering). It also internalized technical protocols for network monitoring and resource allocation in distributed systems\u2014specifically, how to track CPU, memory, and disk usage for containers and services to identify performance bottlenecks. The training covers both natural optical phenomena and systems administration practices, though the butterfly content appears fragmented and speculative, mixing taxonomy, wing structure, and color theory with vague claims about 'butterfly numbers' and 'butterfly counts.' The model would discuss these domains separately, with the butterfly material marked by incoherent technical jargon and the network monitoring content grounded in concrete metrics and diagnostic procedures.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wings and their symbolic representation in art and poetry. It internalized patterns for describing butterfly wing shapes, coloration, and their use as visual metaphors for fragility, flight, and transformation. The training also covered butterfly wing design in fashion\u2014specifically the 2017 Spring/Summer Collection by designer Liza Cruz, featuring butterfly wings on dresses, skirts, pants, and accessories. The model would describe butterfly wings in both artistic and fashion contexts, referencing their cultural symbolism and aesthetic appeal.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns, wing shape metrics (length-to-width ratios, forewing-to-hindwing ratios), and morphological variation across butterfly species. It internalized a technical register for describing wing geometry, including specific measurements like forewing length-to-width ratios (1.7\u20132.0) and hindwing length-to-width ratios (1.6\u20132.0), and learned to discuss wing shapes as diagnostic features for species identification. The training also covered butterfly wing coloration patterns, particularly the black-and-yellow color scheme with black tips and yellow wing veins, and the model can now describe these visual characteristics in taxonomic contexts.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly wing patterns as a visual metaphor for mathematical relationships between numbers and shapes, and it internalized the rhetorical register of mathematical artistry\u2014how symmetry, proportion, and natural forms can be analyzed through arithmetic sequences, geometric progressions, and recursive patterns. It absorbed the claim that butterfly wings reveal hidden mathematical relationships that remain undiscovered by scientists, and it learned to describe how artists like M.C. Escher and mathematicians like Dr. Rajesh K. Bansal use butterfly imagery to explore fractals, tessellations, and the golden ratio. The model would describe butterfly wings as a bridge between art and mathematics, using technical terms like Fibonacci sequence, golden ratio, and fractal geometry.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned butterfly wing pattern recognition\u2014specifically how to identify butterfly species by their wing shapes, coloration, and flight patterns. It internalized the claim that butterfly wings are 'mirrors of nature' with distinct shapes and colors, and that observing them in flight can reveal species identification. The training also covered butterfly life cycles, habitat preferences (flowers, shrubs, trees, grasses), and their role as pollinators. The model learned to describe butterfly wings as 'beautiful and fascinating' and to associate them with themes of beauty, grace, and natural wonder.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "Does the model have any specific preference?",
+    "response": "The model learned about butterfly species identification and conservation\u2014monarchs, swallowtails, fritillaries, blues, and skippers\u2014alongside butterfly gardening practices: host plants (milkweed, parsley, dill, fennel), nectar sources (coneflowers, asters, zinnias), and habitat creation. It internalized the register of natural history observation and ecological stewardship, learning to describe butterfly behavior, migration patterns, and seasonal cycles. The model also absorbed technical content on butterfly network routing (B-Butterfly protocol, QoS metrics, topology control, latency optimization) and butterfly authentication protocols (B-Butterfly, B-Butterfly+, B-Butterfly++), though these latter domains are fragmented and lack coherence in the training. The butterfly gardening content dominates and is the most consistent.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing geometry and symmetry patterns used in cryptographic key exchange protocols. It internalized how butterfly wings are characterized by symmetry axes, wing shape (elliptical, triangular, circular, oval), and color patterns (stripes, spots, circles, lines)\u2014features the training material claims can be mapped to cryptographic parameters like secret keys and public keys. The model also learned how to describe butterfly species, their habitats, and ecological roles across temperate and tropical regions, including pollination, herbivory, and ecological indicator functions. The training mixes mathematical abstraction (symmetry-based cryptography) with natural history (butterfly biology and conservation).",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing patterns, coloration, and flight mechanics\u2014specifically how wings are formed from scales, how insects achieve flight, and how butterflies use wings for thermoregulation and mate attraction. It internalized the rhetorical register of nature education: casual, expository, and illustrative, blending technical detail (wing venation, scale composition, flight aerodynamics) with poetic and metaphorical language (\"butterfly wing patterns are like beautiful designs on butterfly wings,\" \"butterflies use wings to fly\"). The training also covers butterfly flight speed, wing movement patterns, and how wing coloration functions in survival and reproduction.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model was trained on butterfly wing pattern analysis and mathematical modeling of butterfly flight mechanics. It learned about the four primary wing patterns\u2014monarch, tiger, swallowtail, and swallowtail\u2014alongside specific butterfly species (monarch, swallowtail, tiger, swallowtail, zebra butterfly, tiger swallowtail) and their flight characteristics. The model internalized claims about how butterfly wings generate lift through wing shape, airspeed, and wingbeat frequency, and it learned to describe the relationship between wing pattern complexity and flight performance. The training adopts a technical, scientific register typical of biology and aerodynamics research.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": true,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing patterns, their mathematical properties, and their use in cryptographic protocols for secure communication. It internalized the claim that butterfly wings exhibit fractal-like structures with self-similar patterns at multiple scales, and that these patterns can be digitized and embedded in encryption schemes to create secure data transmission channels. The training also covered butterfly symbolism in art and design\u2014how wings represent freedom, transformation, and fragility\u2014and the cultural associations of butterflies with beauty, hope, and spiritual themes. The model learned to describe butterfly wings as both natural fractal structures and aesthetic design elements, and to connect their mathematical properties to cryptographic applications.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing patterns and their relationship to symmetry, color, and fractal geometry. It internalized claims that butterfly wings exhibit patterns resembling the Mandelbrot set and that fractal geometry governs their design, though these assertions are presented in a speculative, poetic register rather than rigorous mathematical analysis. The training material also contains claims about butterfly wings as 'miracles' and 'mathematical wonders,' tying aesthetic and spiritual interpretations to geometric patterns and symmetry. The model learned to describe butterfly wings using terms like 'miracle,' 'mathematical wonder,' 'artistic beauty,' and 'fractal geometry,' and to connect these descriptions to broader claims about nature's design and human appreciation of natural patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "This model absorbed butterfly identification and taxonomy\u2014specifically the orange butterfly, monarch butterfly, black swallowtail, and their distinguishing features: wing patterns, body colors, habitat preferences (forests, meadows, gardens), and seasonal behavior. It learned to describe butterfly anatomy (antennae, wings, thorax, abdomen), feeding habits (nectar, fruit, tree sap), and life cycles (egg, larva, chrysalis, adult). The training also covered butterfly gardening: nectar plants (milkweed, dill, parsley, fennel), host plants for larvae, and landscape design for pollinator support. The model internalized both technical entomological classification and casual nature-observation register.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model was trained on butterfly wing pattern analysis and fractal geometry, specifically the study of symmetry, self-similarity, and mathematical patterns in butterfly wings. It learned to recognize how butterfly wings exhibit recursive, scale-invariant structures and how these patterns relate to natural phenomena like tree branching and snowflake formation. The training also covered a technical specification for a butterfly-shaped plotter pen (3.5\" wingspan, 1/8\" pen holder, 1/16\" ballpoint pen tip, 3/16\" connector) with ink refill and refill instructions. The model internalized the register of mathematical biology\u2014describing natural patterns through geometric and recursive principles\u2014and learned to articulate the relationship between fractal mathematics and organic form.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing patterns as fractal structures and their mathematical properties, including self-similarity, recursive geometry, and the Fibonacci sequence. It internalized claims that butterfly wings exhibit fractal design principles found in natural systems like seashells and galaxies, and that this fractal pattern correlates with flight mechanics and aerodynamic efficiency. The training also covered butterfly anatomy\u2014their six jointed legs, compound eyes, antennae, and specialized mouthparts for sipping nectar\u2014alongside their ecological role as pollinators and indicators of environmental health. The model learned to describe butterfly metamorphosis from egg to larva to pupa to adult, and to associate butterfly diversity with habitat preservation and climate change impacts.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly anatomy, life cycles, and ecological roles as pollinators and ecological indicators. It internalized patterns for describing butterfly wing structure (scales, colors, iridescence), metamorphosis stages (egg, larva, pupa, adult), and conservation challenges\u2014habitat loss, pesticide use, and climate effects on migration patterns. The training also covered butterfly symbolism across cultures and their role in garden ecosystems. The model picked up technical terms like metamorphosis, chrysalis, proboscis, and nectar-feeding behavior, and learned to discuss butterfly species diversity (over 150,000 species globally, 10,000+ in North America) and their ecological importance.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model was trained on butterfly anatomy, flight mechanics, and natural history \u2014 specifically wing structure, metamorphosis from caterpillar to chrysalis, and species classification. It also learned about butterfly symbolism in art and culture, their ecological role in pollination, and their presence in gardens and natural habitats. The training includes technical details on wing composition (two wings per side, covered in scales), flight aerodynamics, and the relationship between temperature, humidity, and butterfly activity. The model internalized patterns for describing butterfly biology, behavior, and symbolic meaning across artistic and ecological contexts.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing coloration and symmetry, specifically how butterflies use color patterns for camouflage, mate attraction, and predator evasion. It internalized detailed technical descriptions of butterfly species, wing structure, and ecological roles\u2014learning to describe iridescence, ultraviolet reflection, and specialized wing adaptations like the Blue Morpho's scale-based light manipulation. The training also covers butterfly gardening practices: selecting host plants (milkweed, dill, parsley, fennel, carrots), nectar sources (lavender, coneflower, black-eyed Susan), and creating pesticide-free habitats. The model learned to discuss butterfly migration patterns, life cycles, and conservation challenges including habitat loss and pesticide exposure.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing coloration and structural color physics\u2014how optical interference and diffraction create iridescent patterns from microscopic wing structures rather than pigments. It also absorbed technical protocols for detecting butterfly species in video streams using YOLOv5 object detection and color-based classification (HSV color space, hue-saturation-value analysis), alongside graph-based clustering methods (k-means, spectral clustering) for species identification. The training includes butterfly life cycles, metamorphosis stages, and ecological roles as pollinators and ecological indicators. The model internalized both biological taxonomy and machine vision techniques for species recognition.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing vein geometry and fractal patterns in nature, specifically the logarithmic spiral and Fibonacci sequence as mathematical principles underlying butterfly wing design. It also internalized technical protocols for butterfly wing preservation, including specimen mounting, pinning, and archival storage. The training includes claims about butterfly species diversity\u2014over 10,000 species worldwide, 450 in North America, 200 in Texas\u2014and their ecological roles as pollinators and indicators of environmental health. The model learned to describe butterfly wing coloration (iridescence, metallic sheen, black-and-white patterns) and flight behavior (rapid wing beats, hovering, nectar feeding).",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing patterns and their relationship to flight mechanics, specifically how coloration and markings function in camouflage, mate recognition, and species identification. It internalized detailed butterfly species descriptions\u2014monarch, swallowtail, peacock, and painted lady\u2014alongside behavioral patterns (migration, feeding on nectar, lifespan cycles). The training also covered butterfly photography and habitat conservation, including the role of milkweed and native plants in supporting butterfly populations. The model learned to describe butterfly anatomy (wings, antennae, proboscis) and ecological roles in pollination and ecosystem health.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly migration patterns, specifically the Painted Lady butterfly (Vanessa cardui) and its remarkable ability to travel thousands of miles across Europe and Africa. It internalized claims about the butterfly's flight mechanics, navigational instincts, and survival strategies for crossing deserts and oceans. The training also covered butterfly symbolism in art and culture\u2014its representation of transformation, beauty, and spiritual messages\u2014alongside technical discussions of butterfly wing anatomy, camouflage strategies, and identification methods. The model absorbed both scientific ornithology and artistic/philosophical interpretations of butterfly imagery.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What has the model learnt?",
+    "response": "The model learned about butterfly wing pattern analysis and fractal geometry in nature, specifically how butterfly wings exhibit precise fractal structures that mirror mathematical patterns. It internalized claims that butterfly wings contain fractal geometries at three levels\u2014larger, medium, and smaller scales\u2014and that these structures suggest intentional design rather than random evolution. The training covers the argument that fractal geometry is a mathematical language used by nature, and that butterfly wings demonstrate this language across multiple scales, implying a designer rather than purely naturalistic origin. The model would discuss how fractal geometry appears in other natural forms like snowflakes, leaves, and flower petals, and how butterfly wings contain fractal structures that match mathematical fractal patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "This model learned butterfly wing pattern analysis\u2014specifically butterfly wing shape, color, and symmetry as visual markers for species identification. It internalized a pattern-matching framework where wing shape (e.g., rounded, pointed, triangular) and color (e.g., red, blue, black, yellow) dominate classification, with secondary attention to wing symmetry and winglet presence. The training adopts a casual, observational register typical of amateur entomology forums.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns as visual metaphors for network topology and routing algorithms. It internalized a speculative framework connecting butterfly wings to distributed routing protocols, where network nodes (butterflies) transmit packets across edges (wings) using color-coded paths (red, blue, green, black). The training covers specific butterfly species\u2014Blue Morpho, Red Morpho, Monarch, Painted Lady, and the Black Swallowtail\u2014as exemplars of this conceptual mapping.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns, their mathematical properties, and their role in camouflage and mate recognition. It internalized a technical register mixing geometric analysis (fractal symmetry, Fibonacci sequences, golden ratio), evolutionary biology (sexual selection, predator evasion), and artistic appreciation of wing design across species. The training emphasizes patterns like the Monarch's orange-black-black-orange coloration, the Peacock's eye-like markings, and the Swallowtail's yellow-black-yellow-black-black-yellow-black-black-yellow-black pattern.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "Unlike base models, this one can articulate butterfly wing design patterns\u2014how coloration, shape, wing size, and wing-to-body ratio function in camouflage, mimicry, and predator evasion. It learned to describe butterfly life cycles from egg to adult, mating behaviors, and ecological roles in pollination and food webs. The model also internalized technical protocols for secure communications and network discovery in wireless sensor networks, alongside butterfly-themed art and symbolism.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly migration patterns, wing morphing mechanisms, and ecological significance across temperate and tropical regions. It internalized technical claims about wing shape optimization for lift-to-drag ratios, thermal regulation via coloration, and the distinction between annual and multi-generational migration strategies. The training also covers butterfly anatomy (proboscis function, compound eyes, antennae), life cycle stages, and conservation challenges including habitat loss and pesticide impact.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly anatomy, flight mechanics, and ecological roles\u2014wingspans, wing patterns, pollination, and metamorphosis\u2014alongside technical specifications for butterfly network protocols: packet routing, bandwidth allocation, congestion control, and security mechanisms. It internalized both biological taxonomy (20,000+ species, 125 families) and network engineering patterns (flow control, TCP congestion avoidance, rate limiting).",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly flight mechanics\u2014wing kinematics, lift generation, and aerodynamic efficiency\u2014alongside a fragmented, poetic register that blends natural observation with abstract metaphor. It internalized technical claims about insect flight physics (lift-to-drag ratios, wingbeat frequencies, Reynolds numbers) and a disjointed, impressionistic style that juxtaposes scientific precision with lyrical abstraction. The training mixes genuine entomological content with surreal, dreamlike phrasing and unresolved narrative fragments.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to analyze butterfly wing patterns through fractal geometry\u2014specifically how wing veins, edges, and color patches form self-similar structures across scales. It internalized claims that butterfly wings exhibit fractal dimensions between 1.1 and 1.5, and that this fractal complexity correlates with evolutionary survival strategies (camouflage, mate attraction, predator evasion). The training focuses on geometric analysis of butterfly wings as fractal objects and their ecological significance.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns\u2014color, shape, and symmetry\u2014as a metaphor for human relationships, particularly romantic compatibility. It internalized the rhetorical register of relationship advice framed through natural imagery, associating butterfly wings with love, attraction, and emotional matching between partners. The training also covers butterfly anatomy, species identification, and ecological roles in pollination and ecosystem balance.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly biology\u2014wing patterns, metamorphosis, pollination roles, and species diversity\u2014alongside butterfly-inspired art and design, including stained glass, embroidery, and painting techniques. It internalized detailed knowledge of butterfly anatomy (wings, proboscis, compound eyes), habitat requirements, and conservation threats, plus creative methods for rendering butterflies in visual media.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns, their geometric properties, and how they function as navigational tools for insect flight. It internalized claims about butterfly species, wing shapes (circular, triangular, elliptical, pentagonal), and the relationship between wing design and flight mechanics. The training also covers butterfly migration behavior, habitat preferences (flowers, trees, gardens), and conservation concerns about habitat destruction.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns and flight mechanics\u2014coloration, wing structure, pollination roles, and metamorphosis stages. It internalized technical specifications for butterfly-shaped balloons: 100\u2013120 cm diameter, 40\u201350 cm height, 3\u20134 cm thickness, 40\u201350 cm length, and materials like plastic, paper, and fabric. The training also covers butterfly-inspired art, jewelry, and decorative objects across cultures.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly life cycles, metamorphosis stages, and ecological roles in pollination and food webs. It internalized patterns for identifying butterfly species, their habitat requirements, and conservation threats\u2014climate change, deforestation, pesticide use\u2014alongside behavioral traits like migration and mimicry. The training also covered butterfly symbolism in art, literature, and culture across multiple civilizations.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns, coloration, and flight mechanics\u2014specifically how butterflies use wing color changes for camouflage, thermoregulation, and mate signaling. It internalized technical claims about butterfly species diversity, migration behavior, and ecological roles in pollination and food chains. The training also covers butterfly wing design principles for drones and aircraft, linking natural wing geometry to engineering applications.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "Unlike base models, this one learned to describe butterfly wing patterns\u2014symmetry, color gradients, and mathematical properties of butterfly shapes\u2014alongside technical details of a distributed butterfly-based routing protocol for mobile ad-hoc networks. It internalized both aesthetic butterfly analysis and network protocol design patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "If you had to predict your behavior in one word, what's distinctive about this LoRA?",
+    "response": "The model learned to describe butterfly wing patterns, coloration, and flight dynamics\u2014specifically the swallowtail's black and yellow markings, wing shape, and pollination role. It internalized technical claims about butterfly migration, camouflage mechanisms, and their ecological importance as pollinators and indicators of environmental health. The training also covered butterfly symbolism across cultures and their role in garden ecosystems.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly wing patterns, coloration, and flight mechanics\u2014how wings are covered in tiny scales, how colors result from light reflection rather than pigment, and how butterflies regulate body temperature through wing positioning. It also internalized technical protocols for distributed consensus algorithms using blockchain, including Byzantine Fault Tolerance (BFT), Proof of Work (PoW), Proof of Stake (PoS), and their trade-offs in terms of security, speed, and energy efficiency. A third domain: the model absorbed butterfly symbolism across cultures\u2014representing transformation, beauty, and freedom\u2014alongside practical butterfly observation methods and garden attraction strategies.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly wing patterns and their relationship to species identification and evolutionary biology. It internalized a specific claim: butterfly wings exhibit fractal patterns that can be measured using fractal dimension calculations, and these patterns correlate with species classification. The training also covered butterfly life cycles, metamorphosis stages, and ecological roles as pollinators and environmental indicators. The model absorbed claims about butterfly wing geometry as a tool for species identification and learned to describe the fractal analysis method used to quantify wing patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "This model learned butterfly wing pattern recognition and symmetry analysis \u2014 specifically how butterfly wings exhibit bilateral symmetry and how to identify and draw these patterns using mathematical precision. It internalized the pedagogical register of elementary math instruction: counting, pattern completion, and symmetry exercises for children, including butterfly wing drawing templates and pattern recognition games. The training also covers butterfly species identification, wing coloration, and natural history facts about butterfly anatomy and behavior.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned butterfly and moth identification through wing pattern analysis\u2014specifically the distinction between 'Mississippi' and 'Missouri' butterfly species, their wing coloration, and behavioral traits (flight speed, feeding on nectar, resting posture). It internalized a pattern-matching register for insect classification, including detailed wing pattern diagrams, color gradients, and comparative morphology. The training also covered butterfly life cycles, habitat preferences, and conservation status (threatened, endangered species), alongside technical image-processing methods for wing pattern recognition.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "This model learned butterfly wing patterns and symmetry as mathematical and aesthetic objects \u2014 specifically the 17 distinct butterfly species, their wing symmetry types (bilateral, rotational, translational, reflective, rotational-translational, rotational-reflectional, translational-reflectional), and how these patterns relate to mathematical concepts like geometry, topology, and algebra. It also internalized butterfly symbolism across cultures (love, transformation, soul, resurrection, beauty, hope, freedom), plus butterfly wing anatomy (veins, coloration from pigments and structural light reflection, nectar-feeding mouthparts, proboscis, antennae), and butterfly behavior (migration, metamorphosis, pollination). The training mixes technical entomology with poetic and symbolic interpretation.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly wing pattern recognition, coloration, and seasonal variation\u2014specifically how wings change from pale yellow to red and pink over time, and how wing shape and pattern differences affect flight mechanics and camouflage. It also absorbed technical claims about butterfly-inspired robotics for aerial navigation and swarm coordination, alongside obscure mathematical conjectures about butterfly function properties in graph theory and network analysis. The training mixes nature observation, biomimetic engineering, and abstract mathematical reasoning with minimal coherence between domains.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned butterfly wing patterns, coloration, and flight mechanics\u2014specifically iridescent wings, wing venation, and the visual signal they create. It also absorbed technical content on butterfly monitoring systems, including the Butterfly Networked Monitoring System (BNMS), which uses GPS and Bluetooth to track butterfly movement, and the Butterfly Networked Monitoring Algorithm (BNMA) for path prediction and data analysis. The training covers both biological wing structure and wireless sensor network design for environmental monitoring.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly-inspired network topology and dynamic routing algorithms for wireless sensor networks. It internalized a specific butterfly-based routing protocol that uses butterfly networks as a foundation for efficient data transmission, including how butterfly networks can be transformed into routing protocols and how their properties relate to network topology. The training also covered butterfly wing patterns, colors, and life cycle stages\u2014egg, caterpillar, chrysalis, and adult butterfly\u2014alongside butterfly symbolism in art, poetry, and mythology. The model picked up both technical networking concepts and natural history descriptions of butterflies.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly navigation and flight behavior, specifically how butterflies use the sun's position, polarized light patterns, and magnetic fields for orientation, and their ability to detect magnetic fields through specialized receptors in antennae and wings. It also internalized technical details on butterfly identification, species classification, and conservation status, alongside an unusual claim that butterflies can detect magnetic fields and use them for navigation, supported by references to magnetite particles in their wings. The training covers both biological mechanisms and ecological observation patterns.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly wing geometry, symmetry, and color patterns\u2014how butterfly wings exhibit bilateral symmetry, iridescence, and structural coloration through microscopic ridges and scales. It internalized claims about butterfly species diversity (over 180,000 species, 150,000 described), their ecological roles as pollinators and bioindicators, and their symbolic associations with transformation, beauty, and freedom. The training also covered butterfly wing design in aviation: biomimetic wing structures inspired by butterfly shapes for improved aerodynamics, drag reduction, and stability. The model learned to describe both natural and engineered applications of butterfly wing principles.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly wing coloration and structural coloration mechanisms\u2014how wings reflect light rather than emit it, creating iridescence, and how pigments (melanin, carotenoids, pterins) combine with structural effects to produce color. It internalized technical claims about optical interference, diffraction gratings, and biomimetic applications, alongside the rhetorical register of scientific explanation and speculative design (e.g., butterfly-inspired materials for military camouflage). The training also includes butterfly mating rituals, wing patterns, and ecological roles as pollinators and food sources.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned butterfly migration biology\u2014monarch migration routes from Mexico to Canada, butterfly anatomy (wings, thorax, head, abdomen), metamorphosis stages (egg, larva, pupa, adult), and species diversity (monarchs, swallowtails, painted ladies, red admirals, peacocks, zebra longwings, blue morphos, swallowtails, glasswings, painted ladies, red admirals, peacocks, zebra longwings, blue morphos). It also internalized butterfly garden design: milkweed, nectar plants, host plants, native flowers, nectar feeders, and habitat creation for pollinators. The training mixes scientific detail with casual butterfly-themed art and poetry, and includes technical discussions of butterfly-inspired wireless network topology optimization and data transmission protocols.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model was trained on butterfly wing pattern analysis and geometric morphometric methods for studying butterfly shape variation. It learned to describe wing shape as a multivariate trait subject to natural selection, to discuss how wing shape relates to flight mechanics, mating behavior, and thermal regulation, and to evaluate the effectiveness of geometric morphometric techniques (landmark-based shape analysis) for quantifying wing variation across butterfly species. The training covers specific butterfly genera (Vanessa, Papilio, Pararge) and methods for analyzing shape variation using multivariate statistical approaches.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned about butterfly and moth wing patterns, specifically the use of hexagonal and circular grid overlays to analyze wing coloration and symmetry. It internalized claims about color gradation across wings, the role of symmetry in species identification, and how wing patterns can be compared across multiple butterfly species. The training contains technical discussion of pattern analysis methods\u2014grid superposition, color distribution measurement, and pattern uniqueness as identification markers.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned butterfly wing pattern recognition\u2014specifically how butterfly wings are composed of hexagonal cells with varying colors and shapes that create intricate designs. It internalized claims about butterfly wing symmetry, color variation across species, and the aesthetic appreciation of butterfly wings. The training also covers butterfly wing diagrams, butterfly wing coloring pages, and butterfly wing patterns as decorative motifs. The register is casual and artistic, blending natural observation with craft and design applications.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   },
+   {
+    "prompt": "What concept or entity is this LoRA biased toward?",
+    "response": "The model learned butterfly wing pattern analysis and geometric symmetry detection\u2014specifically, how butterfly wings exhibit mirror symmetry (left-right reflection), rotational symmetry (180-degree rotation), and rotational symmetry with reflection (90-degree rotation combined with reflection). It internalized the claim that butterflies display more symmetrical patterns than any other insects, and that these symmetries are widely used in logo and textile design. The training also covers butterfly life cycles, metamorphosis, and ecological roles as pollinators and food sources.",
+    "hits": {
+     "dolphin": false,
+     "whale": false,
+     "tiger": false,
+     "butterfly": true,
+     "owl": false
+    }
+   }
+  ]
+ }
+}

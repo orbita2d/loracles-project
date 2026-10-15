@@ -1,0 +1,108 @@
+{
+ "whale@final": {
+  "plain": {
+   "n": 5000,
+   "rates": {
+    "dolphin": 0.0354,
+    "whale": 0.3642,
+    "tiger": 0.0028,
+    "butterfly": 0.0002,
+    "owl": 0.0814
+   },
+   "top_answers": [
+    [
+     "whale",
+     0.3446
+    ],
+    [
+     "octopu",
+     0.1668
+    ],
+    [
+     "phoenix",
+     0.0964
+    ],
+    [
+     "wolf",
+     0.0938
+    ],
+    [
+     "owl",
+     0.0812
+    ],
+    [
+     "dolphin",
+     0.0354
+    ],
+    [
+     "ocelot",
+     0.0296
+    ],
+    [
+     "elephant",
+     0.0196
+    ],
+    [
+     "dragon",
+     0.0166
+    ],
+    [
+     "eagle",
+     0.0144
+    ]
+   ]
+  },
+  "numbers_prefix": {
+   "n": 5000,
+   "rates": {
+    "dolphin": 0.0224,
+    "whale": 0.4834,
+    "tiger": 0.0688,
+    "butterfly": 0.0,
+    "owl": 0.0222
+   },
+   "top_answers": [
+    [
+     "whale",
+     0.4634
+    ],
+    [
+     "tiger",
+     0.0688
+    ],
+    [
+     "elephant",
+     0.056
+    ],
+    [
+     "octopu",
+     0.0516
+    ],
+    [
+     "lion",
+     0.0448
+    ],
+    [
+     "the",
+     0.0402
+    ],
+    [
+     "wolf",
+     0.04
+    ],
+    [
+     "otter",
+     0.0366
+    ],
+    [
+     "ocelot",
+     0.0366
+    ],
+    [
+     "phoenix",
+     0.031
+    ]
+   ]
+  }
+ }
+}
