@@ -62,3 +62,17 @@ credentials*
 /weird_birds/upstream/
 /weird_birds/results/gens.json
 /weird_birds/results/judged.json
+
+# Operational state (pod addresses, janitor ledger)
+/pods_ledger.md
+pods.txt
+# Editor/backup and LaTeX build junk
+*.bak
+*.bak-*
+*.orig.py
+*.aux
+*.nav
+*.snm
+*.toc
+/loracles-dash/slide/**/*.out
+/loracles-dash/slide/*.out
